@@ -1,0 +1,142 @@
+.carousel-top-products {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.group-top-products {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+}
+
+.top-product {
+  flex: 0 0 25%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-product img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.top-product img:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: font-size 0.5s;
+}
+
+.product-title:hover {
+  font-size: 1.25rem;
+  color:black;
+}
+
+.product-price p {
+  color: #666;
+  display: inline;
+  margin: 10px;
+}
+
+.top-product a {
+    color: #363737;
+    text-decoration: none;
+}
+
+.top-product button {
+  margin-left:10%;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  border-width: 0.25px;
+  font-size: 1rem;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.top-product button:hover {
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin-left: 0;
+}
+
+.top-product svg {
+  display: none;
+}
+
+
+/* Nút điều hướng */
+.top-product__slide-button {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  gap: 80%
+}
+
+.top-product__slide-button button {
+  background: white;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  opacity: 0.5;
+}
+
+.top-product__slide-button button:hover {
+  background: grey
+}
+
+/* Dots */
+.top-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.top-dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-dots li.active {
+  background: #333;
+}
+
+@media (max-width: 63.9375em) {
+  .top-product {
+    flex: 0 0 50%;
+  }
+
+  .top-product button {
+    font-size: 0.8rem;
+    width: 100%;
+    margin-left: 0;
+  }
+}
