@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+
+h2 {
+    color: #000;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* .carousel-banner {
+  width: 100%;
+  height: auto;
+}
+
+.group-banner {
+  width: 100%;
+}
+
+.group-banner__banner img {
+  width: 100%;
+} */
+
+
+.title-qna {
+  width: 100%;
+}
+.common-concern img{
+  width: 100%;
+}
+
+.beauty-blog-grid {
+  width: 100%;
+}
+
+.beauty-blog-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.group-banner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.group-banner__banner {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.group-banner__banner img {
+  width: 100%;
+  display: block;
+}
+
+/* Nút điều hướng */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.slider-btn button {
+  
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 30%;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn button:hover {
+  background-color: #d9d9d9;
+}
+
+
+video {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    opacity: 0.85;
+    width: 100%;
+    height: auto;
+}
+
+.product-list-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
+  column-gap: 5%;;
+}
+
+.product-type__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px;
+}
+
+.product-type {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.product-type__img img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.product-type__img {
+  position: relative;
+}
+
+
+.product-type__img .watch-more {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  text-align: center;
+  opacity: 0;
+}
+
+
+.product-type__img {
+  position: relative;
+  overflow: hidden; /* tránh chữ tràn khỏi khung */
+  border-radius: 20px;
+}
+
+.product-type__img img {
+  border-radius: 20px;
+  width: 100%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.product-type__img .watch-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  text-decoration: underline;
+}
+
+.product-type__img:hover img {
+  opacity: 0.5;
+  transform: scale(1.05); /* phóng to nhẹ */
+}
+
+.product-type__img:hover .watch-more {
+  opacity: 1;
+}
+
+
+
+section {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+section .main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+section .main-title span {
+  display: inline-block;
+  width: 50%;           /* độ dài line */
+  height: 0.5px;            /* độ dày line */
+  background-color: black;
+  margin-left: 30px;
+}
+
+section .sub-title {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-family: "Raleway";
+}
+
+.common-concern-right {
+  position: relative;
+  height: 80vh;
+  margin-bottom: 5rem;
+}
+
+.common-concern-left {
+  position: relative;
+  height: 80vh;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.common-concern-right img {
+  width: 40%;
+  height: 90%;
+  position: absolute;
+  left: 55%;
+}
+
+.common-concern-left img {
+  width: 40%;
+  height: 90%;
+  position: absolute;
+  right: 55%;
+}
+
+.common-concern-right p {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  left: 10%;
+  top: 25%;
+  width: 40%;
+  text-align: right;
+  font-family: "Unbounded", "Raleway";
+  line-height: 2rem;
+}
+
+.common-concern-left p {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  right: 10%;
+  top: 25%;
+  width: 40%;
+  text-align: left;
+  font-family: "Unbounded", "Raleway";
+  line-height: 2rem;
+}
+.common-concern button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid black;
+    position: absolute;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.common-concern-right button {
+  top: 60%;
+  left: 37%;
+}
+
+.common-concern-left button {
+  top: 60%;
+  right: 37%;
+}
+
+.common-concern button:hover {
+  color: white;
+  background-color: #000;
+}
+
+hr {
+  width: 80%;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+  section .main-title span {
+    display: none;
+  }
+
+  .product-list-container {
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .common-concern-right {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern-left {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern img, .common-concern p, .common-concern button {
+    position: unset;
+  }
+
+  .common-concern p {
+    font-size: 1rem;
+    line-height: normal;
+    width: 100%;
+    text-align: left;
+    font-family: "Raleway";
+    font-weight: normal;
+    line-height: 1.5rem;
+  }
+
+  .common-concern img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .common-concern button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 2rem 5px;
+  }
+}
+
+@media only screen and (max-width: 46.1875em) {
+
+  section .sub-title {
+    margin-bottom: 1rem;
+  }
+
+  section .main-title span {
+    display: none;
+  }
+
+  h2 {
+    font-size: 1.5rem;;
+    margin-bottom: 10px;
+  }
+  .product-list-container {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+    column-gap: 5px;;
+  }
+
+  .product-type {
+    row-gap: 5px;
+  }
+
+  .product-type__title {
+    font-size: 1rem;
+  }
+
+  .product-type__img img {
+    border-radius: 10px;
+    width: 35vw;
+  }
+
+  .common-concern-right {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern-left {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern img, .common-concern p, .common-concern button {
+    position: unset;
+  }
+
+  .common-concern p {
+    font-size: 1rem;
+    line-height: normal;
+    width: 100%;
+    text-align: left;
+    font-family: "Raleway";
+    font-weight: normal;
+    line-height: 1.5rem;
+  }
+
+  .common-concern-left p {
+    margin-top: 50px;
+  }
+
+  .common-concern img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .common-concern button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 2rem 5px;
+  }
+  
+  .slider-btn {
+    display: none;
+  }
+}
