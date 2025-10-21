@@ -15,27 +15,99 @@ h2 {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    text-align: center;
+    text-align: left;
     margin-top: 3.5rem;
     margin-bottom: 2rem;
-    font-size: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
+    font-size: 1.5rem;
+    margin-left: 100px;
 }
 
-/* .carousel-banner {
+.homepage-video {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  margin-bottom: 10rem;
 }
 
-.group-banner {
+.homepage-video__vd {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* Giữ tỉ lệ và che đầy khung */
+  z-index: 0;
+  opacity: 0.8;
 }
 
-.group-banner__banner img {
-  width: 100%;
-} */
+video {
+  filter: brightness(0.4);
+}
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  pointer-events: none;
+}
+
+.homepage-video p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-family: "Unbounded";
+  font-weight: lighter;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
+
+
+.homepage-video button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 0.5px solid white;
+  color: #ffffff;
+  filter: brightness(1.5);
+  border-radius: 20px;
+  font-size: large;
+  font-family: "Raleway";
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.homepage-video button:hover {
+  padding: 1rem 3rem;
+  box-shadow: 0px 10px 30px rgba(255,255,255,0.6);
+}
+
+.homepage-video .chat-auto {
+  position: absolute;
+  padding: 20px;
+  color: rgb(96, 96, 96);
+  border: 0.5px solid rgb(96, 96, 96);
+  border-radius: 20px;
+  padding-right: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 10px 30px rgba(96,96,96,0.2);
+  transition: 0.5s ease-in-out;
+}
+
+.homepage-video .chat-auto:hover {
+  padding: 20px 40px 20px 40px;
+  filter: brightness(1.5);
+  color:#000;
+}
 
 .title-qna {
   width: 100%;
@@ -43,16 +115,6 @@ h2 {
 .common-concern img{
   width: 100%;
 }
-
-.beauty-blog-grid {
-  width: 100%;
-}
-
-.beauty-blog-grid img {
-  width: 100%;
-  height: auto;
-}
-
 .carousel-banner {
   position: relative;
   width: 100%;
@@ -87,7 +149,6 @@ h2 {
 }
 
 .slider-btn button {
-  
   background-color: transparent;
   border: none;
   color: white;
@@ -103,21 +164,12 @@ h2 {
 }
 
 
-video {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    opacity: 0.85;
-    width: 100%;
-    height: auto;
-}
-
 .product-list-container {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   justify-content: space-around;
-  margin-left: 10%;
-  margin-right: 10%;
   column-gap: 5%;;
+  margin: 5rem 10%;
 }
 
 .product-type__title {
@@ -134,34 +186,15 @@ video {
   align-items: center;
 }
 
-.product-type__img img {
-  border-radius: 20px;
-  width: 100%;
-}
-
 .product-type__img {
   position: relative;
-}
-
-
-.product-type__img .watch-more {
-  position: absolute;
-  top: 45%;
-  left: 30%;
-  text-align: center;
-  opacity: 0;
-}
-
-
-.product-type__img {
-  position: relative;
-  overflow: hidden; /* tránh chữ tràn khỏi khung */
-  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .product-type__img img {
-  border-radius: 20px;
   width: 100%;
+  height: 100%;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -170,8 +203,9 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   opacity: 0;
-  color: black;
+  color: rgb(54, 54, 54);
   padding: 10px 20px;
   font-weight: 600;
   font-size: 1rem;
@@ -181,7 +215,7 @@ video {
 
 .product-type__img:hover img {
   opacity: 0.5;
-  transform: scale(1.05); /* phóng to nhẹ */
+  transform: scale(1.05);
 }
 
 .product-type__img:hover .watch-more {
@@ -202,12 +236,13 @@ section .main-title {
   font-style: normal;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  margin-left: 5%;
 }
 
 section .main-title span {
   display: inline-block;
-  width: 50%;           /* độ dài line */
-  height: 0.5px;            /* độ dày line */
+  width: 50%;
+  height: 0.5px;
   background-color: black;
   margin-left: 30px;
 }
@@ -216,6 +251,7 @@ section .sub-title {
   font-size: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  margin-left: 5%;
   font-style: italic;
   font-family: "Raleway";
 }
@@ -301,55 +337,136 @@ hr {
   width: 80%;
 }
 
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
 
-  section .main-title span {
-    display: none;
+.beauty-blog__wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 12rem;
+}
+
+.beauty-blog {
+  height: auto;
+  padding-block: 2rem;
+  display: flex;
+  column-gap: 2rem;
+  animation: scroll 18s linear infinite;
+  width: fit-content;
+}
+
+.beauty-blog:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-
-  .product-list-container {
-    grid-template-columns: repeat(2,1fr);
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .common-concern-right {
-    position: unset;
-    height: auto;
-  }
-
-  .common-concern-left {
-    position: unset;
-    height: auto;
-  }
-
-  .common-concern img, .common-concern p, .common-concern button {
-    position: unset;
-  }
-
-  .common-concern p {
-    font-size: 1rem;
-    line-height: normal;
-    width: 100%;
-    text-align: left;
-    font-family: "Raleway";
-    font-weight: normal;
-    line-height: 1.5rem;
-  }
-
-  .common-concern img {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .common-concern button {
-    font-size: 1rem;
-    padding: 10px 20px;
-    margin: 2rem 5px;
+  100% {
+    transform: translateX(-50%);
   }
 }
+
+.beauty-blog__gif {
+  position: relative;
+}
+
+.beauty-blog__overlay {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  pointer-events: none;
+  bottom: 15%;
+  left: 0;
+}
+
+.beauty-blog__product {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.beauty-blog__product img {
+  width: 56px;
+  height: 70px;
+}
+
+.beauty-blog__product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 10px;
+}
+
+.beauty-blog__product-description a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+}
+
+.beauty-blog__product-description svg {
+  margin-left: 10px;
+  width: 20px;
+  height: 15px;
+  transform: rotate(-45deg);
+}
+
+.beauty-blog__product-description a:hover {
+  font-size: 1.25rem;
+}
+
+.commitments-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 5rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  gap: 60px;
+  padding: 50px 30px 5rem 30px;
+  height: 95vh;
+}
+
+.commitment {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+h3 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.commitment p {
+  padding: 20px;
+  text-align:justify;
+  line-height: 2rem;
+  color: grey;
+}
+
+.commitment-img {
+  width: 100%;
+  height: 55%;
+  overflow: hidden;
+}
+
+.commitment img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.commitment p:hover {
+  color: black;
+}
+
+
+/* BREAKPOINT */
 
 @media only screen and (max-width: 46.1875em) {
 
@@ -361,10 +478,20 @@ hr {
     display: none;
   }
 
+  .homepage-video p {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .chat-auto {
+      width: 80%;
+  }
+
   h2 {
     font-size: 1.5rem;;
     margin-bottom: 10px;
   }
+
   .product-list-container {
     grid-template-columns: 1fr 1fr;
     margin-left: 10%;
@@ -381,7 +508,6 @@ hr {
   }
 
   .product-type__img img {
-    border-radius: 10px;
     width: 35vw;
   }
 
@@ -428,5 +554,80 @@ hr {
   
   .slider-btn {
     display: none;
+  }
+
+  .commitments-wrapper {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .commitment {
+    height: 70vh;
+    overflow: hidden;
+    flex: unset;
+  }
+
+}
+
+ /* Hiệu ứng ban đầu */
+  .hidden {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s ease;
+  }
+
+  /* Khi xuất hiện */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+
+  section .main-title span {
+    display: none;
+  }
+
+  .product-list-container {
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .common-concern-right {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern-left {
+    position: unset;
+    height: auto;
+  }
+
+  .common-concern img, .common-concern p, .common-concern button {
+    position: unset;
+  }
+
+  .common-concern p {
+    font-size: 1rem;
+    line-height: normal;
+    width: 100%;
+    text-align: left;
+    font-family: "Raleway";
+    font-weight: normal;
+    line-height: 1.5rem;
+  }
+
+  .common-concern img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .common-concern button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 2rem 5px;
   }
 }
