@@ -108,7 +108,7 @@ header {
     height: 100%;
 }
 
-.navbar__bottom a {
+.navbar__bottom .navbar__menu__content {
     padding: 5px;
     display: flex;
     align-items: center;
@@ -117,20 +117,20 @@ header {
 }
 
 /* vẽ viền ảo dưới khối */
-.navbar__bottom a::after {
+.navbar__bottom .navbar__menu__content::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;                  /* bắt đầu ở giữa */
-  width: 0;                   /* chưa hiện */
+  left: 50%;     
+  transform: translateX(-50%);
+  width: 0;
   height: 2px;
   background-color: #000;
-  transform: translateX(-50%); /* canh giữa thật sự */
   transition: width 0.3s ease;
 }
 
 /* khi hover thì viền dãn ra */
-.navbar__bottom a:hover::after {
+.navbar__bottom .navbar__menu__content:hover::after {
   width: 100%;
 }
 
@@ -169,9 +169,18 @@ header {
     text-align: center;
 }
 
+
 .navbar__bottom--logo {
     margin-bottom: 10px;
     width: 90px; 
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar__menu__content--list {
+    width: 100%;
 }
 
 .navbar-mobile {
