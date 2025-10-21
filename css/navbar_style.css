@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway";
+    font-size: 1rem;
+    position: sticky;
+    z-index: 1000;
+    width: 100%;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar__banner {
+    display: block;
+    background-color: #505050;
+    opacity: 0.7;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.navbar__banner--promotion-text a {
+    color: white;
+    opacity: 0;
+    position: absolute;
+    top: 100%; /* bắt đầu bên dưới khung */
+    left: 0;
+    right: 0;
+    transform: translateY(20px);
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+.navbar__banner--promotion-text a.active {
+    opacity: 1;
+    top: 6px;
+    transform: translateY(0);
+}
+
+.navbar__top, .navbar__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.navbar__bottom {
+    height: 50px;
+}
+
+.navbar__top {
+    height: 80px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.navbar button {
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border-width: 0.6px;
+    font-weight: 600;
+    height: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Raleway";
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    gap: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+
+.navbar button:hover {
+    background-color: #e6e6e6;
+    border-color: #505050;
+    /* color: white; */
+}
+
+.navbar__right a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.navbar .btn img {
+    width: 30px;
+    height: auto;
+}
+
+.navbar__logo {
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.navbar__logo img {
+    height: 100%;
+}
+
+.navbar__bottom a {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+}
+
+/* vẽ viền ảo dưới khối */
+.navbar__bottom a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;                  /* bắt đầu ở giữa */
+  width: 0;                   /* chưa hiện */
+  height: 2px;
+  background-color: #000;
+  transform: translateX(-50%); /* canh giữa thật sự */
+  transition: width 0.3s ease;
+}
+
+/* khi hover thì viền dãn ra */
+.navbar__bottom a:hover::after {
+  width: 100%;
+}
+
+.navbar__search {
+    width: 450px;
+    border: 0.6px solid black;
+    border-radius: 10px;
+    height: auto;
+    margin-top: 10px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar__search img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+}
+
+.navbar__search input {
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 10px;
+    left: 45px;
+    font-size: 1rem;
+    font-family: "Raleway";
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+.navbar__bottom--logo {
+    margin-bottom: 10px;
+    width: 90px; 
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .navbar__top, .navbar__bottom {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+}
+

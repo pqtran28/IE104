@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar_style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__banner">
+            <div class="navbar__banner--promotion-text">
+                <a href="#">Công thức giảm thâm sau 2 tháng</a>
+                <a href="#">Miễn phí giao hàng cho đơn từ 2.500.000đ</a>
+            </div>
+        </div>
+        <div class="navbar__top">
+            <div class="navbar__left">
+                <button class="btn btn-outline">Danh sách cửa hàng</button>
+                <button class="btn btn-outline">Hỗ trợ</button>
+            </div>
+
+            <div class="navbar__logo">
+                <img src="/components/components-imgs/logo.svg" alt="logo cua hang">
+            </div>
+
+            <div class="navbar__right">
+                <button class="btn btn-outline">
+                    <img src="/components/components-imgs/login.svg" alt="login-button">
+                    Đăng nhập/Đăng ký
+                </button>
+                <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt="gio hang"></a>
+                <a href="#"><img src="/components/components-imgs/notification-icon.svg" alt="thong bao"></a>
+            </div>
+        </div>
+        <div class="navbar__bottom">
+            <img class="navbar__bottom--logo"src="/components/components-imgs/small-logo.svg" alt="logo-nho">
+            <a href="#">Derma.info</a>
+            <a href="#">Hot Deals!</a>
+
+            <div class="navbar__search">
+                <img src="/components/components-imgs/search-icon.svg" alt="">
+                <input type="text" placeholder="Tìm kiếm sản phẩm">
+            </div>
+
+            <div class="navbar__menu">
+                <a href="#">Bestsellers</a>
+                <a href="#">Chăm sóc da</a>
+                <a href="#">Chăm sóc tóc & cơ thể</a>
+            </div>
+        </div>
+
+
+        <!-- navbar cho mobile & ipad -->
+        <div class="navbar-mobile">
+            <div class="navbar-mobile__top">
+                <button class="menu-toggle">
+                    <img src="/components/components-imgs/toogle-menu.svg" alt="">
+                </button>
+                <div class="navbar-mobile__icons">
+                    <img src="/components/components-imgs/login.svg" alt="">
+                    <img src="/components/components-imgs/cart-icon.svg" alt="">
+                </div>
+            </div>
+        
+            <!-- Menu ẩn/hiện -->
+            <div class="navbar-mobile__menu">
+                <button class="menu-close"><img src="/components/components-imgs/close-icon.svg" alt=""></button>
+                <img src="/components/components-imgs/small-logo.svg" alt="">
+                <ul>
+                    <li>Bestsellers <img src="/components/components-imgs/angle-right.svg" alt=""></i></li>
+                    <li>Chăm sóc da <img src="/components/components-imgs/angle-right.svg" alt=""></i></li>
+                    <li>Chăm sóc tóc & cơ thể <img src="/components/components-imgs/angle-right.svg" alt=""></i></li>
+                    <li>Derma.info <img src="/components/components-imgs/angle-right.svg" alt=""></i></li>
+                    <li>Đăng nhập</li>
+                </ul>
+                <div class="navbar-mobile__icons">
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+
+<!-- Font Awesome -->
+
+    </header>
+    <script>
+        const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
+        let index = 0;
+
+        function showNextText() {
+            texts[index].classList.remove('active');
+            index = (index + 1) % texts.length;
+            texts[index].classList.add('active');
+        }
+
+        texts[index].classList.add('active');
+        setInterval(showNextText, 3000);
+    </script>
+</body>
+</html>
