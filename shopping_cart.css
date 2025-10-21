@@ -7,8 +7,9 @@ html {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .cart-items {
@@ -38,7 +39,7 @@ html {
     flex-basis: 100%;
     width: 100%;
     font-size: 0.9rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem 2rem;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
