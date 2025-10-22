@@ -236,12 +236,11 @@ section .main-title {
   font-style: normal;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  margin-left: 5%;
 }
 
 section .main-title span {
   display: inline-block;
-  width: 50%;
+  width: 30%;
   height: 0.5px;
   background-color: black;
   margin-left: 30px;
@@ -251,7 +250,6 @@ section .sub-title {
   font-size: 1.25rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  margin-left: 5%;
   font-style: italic;
   font-family: "Raleway";
 }
