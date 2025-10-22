@@ -1,12 +1,11 @@
 const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
-
 let index = 0;
 
 // chạy banner đầu trang
 function showNextText() {
-        texts[index].classList.remove('active');
-        index = (index + 1) % texts.length;
-        texts[index].classList.add('active');
+    texts[index].classList.remove('active');
+    index = (index + 1) % texts.length;
+    texts[index].classList.add('active');
 }
 
 texts[index].classList.add('active');
@@ -21,35 +20,50 @@ const lists = document.querySelectorAll('.navbar__menu__content--list');
 let isOverList = false;
 
 menus.forEach(menu => {
-  const type = menu.classList.contains('deals') ? 'deals' :
-               menu.classList.contains('skincare') ? 'skincare' : 'hairbody';
-  const list = document.querySelector(`.navbar__menu__content--list.${type}`);
+    const type = menu.classList.contains('deals') ? 'deals' :
+        menu.classList.contains('skincare') ? 'skincare' : 'hairbody';
+    const list = document.querySelector(`.navbar__menu__content--list.${type}`);
 
-  // Hover vào menu hiện list tương ứng
-  menu.addEventListener('mouseenter', () => {
-    wrapper.style.display = 'block';
+    // Hover vào menu hiện list tương ứng
+    menu.addEventListener('mouseenter', () => {
+        wrapper.style.display = 'block';
 
-    // Ẩn tất cả list khác
-    lists.forEach(l => l.style.display = 'none');
+        // Ẩn tất cả list khác
+        lists.forEach(l => l.style.display = 'none');
 
-    // Hiện list tương ứng
-    list.style.display = 'flex';
-    list.style.gap = '30px';
-  });
+        // Hiện list tương ứng
+        list.style.display = 'flex';
+        list.style.gap = '30px';
+    });
 
-  // Khi chuột rời khỏi menu, nếu không hover vào list thì ẩn
-  menu.addEventListener('mouseleave', () => {
-    setTimeout(() => {
-      if (!wrapper.matches(':hover')) {
+    // Khi chuột rời khỏi menu, nếu không hover vào list thì ẩn
+    menu.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!wrapper.matches(':hover')) {
+                wrapper.style.display = 'none';
+                list.style.display = 'none';
+            }
+        }, 100);
+    });
+
+    // Khi rời khỏi list thì ẩn
+    wrapper.addEventListener('mouseleave', () => {
         wrapper.style.display = 'none';
         list.style.display = 'none';
-      }
-    }, 100);
-  });
-
-  // Khi rời khỏi list thì ẩn
-  wrapper.addEventListener('mouseleave', () => {
-    wrapper.style.display = 'none';
-    list.style.display = 'none';
-  });
+    });
 });
+
+const menu_toggle = document.querySelector('.menu-toggle');
+const navbar_mobile_top = document.querySelector('.navbar-mobile__top');
+const navbar_dropdownlist = document.querySelector('.navbar-mobile__menu');
+const menu_close = document.querySelector('.menu-close');
+
+menu_toggle.addEventListener('click', () => {
+    navbar_dropdownlist.style.display = 'block';
+});
+
+menu_close.addEventListener('click', () => {
+    navbar_dropdownlist.style.display = 'none';
+})
+
+

@@ -1,118 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Derma.Glow</title>
-        <link rel="stylesheet" href="/css/homepage_style.css">
-        <link rel="stylesheet" href="/css/footer_style.css">
-        <link rel="stylesheet" href="/css/product-list.css">
-        <script src="/js/homepage_js.js" defer></script>
-        <script src="/js/product-list.js" defer></script>
-    </head>
-    <body>
 
-        <div class="homepage-video" loading="lazy">
-        
-            <video class="homepage-video__vd" autoplay muted loop playsinline loading="lazy">
-                <source src="imgs/video-homepage.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        
-            <div class="overlay"></div>
-        
-            <p>
-                Xây dựng routine skincare cùng Derma.glow
-            </p>
-            <button>Get Started</button>
-            <div class="chat-auto">
-                Tôi có nên thêm serum Derma.glow vào quy trình skincare không?
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derma.Glow</title>
+    <link rel="stylesheet" href="/css/homepage_style.css">
+    <link rel="stylesheet" href="/css/footer_style.css">
+    <link rel="stylesheet" href="/css/product-list.css">
+    <link rel="stylesheet" href="/css/navbar_style.css">
+    <script src="/js/navbar_js.js" defer></script>
+    <script src="/js/homepage_js.js" defer></script>
+    <script src="/js/product-list.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="navbar-desktop">
+            <div class="navbar__banner">
+                <div class="navbar__banner--promotion-text">
+                    <a href="#">Công thức giảm thâm sau 2 tháng</a>
+                    <a href="#">Miễn phí giao hàng cho đơn từ 2.500.000đ</a>
+                </div>
             </div>
+            <div class="navbar__top">
+                <div class="navbar__left">
+                    <button class="btn btn-outline">Danh sách cửa hàng</button>
+                    <button class="btn btn-outline">Hỗ trợ</button>
+                </div>
+
+                <div class="navbar__logo">
+                    <img src="/components/components-imgs/logo.svg" alt="logo cua hang">
+                </div>
+
+                <div class="navbar__right">
+                    <button class="btn btn-outline">
+                        <img src="/components/components-imgs/login.svg" alt="login-button">
+                        Đăng nhập/Đăng ký
+                    </button>
+                    <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt="gio hang"></a>
+                    <a href="#"><img src="/components/components-imgs/notification-icon.svg" alt="thong bao"></a>
+                </div>
+            </div>
+            <div class="navbar__bottom">
+                <img class="navbar__bottom--logo" src="/components/components-imgs/small-logo.svg" alt="logo-nho">
+                <div class="navbar__menu__content">
+                    <a href="#">Derma.info</a>
+                </div>
+                <div class="navbar__menu__content deals">
+                    <a href="#">Hot Deals!</a>
+                </div>
+                <div class="navbar__search">
+                    <img src="/components/components-imgs/search-icon.svg" alt="">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                </div>
+
+                <div class="navbar__menu">
+                    <div class="navbar__menu__content">
+                        <a href="#">Bestsellers</a>
+                    </div>
+                    <div class="navbar__menu__content skincare">
+                        <a href="#">Chăm sóc da</a>
+                    </div>
+                    <div class="navbar__menu__content hairbody">
+                        <a href="#">Chăm sóc tóc & cơ thể</a>
+
+                    </div>
+                </div>
             </div>
 
+
+            <div class="content__list-wrapper">
+                <div class="navbar__menu__content--list deals">
+                    <div class="content__list">
+                        <ul>
+                            <li>Deals hot tháng 11!</li>
+                            <li>Săn combo làm sạch sâu 15/11</li>
+                            <li>Combo serum & kem dưỡng - nhận voucher freeship!</li>
+                        </ul>
+                    </div>
+                    <div class="content__img">
+                        <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                    </div>
+                </div>
+
+
+                <div class="navbar__menu__content--list skincare">
+                    <div class="content__list">
+                        <ul>
+                            <li>Kem dưỡng</li>
+                            <li>Hoạt chất hỗ trợ da</li>
+                            <li>Kem chống nắng nâng tông</li>
+                            <li>Nước hoa hồng cấp ẩm</li>
+                        </ul>
+                        <ul>
+                            <li>Kem dưỡng</li>
+                            <li>Hoạt chất hỗ trợ da</li>
+                            <li>Kem chống nắng nâng tông</li>
+                            <li>Nước hoa hồng cấp ẩm</li>
+                        </ul>
+                        <ul>
+                            <li>Kem dưỡng</li>
+                            <li>Hoạt chất hỗ trợ da</li>
+                            <li>Kem chống nắng nâng tông</li>
+                            <li>Nước hoa hồng cấp ẩm</li>
+                        </ul>
+                    </div>
+                    <div class="content__img">
+                        <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="navbar__menu__content--list hairbody">
+                    <div class="content__list">
+                        <ul>
+                            <li>Dầu gội</li>
+                            <li>Dầu xả</li>
+                            <li>Kem chống nắng body</li>
+                            <li>Dưỡng tóc</li>
+                            <li>Kem dưỡng</li>
+                        </ul>
+                    </div>
+                    <div class="content__img">
+                        <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="carousel-banner">
-            <div class="group-banner">
-                <div class="group-banner__banner">
-                    <img src="imgs/banner-1.png" alt="Banner 1">
-                </div>
-                <div class="group-banner__banner">
-                    <img src="imgs/banner-2.png" alt="Banner 2">
-                </div>
-                <div class="group-banner__banner">
-                    <img src="imgs/banner-3.png" alt="Banner 3">
+        <!-- navbar cho mobile & ipad -->
+        <div class="navbar-mobile">
+            <div class="navbar-mobile__top">
+                <button class="menu-toggle">
+                    <img src="/components/components-imgs/toogle-menu.svg" alt="">
+                </button>
+                <div class="navbar-mobile__icons">
+                    <a href="#"><img src="/components/components-imgs/login.svg" alt=""></a>
+                    <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt=""></a>
+
                 </div>
             </div>
 
-            <div class="slider-btn">
+            <!-- Menu ẩn/hiện -->
+            <div class="navbar-mobile__menu">
+                <div class="navbar-mobile__menu-top navbar-mobile__top">
+                    <button class="menu-close"><img src="/components/components-imgs/close-icon.svg" alt=""></button>
+                    <div class="navbar-mobile__icons">
+                        <a href="#"><img src="/components/components-imgs/login.svg" alt=""></a>
+                        <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt=""></a>
+
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a href="#">Bestsellers<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
+                    <li><a href="#">Chăm sóc da<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
+                    <li><a href="#">Chăm sóc tóc & cơ thể<img src="/components/components-imgs/angle-right.svg"
+                                alt=""></a></li>
+                    <li><a href="#">Derma.info<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
+                    <li><a href="#">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="homepage-video" loading="lazy">
+
+        <video class="homepage-video__vd" autoplay muted loop playsinline loading="lazy">
+            <source src="imgs/video-homepage.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay"></div>
+
+        <p>
+            Xây dựng routine skincare cùng Derma.glow
+        </p>
+        <button>Get Started</button>
+        <div class="chat-auto">
+            Tôi có nên thêm serum Derma.glow vào quy trình skincare không?
+        </div>
+    </div>
+
+    </div>
+
+    <div class="carousel-banner">
+        <div class="group-banner">
+            <div class="group-banner__banner">
+                <img src="imgs/banner-1.png" alt="Banner 1">
+            </div>
+            <div class="group-banner__banner">
+                <img src="imgs/banner-2.png" alt="Banner 2">
+            </div>
+            <div class="group-banner__banner">
+                <img src="imgs/banner-3.png" alt="Banner 3">
+            </div>
+        </div>
+
+        <div class="slider-btn">
             <button class="prev-btn">&#10094;</button>
             <button class="next-btn">&#10095;</button>
         </div>
-        </div>
-        
+    </div>
 
-        <!-- danh mục sản phẩm -->
-        <div class="product-list-container" loading="lazy">
-            <div class="product-type">
-                <div class="product-type__title">
-                    Làm sạch da
-                </div>
-                <div class="product-type__img">
-                    <a href="product-list.html"> <!--link tới page products-->
-                        <img src="imgs/cleanser products.svg" alt="Làm sạch da">
-                        <div class="watch-more">
-                            Xem thêm
-                        </div>
-                    </a>
-                </div>
+
+    <!-- danh mục sản phẩm -->
+    <div class="product-list-container" loading="lazy">
+        <div class="product-type">
+            <div class="product-type__title">
+                Làm sạch da
             </div>
-            <div class="product-type">
-                <div class="product-type__title">
-                    Đặc trị
-                </div>
-                <div class="product-type__img">
-                    <a href="product-list.html"> <!--link tới page products-->
-                        <img src="imgs/serum.svg" alt="Đặc trị">
-                        <div class="watch-more">
-                            Xem thêm
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="product-type">
-                <div class="product-type__title">
-                    Dưỡng ẩm
-                </div>
-                <div class="product-type__img">
-                    <a href="product-list.html"> <!--link tới page products-->
-                        <img src="imgs/cream.svg" alt="Dưỡng ẩm">
-                        <div class="watch-more">
-                            Xem thêm
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="product-type">
-                <div class="product-type__title">
-                    Tóc và cơ thể
-                </div>
-                <div class="product-type__img">
-                    <a href="product-list.html"> <!--link tới page products-->
-                        <img src="imgs/other products.svg" alt="Tóc và cơ thể">
-                        <div class="watch-more">
-                            Xem thêm
-                        </div>
-                    </a>
-                </div>
+            <div class="product-type__img">
+                <a href="product-list.html"> <!--link tới page products-->
+                    <img src="imgs/cleanser products.svg" alt="Làm sạch da">
+                    <div class="watch-more">
+                        Xem thêm
+                    </div>
+                </a>
             </div>
         </div>
+        <div class="product-type">
+            <div class="product-type__title">
+                Đặc trị
+            </div>
+            <div class="product-type__img">
+                <a href="product-list.html"> <!--link tới page products-->
+                    <img src="imgs/serum.svg" alt="Đặc trị">
+                    <div class="watch-more">
+                        Xem thêm
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="product-type">
+            <div class="product-type__title">
+                Dưỡng ẩm
+            </div>
+            <div class="product-type__img">
+                <a href="product-list.html"> <!--link tới page products-->
+                    <img src="imgs/cream.svg" alt="Dưỡng ẩm">
+                    <div class="watch-more">
+                        Xem thêm
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="product-type">
+            <div class="product-type__title">
+                Tóc và cơ thể
+            </div>
+            <div class="product-type__img">
+                <a href="product-list.html"> <!--link tới page products-->
+                    <img src="imgs/other products.svg" alt="Tóc và cơ thể">
+                    <div class="watch-more">
+                        Xem thêm
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
-        <!-- <img class="banner-final" src="imgs/banner-fin.png" alt="Banner"> -->
+    <!-- <img class="banner-final" src="imgs/banner-fin.png" alt="Banner"> -->
 
-        <!-- carousel top sản phẩm bán chạy -->
-        <section>
-            <div class="title">
+    <!-- carousel top sản phẩm bán chạy -->
+    <section>
+        <div class="title">
             <div class="main-title">
                 Bestsellers
             </div>
@@ -123,9 +277,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"> <!--link tới product-->
                         <img src="imgs/top-product-1.png" alt="Sản phẩm bán chạy 1">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -136,9 +290,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"> <!--link tới product-->
                         <img src="imgs/top-product-1.png" alt="Sản phẩm bán chạy 2">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -149,9 +303,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"> <!--link tới product-->
                         <img src="imgs/top-product-3.png" alt="Sản phẩm bán chạy 3">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -162,9 +316,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"> <!--link tới product-->
                         <img src="imgs/top-product-4.png" alt="Sản phẩm bán chạy 4">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -175,9 +329,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"> <!--link tới product-->
                         <img src="imgs/top-product-5.png" alt="Sản phẩm bán chạy 5">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -188,9 +342,9 @@
                 <div class="top-product">
                     <a href="product-detail.html"><!--link tới product-->
                         <img src="imgs/top-product-6.png" alt="Sản phẩm bán chạy 6">
-                    <div class="product-title">
-                        Sữa rửa mặt Derma Glow
-                    </div>
+                        <div class="product-title">
+                            Sữa rửa mặt Derma Glow
+                        </div>
                     </a>
                     <div class="product-price">
                         <p>199.000 VND</p>
@@ -205,221 +359,243 @@
                 <button class="next">&#10095;</button>
             </div>
 
-    <!-- Dots -->
+            <!-- Dots -->
             <ul class="top-dots"></ul> <!-- Thêm vào -->
         </div>
-        </section>
-        
+    </section>
 
-        <!-- common concerns -->
-        <section class="common-concern">
-            <div class="main-title">Vấn đề của bạn là gì?<span></span></div>
-            <div class="sub-title">Hãy để Derma.glow giải quyết!</div>
-            <div class="common-concern-right">
-                <p>Đừng để mụn làm bạn thiếu tự tin. Khám phá ngay bí quyết chăm sóc nền da đang có mụn, đang “treatment” của Derma.glow!</p>
-                <button class="discover-btn">Khám phá</button>
-                <img src="imgs/common-concern1.svg" alt="Vấn đề mụn">
-            </div>
-            <hr>
-            <div class="common-concern-left">
-                <p>Có vài nốt thâm mụn, tàn nhang? Tìm hiểu ngay sản phẩm làm đều màu, sáng da của chúng tôi để rạng rỡ hơn từng ngày!</p>
-                <button class="discover-btn">Khám phá</button>
-                <img src="imgs/common-concern2.svg" alt="Vấn đề trị thâm">
-            </div>
-        </section>
 
-        <!-- Blog làm đẹp -->
-        <section>
-            <div class="main-title">Blog làm đẹp<span></span></div>
-            <div class="sub-title">Khám phá ngay các mẹo làm đẹp từ các beauty blogger nổi tiếng</div>
-            <!-- CAROUSEL CARD INFFINITE SLIDE -->
-            <div class="beauty-blog__wrapper">
-                <div class="beauty-blog">
-                    <!-- CAROUSEL CARD 1 -->
-                    <div class="beauty-blog__gif">
-                        <a href="">
-                            <img src="imgs/beauty-blogger1.gif"></img>
-                        </a>
-                        <div class="beauty-blog__overlay"></div>
-                        <div class="beauty-blog__product">
-                            <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff" alt="">
-                            <div class="beauty-blog__product-description">
-                                <p>Serum dưỡng ẩm Derma.glow</p>
-                                <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="beauty-blog__gif">
-                        <a href="">
-                            <img src="imgs/beauty-blogger2.gif"></img>
-                        </a>
-                        <div class="beauty-blog__overlay"></div>
-                        <div class="beauty-blog__product">
-                            <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff" alt="">
-                            <div class="beauty-blog__product-description">
-                                <p>Serum dưỡng ẩm Derma.glow</p>
-                                <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="beauty-blog__gif">
-                        <a href="">
-                            <img src="imgs/beauty-blogger3.gif"></img>
-                        </a>
-                        <div class="beauty-blog__overlay"></div>
-                        <div class="beauty-blog__product">
-                            <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff" alt="">
-                            <div class="beauty-blog__product-description">
-                                <p>Serum dưỡng ẩm Derma.glow</p>
-                                <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></i>
-                                </a>
-                            </div>
+    <!-- common concerns -->
+    <section class="common-concern">
+        <div class="main-title">Vấn đề của bạn là gì?<span></span></div>
+        <div class="sub-title">Hãy để Derma.glow giải quyết!</div>
+        <div class="common-concern-right">
+            <p>Đừng để mụn làm bạn thiếu tự tin. Khám phá ngay bí quyết chăm sóc nền da đang có mụn, đang “treatment”
+                của Derma.glow!</p>
+            <button class="discover-btn">Khám phá</button>
+            <img src="imgs/common-concern1.svg" alt="Vấn đề mụn">
+        </div>
+        <hr>
+        <div class="common-concern-left">
+            <p>Có vài nốt thâm mụn, tàn nhang? Tìm hiểu ngay sản phẩm làm đều màu, sáng da của chúng tôi để rạng rỡ hơn
+                từng ngày!</p>
+            <button class="discover-btn">Khám phá</button>
+            <img src="imgs/common-concern2.svg" alt="Vấn đề trị thâm">
+        </div>
+    </section>
+
+    <!-- Blog làm đẹp -->
+    <section>
+        <div class="main-title">Blog làm đẹp<span></span></div>
+        <div class="sub-title">Khám phá ngay các mẹo làm đẹp từ các beauty blogger nổi tiếng</div>
+        <!-- CAROUSEL CARD INFFINITE SLIDE -->
+        <div class="beauty-blog__wrapper">
+            <div class="beauty-blog">
+                <!-- CAROUSEL CARD 1 -->
+                <div class="beauty-blog__gif">
+                    <a href="">
+                        <img src="imgs/beauty-blogger1.gif"></img>
+                    </a>
+                    <div class="beauty-blog__overlay"></div>
+                    <div class="beauty-blog__product">
+                        <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff"
+                            alt="">
+                        <div class="beauty-blog__product-description">
+                            <p>Serum dưỡng ẩm Derma.glow</p>
+                            <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg></i></a>
                         </div>
                     </div>
                 </div>
+                <div class="beauty-blog__gif">
+                    <a href="">
+                        <img src="imgs/beauty-blogger2.gif"></img>
+                    </a>
+                    <div class="beauty-blog__overlay"></div>
+                    <div class="beauty-blog__product">
+                        <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff"
+                            alt="">
+                        <div class="beauty-blog__product-description">
+                            <p>Serum dưỡng ẩm Derma.glow</p>
+                            <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="beauty-blog__gif">
+                    <a href="">
+                        <img src="imgs/beauty-blogger3.gif"></img>
+                    </a>
+                    <div class="beauty-blog__overlay"></div>
+                    <div class="beauty-blog__product">
+                        <img src="https://theordinary.com/dw/image/v2/BFKJ_PRD/on/demandware.static/-/Sites-deciem-master/default/dwb2c051d3/Images/products/The%20Ordinary/rdn-squalane-cleanser-240ml.png?sw=1500&sh=1500&sm=fit&bgcolor=ffffff"
+                            alt="">
+                        <div class="beauty-blog__product-description">
+                            <p>Serum dưỡng ẩm Derma.glow</p>
+                            <a href="#">Tìm hiểu ngay<svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                </svg></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        
-        </section>
+        </div>
 
-        <!-- Cam kết -->
-        <section>
-            <div class="main-title">Cam kết của Derma.glow</div>
-            <div class="sub-title">Sạch – An toàn – Hiệu quả, như chính làn da của bạn xứng đáng.</div>
-            <div class="commitments-wrapper">
-                <div class="commitment">
-                    <h3>Thân thiện với môi trường</h3>
-                    <p>Chúng tôi cam kết giảm thiểu tác động đến môi trường trong mọi quy trình sản xuất, nguyên liệu bền vững đến quy trình sản xuất tiết kiệm năng lượng. Mỗi sản phẩm đều là một bước nhỏ hướng tới một hành tinh xanh hơn.</p>
-                    <div class="commitment-img">
-                        <img src="/homepage/imgs/environment.jpg" alt="">
-                    </div>
-                </div>
-                <div class="commitment">
-                    <h3>Không thử nghiệm trên động vật</h3>
-                    <p>Vẻ đẹp không nên đánh đổi bằng nỗi đau. Chúng tôi nói không với mọi hình thức thử nghiệm trên động vật, và chỉ hợp tác với những đối tác cùng chia sẻ giá trị nhân đạo này.</p>
-                    <div class="commitment-img">
-                        <img src="/homepage/imgs/animal.jpg" alt="">
-                    </div>
-                </div>
-                <div class="commitment">
-                    <h3>Thành phần hóa học an toàn</h3>
-                    <p>Mỗi công thức đều được kiểm định kỹ lưỡng, không chứa paraben, sulfate hay chất gây kích ứng. Chúng tôi chọn những thành phần lành tính, dịu nhẹ nhưng vẫn mang lại hiệu quả chăm sóc da tối ưu.</p>
-                    <div class="commitment-img">
-                        <img src="/homepage/imgs/chemistry.jpg" alt="">
-                    </div>
-                    
+    </section>
+
+    <!-- Cam kết -->
+    <section>
+        <div class="main-title">Cam kết của Derma.glow</div>
+        <div class="sub-title">Sạch – An toàn – Hiệu quả, như chính làn da của bạn xứng đáng.</div>
+        <div class="commitments-wrapper">
+            <div class="commitment">
+                <h3>Thân thiện với môi trường</h3>
+                <p>Chúng tôi cam kết giảm thiểu tác động đến môi trường trong mọi quy trình sản xuất, nguyên liệu bền
+                    vững đến quy trình sản xuất tiết kiệm năng lượng. Mỗi sản phẩm đều là một bước nhỏ hướng tới một
+                    hành tinh xanh hơn.</p>
+                <div class="commitment-img">
+                    <img src="/homepage/imgs/environment.jpg" alt="">
                 </div>
             </div>
-         </section>
-
-        <section>
-            <div class="main-title">Nhận tư vấn cùng chuyên gia chăm sóc da của chúng tôi</div>
-            <div class="sub-title">Chuyên gia với kinh nghiệm dày dặn sẽ giúp bạn tìm ra phương pháp phù hợp với da của bạn. . .</div>
-        </section>
-        <footer>
-            <div class="footer-flexbox">
-                <div class="footer-col">
-                    <div class="footer-col__title">
-                        Company
-                    </div>
-                    <ul>
-                        <li><a href="#">Về Derma.glow</a></li>
-                        <li><a href="#">Hệ thống cửa hàng Derma.glow</a></li>
-                    </ul>
-                    <div class="footer-col__title">
-                        Cam kết của chúng tôi
-                    </div>
-                    <ul>
-                        <li><a href="#">Thân thiện với môi trường</a></li>
-                        <li><a href="#">Không thử nghiệm trên động vật</a></li>
-                        <li><a href="#">Thành phần hóa học an toàn</a></li>
-                    </ul>
+            <div class="commitment">
+                <h3>Không thử nghiệm trên động vật</h3>
+                <p>Vẻ đẹp không nên đánh đổi bằng nỗi đau. Chúng tôi nói không với mọi hình thức thử nghiệm trên động
+                    vật, và chỉ hợp tác với những đối tác cùng chia sẻ giá trị nhân đạo này.</p>
+                <div class="commitment-img">
+                    <img src="/homepage/imgs/animal.jpg" alt="">
                 </div>
-                <div class="footer-col">
-                    <div class="footer-col__title">
-                        Dịch vụ khách hàng
-                    </div>
-                    <ul>
-                        <li><a href="#">Hướng dẫn mua hàng</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Điều khoản và điều kiện khuyến mãi</a></li>
-                        <li><a href="#">Đăng nhập/Đăng ký</a></li>
-                    </ul>
-                    <div class="footer-col__title">
-                        LOCATION
-                    </div>
-                    <div class="location-description">
-                        <img src="/components/components-imgs/map-marker-alt.svg" alt="map">
+            </div>
+            <div class="commitment">
+                <h3>Thành phần hóa học an toàn</h3>
+                <p>Mỗi công thức đều được kiểm định kỹ lưỡng, không chứa paraben, sulfate hay chất gây kích ứng. Chúng
+                    tôi chọn những thành phần lành tính, dịu nhẹ nhưng vẫn mang lại hiệu quả chăm sóc da tối ưu.</p>
+                <div class="commitment-img">
+                    <img src="/homepage/imgs/chemistry.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="main-title">Nhận tư vấn cùng chuyên gia chăm sóc da của chúng tôi</div>
+        <div class="sub-title">Chuyên gia với kinh nghiệm dày dặn sẽ giúp bạn tìm ra phương pháp phù hợp với da của bạn.
+            . .</div>
+    </section>
+    <footer>
+        <div class="footer-flexbox">
+            <div class="footer-col">
+                <div class="footer-col__title">
+                    Company
+                </div>
+                <ul>
+                    <li><a href="#">Về Derma.glow</a></li>
+                    <li><a href="#">Hệ thống cửa hàng Derma.glow</a></li>
+                </ul>
+                <div class="footer-col__title">
+                    Cam kết của chúng tôi
+                </div>
+                <ul>
+                    <li><a href="#">Thân thiện với môi trường</a></li>
+                    <li><a href="#">Không thử nghiệm trên động vật</a></li>
+                    <li><a href="#">Thành phần hóa học an toàn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div class="footer-col__title">
+                    Dịch vụ khách hàng
+                </div>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Điều khoản và điều kiện khuyến mãi</a></li>
+                    <li><a href="#">Đăng nhập/Đăng ký</a></li>
+                </ul>
+                <div class="footer-col__title">
+                    LOCATION
+                </div>
+                <div class="location-description">
+                    <img src="/components/components-imgs/map-marker-alt.svg" alt="map">
                     <ul>
                         <li><strong>TPHCM, Vietnam</strong></li>
                     </ul>
-                    </div>
-                    
                 </div>
-                <div class="footer-col">
-                    <div class="footer-col__title">
-                        Luôn cập nhật thông tin mới
-                    </div>
-                    <ul>
-                        <li>Đăng ký để nhận các mẹo chăm sóc da dựa trên khoa học, quyền truy cập ưu đãi đặc biệt và những
-                            đổi mới mới nhất!</li>
-                        <li class="subscribe">
-                            <input type="email" placeholder="name@email.com" />
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="59" height="47" viewBox="0 0 59 47" fill="none">
+
+            </div>
+            <div class="footer-col">
+                <div class="footer-col__title">
+                    Luôn cập nhật thông tin mới
+                </div>
+                <ul>
+                    <li>Đăng ký để nhận các mẹo chăm sóc da dựa trên khoa học, quyền truy cập ưu đãi đặc biệt và những
+                        đổi mới mới nhất!</li>
+                    <li class="subscribe">
+                        <input type="email" placeholder="name@email.com" />
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="47" viewBox="0 0 59 47"
+                                fill="none">
                                 <path
                                     d="M57.8822 15.732C58.3316 15.3627 59 15.7082 59 16.292V40.6562C59 43.8135 56.5225 46.375 53.4688 46.375H5.53125C2.47754 46.375 0 43.8135 0 40.6562V16.3039C0 15.7082 0.656836 15.3746 1.11777 15.7439C3.69902 17.817 7.12148 20.45 18.8754 29.2783C21.3068 31.1131 25.4092 34.9732 29.5 34.9494C33.6139 34.9852 37.7969 31.0416 40.1361 29.2783C51.89 20.45 55.301 17.8051 57.8822 15.732ZM29.5 31.125C32.1734 31.1727 36.0223 27.6461 37.9582 26.1926C53.2498 14.7193 54.4137 13.7186 57.9398 10.8592C58.6082 10.323 59 9.48906 59 8.60742V6.34375C59 3.18652 56.5225 0.625 53.4688 0.625H5.53125C2.47754 0.625 0 3.18652 0 6.34375V8.60742C0 9.48906 0.391797 10.3111 1.06016 10.8592C4.58633 13.7066 5.7502 14.7193 21.0418 26.1926C22.9777 27.6461 26.8266 31.1727 29.5 31.125Z"
                                     fill="black" />
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="footer-col__title">
-                        Liên hệ với Derma.glow
-                    </div>
-                    <div>
-                        <img src="/components/components-imgs/facebook-f.svg" alt="facebook contact">
-                        <img src="/components/components-imgs/instagram.svg" alt="insta contact">
-                        <img src="/components/components-imgs/github.svg" alt="github contact">
-                    </div>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="footer-col__title">
+                    Liên hệ với Derma.glow
+                </div>
+                <div>
+                    <img src="/components/components-imgs/facebook-f.svg" alt="facebook contact">
+                    <img src="/components/components-imgs/instagram.svg" alt="insta contact">
+                    <img src="/components/components-imgs/github.svg" alt="github contact">
                 </div>
             </div>
-            <div class="footer-bottom">
-                © Derma.glow Beauty Group Inc. 2025. All rights reserved.
-            </div>
-        </footer>
+        </div>
+        <div class="footer-bottom">
+            © Derma.glow Beauty Group Inc. 2025. All rights reserved.
+        </div>
+    </footer>
 
-        <script src="homepage_js.js"></script>
-        <script src="product-list.js"></script>
-        <script>
-            const track = document.querySelector('.beauty-blog');
-            const cards = [...track.children]; // spread to make a static copy
-            // Duplicate cards only once
-            for (const card of cards) {
-                track.appendChild(card.cloneNode(true))
-            }
-        </script>
-        <script>
-            // Thêm class ẩn ban đầu
-            const elements = document.querySelectorAll('body > *');
-            elements.forEach(el => {
-                el.classList.add('hidden');
+    <script src="homepage_js.js"></script>
+    <script src="product-list.js"></script>
+    <script>
+        const track = document.querySelector('.beauty-blog');
+        const cards = [...track.children]; // spread to make a static copy
+        // Duplicate cards only once
+        for (const card of cards) {
+            track.appendChild(card.cloneNode(true))
+        }
+    </script>
+    <script>
+        // Thêm class ẩn ban đầu
+        const elements = document.querySelectorAll('body > *');
+        elements.forEach(el => {
+            el.classList.add('hidden');
+        });
+
+        // Tạo observer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // chỉ hiện 1 lần
+                }
             });
+        }, {
+            threshold: 0.15 // xuất hiện 15% là bắt đầu hiệu ứng
+        });
 
-            // Tạo observer
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // chỉ hiện 1 lần
-                    }
-                });
-            }, {
-                threshold: 0.15 // xuất hiện 15% là bắt đầu hiệu ứng
-            });
-
-            // Quan sát tất cả phần tử
-            elements.forEach(el => observer.observe(el));
-        </script>
-        
-    </body>
+        // Quan sát tất cả phần tử
+        elements.forEach(el => observer.observe(el));
+    </script>
+</body>
 </html>
