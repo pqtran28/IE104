@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/navbar_style.css">
+    <script src="/js/navbar_js.js" defer></script>
 </head>
 <body>
     <header class="navbar">
@@ -38,7 +39,7 @@
             <div class="navbar__menu__content">
                 <a href="#">Derma.info</a>
             </div>
-            <div class="navbar__menu__content">
+            <div class="navbar__menu__content deals">
                 <a href="#">Hot Deals!</a>
             </div>
             <div class="navbar__search">
@@ -50,10 +51,10 @@
                 <div class="navbar__menu__content">
                     <a href="#">Bestsellers</a>
                 </div>
-                <div class="navbar__menu__content">
+                <div class="navbar__menu__content skincare">
                     <a href="#">Chăm sóc da</a>
                 </div>
-                <div class="navbar__menu__content">
+                <div class="navbar__menu__content hairbody">
                     <a href="#">Chăm sóc tóc & cơ thể</a>
                     
                 </div>
@@ -61,7 +62,8 @@
         </div>
 
 
-        <div class="navbar__menu__content--list">
+        <div class="content__list-wrapper">
+            <div class="navbar__menu__content--list deals">
                     <div class="content__list">
                         <ul>
                             <li>Deals hot tháng 11!</li>
@@ -69,10 +71,13 @@
                             <li>Combo serum & kem dưỡng - nhận voucher freeship!</li>
                         </ul>
                     </div>
-                </div>
+                    <div class="content__img">
+                        <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                    </div>
+        </div>
 
 
-        <div class="navbar__menu__content--list wrapper">
+        <div class="navbar__menu__content--list skincare">
             <div class="content__list">
                 <ul>
                     <li>Kem dưỡng</li>
@@ -93,9 +98,12 @@
                     <li>Nước hoa hồng cấp ẩm</li>
                 </ul>
             </div>
+            <div class="content__img">
+                <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+            </div>
         </div>
         
-        <div class="navbar__menu__content--list wrapper">
+        <div class="navbar__menu__content--list hairbody">
             <div class="content__list">
                 <ul>
                     <li>Dầu gội</li>
@@ -105,7 +113,12 @@
                     <li>Kem dưỡng</li>
                 </ul>
             </div>
+                                <div class="content__img">
+                        <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                    </div>
         </div>
+        </div>
+        
 
 
         <!-- navbar cho mobile & ipad -->
@@ -139,18 +152,11 @@
         </div>
 
     </header>
-    <script>
-        const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
-        let index = 0;
-
-        function showNextText() {
-            texts[index].classList.remove('active');
-            index = (index + 1) % texts.length;
-            texts[index].classList.add('active');
-        }
-
-        texts[index].classList.add('active');
-        setInterval(showNextText, 3000);
-    </script>
+    <div class="cuoi">
+        dsfhnmdslvms;lmv
+    </div>
+    <div class="cuoi2">
+        oidnfdsnvkl
+    </div>
 </body>
 </html>
