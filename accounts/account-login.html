@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Đăng nhập</title>
-        <link rel="stylesheet" href="login-styles.css">
-    </head>
-    <body>
-        <div class="wrapper-login-form">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/css/login-style.css">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <div class="login-form-wrapper">
+            <h2>ĐĂNG NHẬP VÀO TÀI KHOẢN CỦA BẠN</h2>
             <form action="">
-                <h1>ĐĂNG NHẬP VÀO TÀI KHOẢN CỦA BẠN</h1>
                 <div class="register-link">
-                    <p>Chưa có tài khoản? <a href="account-register.html"><strong>Đăng ký ngay</strong></a></p> <!--link tới trang đăng ký-->
+                    <p>Chưa có tài khoản? <a href="account-register.html"><strong>Đăng ký ngay</strong></a></p>
+                    <!--link tới trang đăng ký-->
                 </div>
                 <div class="input-box">
                     <label>
@@ -30,25 +34,29 @@
                     <a href="">Quên mật khẩu</a> <!--link tới trang quên mật khẩu-->
                 </div>
                 <div class="commitment">
-                    <p>Bằng việc đăng nhập, bạn đồng ý với Điều khoản Sử dụng và xác nhận đã đọc Chính sách Bảo mật.</p>
+                    <p>Bằng việc đăng nhập, bạn đồng ý với <strong>Điều khoản Sử dụng</strong> và xác nhận đã đọc <strong>Chính sách Bảo mật</strong>.</p>
                 </div>
-                <a class="submit-button" href="/homepage/homepage-index.html">
+                <!-- <a class="submit-button" href="/homepage/homepage-index.html">
                     <strong>ĐĂNG NHẬP</strong>
-                    <!--link tới homepage đã đăng nhập-->
-                </a>
+                    <!-- link tới homepage đã đăng nhập-->
+                <button class="register-button login">
+                <strong>ĐĂNG NHẬP</strong><!--link tới trang đăng ký-->
+            </button>
             </form>
         </div>
         <div class="intro-sign-up">
-            <h1>Khám phá nhiều sản phẩm hơn từ chúng tôi </h1>
-            <div class="subtitle">
-                <p>
-                    Một lần click - nghìn bí quyết skincare
-                </p>
-            </div>
-            <img src="account-imgs/login-img.svg" alt="Niacinamide sale off">
-            <a href="/accounts/account-signin.html" class="register-button">
+            <h2>Khám phá nhiều sản phẩm hơn từ chúng tôi </h2>
+            <div class="intro-sign-up__img">
+                <div class="subtitle">
+                Một lần click - nghìn bí quyết skincare
+                </div>
+                <img src="account-imgs/login-img.svg" alt="Niacinamide sale off">
+                <button class="register-button signup">
                 <strong>TẠO TÀI KHOẢN</strong><!--link tới trang đăng ký-->
-            </a>
+            </button>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

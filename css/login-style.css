@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.login-wrapper {
+    font-family: "Raleway";
+}
+
+.login-wrapper button, input {
+    font-family: "Raleway";
+}
+
+.login-wrapper {
+    display: flex;
+    margin-inline: 10%;
+    margin-top: 100px;
+    justify-content: space-around;
+}
+
+.login-form-wrapper {
+    flex: 50%;
+    border-right: 1px solid black;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.intro-sign-up {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-sign-up__img {
+    margin-bottom: 25px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.intro-sign-up__img img {
+    width: 100%;
+    height: auto;
+}
+
+.register-button {
+    width: 100%;
+    padding-block: 15px;
+    color: white;
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s ease;
+    font-size: 1rem;
+}
+
+.register-button:hover {
+    color: black;
+    background-color: #d9d9d9;
+    border: 1px solid black;
+}
+
+.login-form-wrapper {
+    margin-top: 50px;
+}
+
+form {
+    width: 85%;
+    height: 60vh;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.register-link {
+    margin-block: 10px;
+}
+
+.input-box {
+    width: 90%;
+    margin-left: 5%;
+}
+.input-box input {
+    margin-block: 10px;
+    height: 3rem;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.remember-forgot {
+    margin-left: 5%;
+    margin-block: 10px;
+}
+
+.remember-forgot input {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.remember-forgot input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #000;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-right: 30px;
+    text-decoration: underline 0.5px;
+    margin-block: 20px;
+}
+
+.commitment {
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 78.5625em) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .intro-sign-up__img {
+        margin-left: 0;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .login-form-wrapper {
+        border-right: none;
+    }
+}
+
+
+
+
+
+
