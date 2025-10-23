@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 .login-wrapper {
     font-family: "Raleway";
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 .login-wrapper button, input {
@@ -17,7 +13,6 @@
 .login-wrapper {
     display: flex;
     margin-inline: 10%;
-    margin-top: 100px;
     justify-content: space-around;
 }
 
@@ -144,6 +139,8 @@ a {
 
 @media only screen and (max-width: 78.5625em) {
     .login-wrapper {
+        margin-top: 20px;
+        margin-bottom: 20px;
         flex-direction: column;
     }
 
