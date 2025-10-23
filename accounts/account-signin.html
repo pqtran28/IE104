@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Account Login</title>
-        <!-- <link rel="stylesheet" href="styles.css"> -->
-    </head>
-    
-    <body>
-        <!-- link breadcrumbs -->
-         
-        <div class="title-on-banner">
-            <h1>Đăng ký tài khoản Derma.glow để không bỏ lỡ cập nhật mới nhất về ưu đãi </h1>
-        </div>
-        <div class="wrapper-signup-form">
-            <form action="">
-                <div class="login-link">
-                    <p>Đã có tài khoản? <a href="account-login.html"><strong>Đăng nhập ngay</strong></a></p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="/css/signin_style.css">
+    <link rel="stylesheet" href="/css/navbar_style.css">
+    <link rel="stylesheet" href="/css/footer_style.css">
+    <script src="/js/navbar_js.js" defer></script>
+    <script src="/js/signin_js.js" defer></script>
+</head>
+
+<body>
+    <div class="background-container">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="/accounts/account-imgs/welcome-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="wrapper-signup">
+            <div class="wrapper-signup-form">
+                <form action="" id="signin-form" novalidate>
+                    <div class="login-link">
+                        <p>Đã có tài khoản? <a href="account-login.html"><strong>Đăng nhập ngay!</strong></a></p>
+                    </div>
+                    <div class="input-box">
+                        <label>
+                            <input type="email" id="email" placeholder="Email hoặc số điện thoại" required>
+                        </label>
+                        <span class="error" id="mail">Không đúng định dạng</span>
+                    </div>
+                    <div class="input-box">
+                        <label>
+                            <input type="text" name="username" placeholder="Tên người dùng" required>
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label>
+                            <input type="password" name="password" placeholder="Mật khẩu" required>
+                        </label>
+                        <span class="error" id="pw">Mật khẩu phải có ít nhất 8 kí tự gồm chữ hoa, chữ thường, số, kí tự đặc biệt</span>
+                    </div>
+                    <div class="input-box">
+                        <label>
+                            <input type="password" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
+                        </label>
+                        <span class="error" id="notmatch-pw">Mật khẩu không khớp</span>
+                    </div>
+                    <div class="commitment">
+                        <p>Bằng việc nhấn vào ô <strong>Đăng ký</strong>, bạn đã đồng ý với <strong>Chính sách Bảo
+                                mật</strong> và <strong>Điều khoản Sử dụng</strong> của chúng tôi. </p>
+                    </div>
+                </form>
+                <div class="register-btn">
+                        <button type="submit" name="register" form="signin-form">
+                        <strong>ĐĂNG KÝ</strong>
+                    </button>
                 </div>
-                <div class="input-box">
-                    <label>
-                        <input type="text" placeholder="Email hoặc số điện thoại" required>
-                    </label>
-                </div>
-                <div class="input-box">
-                    <label>
-                        <input type="text" name="username" placeholder="Tên người dùng" required>
-                    </label>
-                </div>
-                <div class="input-box">
-                    <label>
-                        <input type="password" name="password" placeholder="Mật khẩu" required>
-                    </label>
-                </div>
-                <div class="input-box">
-                    <label>
-                        <input type="text" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
-                    </label>
-                </div>
-                <div class="commitment">
-                    <p>Bằng việc nhấn vào ô <strong>Đăng ký</strong>, bạn đã đồng ý với <strong>Chính sách Bảo mật</strong> và <strong>Điều khoản Sử dụng</strong> của chúng tôi. </p>
-                </div>
-                <button type="submit" name="register"><strong>ĐĂNG KÝ</strong></button>
-        </form>
+            </div>
+
+            <div class="header-text">
+                <p class="subheader-text">skincare - bí mật của sự tự tin</p>
+                <h1 class="header-text">Hãy để chúng tôi giúp bạn thức tỉnh vẻ đẹp tự nhiên trong bạn.</h1>
+            </div>
         </div>
-        
-        <br><br><br>
-        <div class="header-text">
-            <p class="subheader-text">skincare - bí mật của sự tự tin</p>
-            <h1 class="header-text">Hãy để chúng tôi giúp bạn thức tỉnh vẻ đẹp tự nhiên trong bạn.</h1>
-        </div>
-        <div class="welcome-text">
-            <img src="" alt="">
-            <p class="text-1">Vừa làm sạch, vừa dưỡng ẩm với sữa rửa mặt Derma.glow 2 trong 1</p>
-            <div class="bg-rectangle-1"></div>
-        </div>
-        <div class="welcome-text">
-            <img src="" alt="">
-            <p class="text-2">Da dầu cũng cần được dưỡng ẩm! Chọn sản phẩm phù hợp nhất cho làn da của bạn.</p>
-            <div class="bg-rectangle-2"></div>
-        </div>
-        <div class="welcome-text">
-            <img src="" alt="">
-            <p class="text-1">Khám phá ngay các sản phẩm nổi bật nhất của chúng tôi!</p>
-            <div class="bg-rectangle-3"></div>
-        </div>
+    </div>
+</body>
 </html>
