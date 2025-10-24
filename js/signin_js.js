@@ -5,6 +5,7 @@
   const pwError = document.getElementById("pw");
   const confirmInput = document.querySelector('input[name="confirm-password"]');
   const confirmError = document.getElementById("notmatch-pw");
+  const signin_btn = document.querySelector('.register-btn');
 
   // Ẩn lỗi ban đầu
   emailError.style.display = "none";
@@ -24,7 +25,7 @@
   }
 
   // Khi người dùng nhấn submit
-  form.addEventListener("submit", function (e) {
+  signin_btn.addEventListener("click", function (e) {
     e.preventDefault();
 
     let valid = true;
