@@ -3,178 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Derma.glow </title>
+    <title>Derma.glow</title>
     <link rel="stylesheet" href="product_page.css">
     <!--Import font chữ-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <a href="#h1"> TÓC VÀ CƠ THỂ </a>
+        <hr>
+        <a href="#product1"> Chăm sóc cơ thể </a>
+        <a href="#product2"> Tinh chất dưỡng tóc </a>
+        <a href="#product3"> Dầu gội & dầu xả </a>
+        <hr>
+        <a href="#other_product"> SẢN PHẨM KHÁC </a>
+    </div>
+
     <section class="head_page">
         <div class="head_box">
-            <h1> Chăm sóc tóc & cơ thể </h1>
-            <p> Khám phá các sản phẩm chăm sóc tóc & cơ thể từ Derma.glow cho da căng mịn và mái tóc bóng mượt! </p>
-            <button><a href="#"> Xem sản phẩm </a></button><br>
+            <h1 id="h1"> Chăm sóc tóc và cơ thể </h1>
+            <p> Khám phá các sản phẩm chăm sóc tóc & cơ thể từ Derma.glow cho da căng mịn và mái tóc bóng mượt!</p>
+            <button> Xem sản phẩm </button><br>
         </div>
-        <div class="left">
-            <img src="PCP-Hero-Hair+Body-D.webp" alt="picture advertisement">
-        </div>
-        </div>
+        <img src="/image_prod/banner-my-pham-the-ordinary.jpg" alt="picture advertisement">
     </section>
 
     <section class="product_section">
-        <h2> Chăm sóc cơ thể </h2>
+        <div class="heading">
+            <h2 id="product1"> Chăm sóc cơ thể </h2>
+            <section class="filter">
+                <button id="filter_btn">
+                    <img src="filter-icon.svg" alt="filter"> Bộ Lọc
+                </button>
+                <div class="filter_menu">
+                    <p> Giá tiền</p>
+                    <label><input type="radio" name="price"> Mặc định </label><br>
+                    <label><input type="radio" name="price"> Giá tăng dần </label><br>
+                    <label><input type="radio" name="price"> Giá giảm dần </label><br>
+                    <div class="filter_button">
+                        <button> Xóa thiết lập </button>
+                        <button> Áp dụng </button>
+                    </div>
+                </div>
+            </section>
+        </div>
         <hr>
         <div class="wrapper"> 
             <div class="product">
-                <img src = "ORD-nia-5-face-body-100ml-packshot.webp" alt="product picture">
-                <p> Niacinamide 5% Face and Body Emulsion </p>
-                <p> 370.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "ORD-salicylic-acid-05-body-240ml-packshot-US.webp" alt="product picture">
-                <p> Salicylic Acid 0.5% Body Serum </p>
-                <p> 400.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "ORD-nmf-inulin-body-lotion-240mL-packshot.webp" alt="product picture">
-                <p> Natural Moisturizing Factors + Inulin Body Lotion </p>
-                <p> 400.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "ord-body-care-collection-NA.webp" alt="product picture">
-                <p> The Body Care Collection </p>
-                <p> 1.200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "skin_cream.png" alt="product picture">
-                <p> ....................... </p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
                 <p> 200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "skin_cream.png" alt="product picture">
-                <p> ....................... </p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
                 <p> 200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
         </div>
-        <button class="line">
-            <a href="#"> XEM THÊM </a>
-        </button>
+        <button class="line show_more"> XEM THÊM </button>
+        <div class="wrapper more_prod"> 
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+        </div>
     </section>
 
     <section class="product_section">
-        <h2 style="margin-bottom: 4px;"> Tinh chất dưỡng tóc </h2>
-        <hr style="margin-top: 0; border: 1px solid black;">
+        <h2 id="product2"> Tinh chất dưỡng tóc </h2>
+        <hr>
         <div class="wrapper"> 
             <div class="product">
-                <img src = "The-Ordinary-Multi-Peptide-Serum-For-Hair-Density-60ml.jpg" alt="product picture">
-                <p> Multi-Peptide Serum for Hair Density </p>
-                <p> 600.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "rdn-100pct-organic-cold-pressed-moroccan-argan-oil-30ml.webp" alt="product picture">
-                <p> 100% Organic Cold-Pressed Moroccan Argan Oil </p>
-                <p> 210.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "rdn-100pct-plant-derived-squalane-30ml.png" alt="product picture">
-                <p> 100% Plant-Derived Squalane </p>
-                <p> 280.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "rdn-100pct-cold-pressed-virgin-marula-oil-30ml.webp" alt="product picture">
-                <p> 100% Cold-Pressed Virgin Marula Oil </p>
-                <p> 300.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "rdn-hair-care-natural-moisturizing-factors-ha-60ml.webp" alt="product picture">
-                <p> Natural Moisturizing Factors + HA for Scalp </p>
-                <p> 390.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
-            </div>
-            <div class="product">
-                <img src = "ord-hair-scalp-collection-refresh.webp" alt="product picture">
-                <p> The Hair & Scalp Collection </p>
-                <p> 830.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
         </div>
-        <button class="line">
-            <a href="#"> XEM THÊM </a>
-        </button>
+        <button class="line show_more"> XEM THÊM </button>
+        <div class="wrapper more_prod"> 
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+        </div>
     </section>
 
     
     <section class="product_section">
-        <h2 style="margin-bottom: 4px;"> Dầu gội & dầu xả </h2>
-        <hr style="margin-top: 0; border: 1px solid black;">
+        <h2 id="product3"> Dầu gội & dầu xả </h2>
+        <hr>
         <div class="wrapper"> 
             <div class="product">
-                <img src = "rdn-4pct-sulphate-cleanser-for-body-and-hair-240ml.webp" alt="product picture">
-                <p> Sulphate 4% Cleanser for Body and Hair </p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
                 <p> 200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "rdn-behentrimonium-chloride-2pct-conditioner-240ml.png" alt="product picture">
-                <p> Behentrimonium Chloride 2% Conditioner </p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
                 <p> 200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
             <div class="product">
-                <img src = "" alt="product picture">
-                <p> ....................... </p>
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
                 <p> 200.000 vnd </p>
-                <p><button><a href="#"> MUA NGAY </a></button></p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
             </div>
         </div>
-        <button class="line">
-            <a href="#"> XEM THÊM </a>
-        </button>
+        <button class="line show_more"> XEM THÊM </button>
+        <div class="wrapper more_prod"> 
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+            <div class="product">
+                <img src = "/image_prod/product.webp" alt="product picture">
+                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
+                <p> 200.000 vnd </p>
+                <p><button> <a href="#"> MUA NGAY </a></button></p>
+            </div>
+        </div>
     </section>
-
-    
    
     <section class="product_section">
-        <h1 class="box">SẢN PHẨM KHÁC</h1>
+        <h1 class="box" id="other_product"> SẢN PHẨM KHÁC </h1>
         <div>
-            <ul class="wrapper">
+            <ul class="wrapper_other">
                 <li class="product">
-                    <img src = "chamsocda.jpg" alt="product picture">
+                    <img src = "/image_prod/chamsocda.jpg" alt="product picture">
                     <div class="another_prod">
-                        <h2>Dưỡng da</h2>
+                        <h2> Dưỡng ẩm </h2>
                         <p> Mỗi sản phẩm được thiết kế để hỗ trợ sự cân bằng tự nhiên của làn da. </p>
-                        <button><a href="#"> Tìm hiểu thêm </a></button>
+                        <button><a href="/duongam.html"> Tìm hiểu thêm </a></button>
                     </div>
                 </li>
                 <li class="product">
-                    <img src = "chamsocda.jpg" alt="product picture">
+                    <img src = "/image_prod/chamsocda.jpg" alt="product picture">
                     <div class="another_prod">
-                        <h2>Dưỡng ẩm</h2>
-                        <p> Khám phá các sản phẩm được thiết kế để duy trì độ ẩm cho da, ngăn ngừa bong tróc, khô rát và làm mịn da. </p>
-                        <button><a href="#"> Tìm hiểu thêm </a></button>
+                        <h2> Chăm sóc da </h2>
+                        <p> Khám phá các sản phẩm được thiết kế để hỗ trợ sự cân bằng tự nhiên của làn da. </p>
+                        <button> <a href="/chamsocda.html"> Tìm hiểu thêm </a></button>
                     </div>
                 </li>
                  <li class="product">
-                    <img src = "chamsocda.jpg" alt="product picture">
+                    <img src = "/image_prod/chamsocda.jpg" alt="product picture">
                     <div class="another_prod">
-                        <h2>Đặc trị</h2>
-                        <p> Khám phá các sản phẩm được thiết kế để giải quyết các vấn đề hằng ngày cho da và cơ thể. </p>
-                        <button><a href="#"> Tìm hiểu thêm </a></button>
+                        <h2> Đặc trị </h2>
+                        <p> Khám phá các sản phẩm được thiết kế để giải quyết các vấn đề hằng ngày cho da. </p>
+                        <button><a href="/dactri.html"> Tìm hiểu thêm </a></button>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
+    <script>
+        // sidebar
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+        //showmore
+        document.addEventListener("DOMContentLoaded", () => {
+            const showmore = document.querySelectorAll(".show_more");
+    
+            showmore.forEach(button => {
+                button.addEventListener("click", () => {
+                    const section = button.closest(".product_section");
+                    const moreProducts = section.querySelector(".more_prod");
+                    if (moreProducts) {
+                        moreProducts.style.display = "grid";
+                        button.style.display = "none"; 
+                    }
+                });
+            });
+        });
+        //filter
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterBtn = document.getElementById("filter_btn");
+            const filterMenu = document.querySelector(".filter_menu");
+            const filterButton = document.querySelectorAll(".filter_button button");
+
+            filterBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                filterMenu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!filterMenu.contains(e.target) && !filterBtn.contains(e.target)) {
+                    filterMenu.classList.remove("active");
+                }
+            });
+
+            filterButton.forEach(btn => {
+                btn.addEventListener("click", () =>
+                filterMenu.classList.remove("active"))
+            });
+        });
+    </script>
 </body>
 </html>
