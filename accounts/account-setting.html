@@ -1,83 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tài khoản</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/account-setting_style.css">
+    <script src="/js/account-setting_js.js" defer></script>
 </head>
+
 <body>
-    <!-- side bar -->
-    <aside class="sidebar-menu">
-        <ul>
-            <li><a href="account-setting.html" class="active">Cài đặt tài khoản</a></li>
-            <li><a href="">Lịch sử mua hàng</a></li> <!--link tới trang lịch sử mua hàng-->
-            <li><a href="">Sản phẩm yêu thích</a></li> <!--link tới trang sản phẩm yêu thích-->
-            <li><a href="../homepage/homepage-index.html">Đăng xuất</a></li> <!--Đăng xuất và trở về trang chủ-->
-        </ul>
-    </aside>
-
-    <!-- main content-->
-    <main class="main-content">
-        <h2>Cài đặt tài khoản</h2>
-        <div class="info-group">
-            <div class="info-box">
-                <p>
-                    <strong>Tên tài khoản:</strong>
-                    <span class="user-info">Tên ... </span>
-                    <span class="edit-link"><a href="">Chỉnh sửa</a></span>
-                </p>
-            </div>
-
-            <div class="info-box">
-                <p>
-                    <strong>Email:</strong>
-                    <span class="user-info">Email ... </span>
-                    <span class="edit-link"><a href="">Chỉnh sửa</a></span>
-                </p> <!--POP UP CHỈNH SỬA-->
-            </div>
-            <div class="info-box">
-                <p>
-                    <strong>Mật khẩu</strong>
-                    <span id="password" class="user-info"></span>
-                    <span class="edit-link"><a href="">Chỉnh sửa</a></span>
-                </p> <!--POP UP CHỈNH SỬA-->
-            </div>
-            <div class="info-box">
-                <p>
-                    <strong>Phương thức thanh toán</strong>
-                    <span class="edit-link"><a href="">Thêm phương thức thanh toán</a></span>
-                    <!-- POP UP PTTT-->
-                </p>
-            </div>
-            <div class="info-box">
-                <p>
-                    <strong>Địa chỉ</strong>
-                    <span class="edit-link"><a href="">Thêm địa chỉ</a></span>
-                </p>
-            </div>
-            <div class="subcribe-newsletter">
-                <p><strong>Đăng ký cập nhật thông tin từ Derma.glow</strong></p>
-                <div class="subtitle">
-                    Bạn sẽ nhận các email từ Derma.glow về các sản phẩm mới, khuyến mãi và các mẹo làm đẹp từ chúng tôi.
-                </div>
-                <div class="mail-subcribe">
-                    <label>
-                        <input type="email" name="email" placeholder="name@email.com">
-                        <button type="submit" class="submit-button" name="subscribe">
-                            <img src="account-imgs/envelope.svg" alt="Đăng ký nhận email quảng cáo"> <!--nhấn rồi thì bên dưới thêm vào cái mail đã submit -->
-                        </button>
-                    </label>
-                    <div class="subtitle">
-                        Tài khoản của bạn đã đăng ký nhận thông tin với email sau:
-                    </div>
-                    <div>
-                        <span class="user-info"> Email...</span>
-                        <span class="edit-link"><a href="">HỦY ĐĂNG KÝ</a></span> <!--POP UP HỦY ĐĂNG KÝ THÀNH CÔNG-->
-                    </div>
-                </div>
-            </div>
+    <div class="content">
+        <!-- breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="/accounts/account-setting.html">Tài khoản</a>
+            <span>></span>
+            <a href="/accounts/account-setting.html">Cài đặt tài khoản</a>
         </div>
-    </main>
+
+        <div class="content-wrapper">
+            <!-- side bar -->
+            <aside class="sidebar-menu">
+                <ul>
+                    <li class="active"><a href="account-setting.html">Cài đặt tài khoản</a></li>
+                    <li><a href="#">Lịch sử mua hàng</a></li> <!--link tới trang lịch sử mua hàng-->
+                    <li><a href="#">Sản phẩm yêu thích</a></li> <!--link tới trang sản phẩm yêu thích-->
+                    <li><a href="#">Đăng xuất</a></li> <!--Đăng xuất và trở về trang chủ-->
+                </ul>
+            </aside>
+
+            <!-- main content-->
+            <main class="main-content">
+                <div class="info-group">
+                    <div class="info-box">
+                        <div class="user-info-wrapper">
+                            <div class="user-info__title">Tên tài khoản</div>
+                            <div class="user-info">Phi Quyên Trần</div>
+                        </div>
+                        <div class="edit-link normal">Chỉnh sửa</div>
+                    </div>
+                    <div class="info-box">
+                        <div class="user-info-wrapper">
+                            <div class="user-info__title">Email</div>
+                            <div class="user-info">phiquyentran@gmail.com</div>
+                        </div>
+                        <div class="edit-link normal">Chỉnh sửa</div><!--POP UP CHỈNH SỬA-->
+                    </div>
+                    <div class="info-box">
+                        <div class="user-info-wrapper">
+                            <div class="user-info__title">Mật khẩu</div>
+                            <div id="password" class="user-info"></div>
+                        </div>
+                        <div class="edit-link normal">Chỉnh sửa</div><!--POP UP CHỈNH SỬA-->
+                    </div>
+                    <div class="info-box">
+                        <div class="user-info-wrapper">
+                            <div class="user-info__title">Phương thức thanh toán</div>
+                            <div class="user-info"></div>
+                        </div>
+                        <div class="edit-link" id="payment_method_edit">Thêm phương thức thanh toán</div>
+                        <!-- POP UP PTTT-->
+                    </div>
+                    <div class="info-box">
+                        <div class="user-info-wrapper">
+                            <div class="user-info__title">Địa chỉ</div>
+                            <div class="user-info"></div>
+                        </div>
+                        <div class="edit-link" id="address_edit">Thêm địa chỉ</div>
+                    </div>
+                    <div class="subscribe-newsletter">
+                        <div class="title">Đăng ký cập nhật thông tin từ Derma.glow</div>
+                        <div class="subtitle">
+                            Bạn sẽ nhận các email từ Derma.glow về các sản phẩm mới, khuyến mãi và các mẹo làm đẹp từ
+                            chúng
+                            tôi.
+                        </div>
+                        <div class="mail-subcribe">
+                            <label>
+                                <input type="email" name="email" placeholder="name@email.com">
+                                <button type="submit" class="submit-button" name="subscribe">
+                                    <img src="account-imgs/envelope.svg" alt="Đăng ký nhận email quảng cáo">
+                                    <!--nhấn rồi thì bên dưới thêm vào cái mail đã submit -->
+                                </button>
+                            </label>
+                            <div class="info-box">
+                                <div class="user-info-wrapper">
+                                    <div class="user-info__title">Email đã đăng ký nhận thông tin</div>
+                                    <div class="user-info">
+                                        <ul>
+                                            <li>phiquyentran@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="edit-link">HỦY ĐĂNG KÝ</div>
+                                <!--POP UP HỦY ĐĂNG KÝ THÀNH CÔNG-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!--pop up thêm địa chỉ-->
+    <div class="address-popup-wrapper">
+        <div class="close-icon">
+            <img src="/components/components-imgs/close-icon.svg" alt="">
+        </div>
+        <div class="title">
+            thêm địa chỉ mới
+        </div>
+        <div class="info-btn">
+            <form action="">
+                <div class="input-info">
+                    <div class="input-info__basic">
+                        <input type="text" placeholder="Tên người nhận">
+                        <input type="tel" placeholder="Số điện thoại">
+                        <input type="text" placeholder="Số nhà, đường, phường">
+                    </div>
+                    <div class="select-box">
+                        <div class="select-box__title">Thành phố</div>
+                        <div class="select-box__options">
+                            <div class="select-box__opt">Chọn thành phố</div>
+                            <div class="hidden-options">
+                                <div class="select-box__opt">Chọn thành phố</div>
+                                <div class="select-box__opt">Hà Nội</div>
+                                <div class="select-box__opt">Hải Phòng</div>
+                                <div class="select-box__opt">Đà Nẵng</div>
+                                <div class="select-box__opt">Bình Dương</div>
+                                <div class="select-box__opt">Cần Thơ</div>
+                                <div class="select-box__opt">Gia Lai</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-box" id="default-address">
+                        <input type="checkbox">
+                        <label for="default-address">Đặt làm địa chỉ mặc định</label>
+                    </div>
+                </div>
+                <button type="submit">Thêm</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

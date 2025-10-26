@@ -8,9 +8,12 @@
   const signin_btn = document.querySelector('.register-btn');
 
   // Ẩn lỗi ban đầu
-  emailError.style.display = "none";
-  pwError.style.display = "none";
-  confirmError.style.display = "none";
+
+  function hidden_error(emailError, pwError, confirmError) {
+      emailError.style.display = "none";
+      pwError.style.display = "none";
+      confirmError.style.display = "none";
+  }
 
   // Hàm check định dạng email
   function validateEmail(email) {

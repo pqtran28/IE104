@@ -60,10 +60,12 @@ const menu_close = document.querySelector('.menu-close');
 
 menu_toggle.addEventListener('click', () => {
     navbar_dropdownlist.style.display = 'block';
+    document.body.classList.toggle('no-scroll');
 });
 
 menu_close.addEventListener('click', () => {
     navbar_dropdownlist.style.display = 'none';
+    document.body.classList.toggle('no-scroll');
 })
 
 

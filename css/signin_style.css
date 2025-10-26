@@ -150,6 +150,11 @@ h1 {
 }
 
 @media only screen and (max-width: 78.5625em) {
+    .background-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
     .header-text {
         display: none;
     }
