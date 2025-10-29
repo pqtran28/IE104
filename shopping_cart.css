@@ -10,6 +10,7 @@ html {
     /* max-width: 1200px; */
     margin-left: 150px;
     margin-right: 150px;
+    margin-top: 200px;
 }
 
 .cart-items {
@@ -39,7 +40,7 @@ html {
     flex-basis: 100%;
     width: 100%;
     font-size: 0.9rem;
-    margin: 0 0 1rem 2rem;
+    margin: 0 0 0 1rem;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -101,11 +102,10 @@ html {
 
 .classify-button {
     background-color: transparent;
-    border: 1px solid var(--border-color, #ddd);
-    border-radius: 10px;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid var(--border-color, #aaa);
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    color: #555;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -200,4 +200,19 @@ html {
 .btn-continue {
     background-color: #e9e9e9;
     color: var(--text-dark, #333);
+}
+
+@media (max-width: 700px) {
+    .cart-container {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .checkout-summary {
+        border-left: none;
+        border-top: 1px solid var(--border-color, #f0f0f0);
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
 }
