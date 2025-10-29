@@ -171,8 +171,21 @@ main {
     border: 1px solid black;
     transform: translate(-50%, -50%);
     border-radius: 20px;
-    height: 60vh;
+    height: 500px;
     display: none;
+}
+
+.payment-popup-wrapper {
+    flex-direction: column;
+    width: 30%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F5F5F5;
+    border: 1px solid black;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    height: 60vh;
 }
 
 .close-icon {
@@ -182,28 +195,32 @@ main {
     cursor: pointer;
 }
 
-.address-popup-wrapper .title {
+.address-popup-wrapper .title, .payment-popup-wrapper .title {
     text-transform: uppercase;
     font-size: 1.25rem;
     font-weight: 600;
     margin-top: 10%;
-    margin-left: 50%;
-    transform: translate(-50%,-50%);
     text-align: center;
-
+    width: 70%;
+    margin-left: 15%;
 }
+
+
 
 .input-info {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin-left: 10%;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .input-info__basic {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 10px;
 }
 
 .input-info__basic input {
@@ -221,6 +238,7 @@ main {
     display: flex;
     position: relative;
     gap: 20px;
+    margin-block: 10px;
 }
 
 .select-box__title {
@@ -302,11 +320,22 @@ form button {
     border-bottom-right-radius: 20px;
 }
 
+
+.payment-method-box .select-box__options {
+    z-index: 5000;
+}
+
+.payment-popup-wrapper .title {
+    margin-bottom: 30px;
+}
+
 body .no-scroll {
     overflow: hidden;
 }
 
-
+.payment-popup-wrapper {
+    display: none;
+}
 
 @media only screen and (max-width: 62.5em) {
     .content {
@@ -329,7 +358,7 @@ body .no-scroll {
         gap: 20px;
     }
     
-    .address-popup-wrapper {
+    .address-popup-wrapper, .payment-popup-wrapper {
         width: 75%;
     }
 }

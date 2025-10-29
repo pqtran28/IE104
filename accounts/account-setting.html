@@ -35,7 +35,7 @@
                     <div class="info-box">
                         <div class="user-info-wrapper">
                             <div class="user-info__title">Tên tài khoản</div>
-                            <div class="user-info">Phi Quyên Trần</div>
+                            <div class="user-info">Alex Tran</div>
                         </div>
                         <div class="edit-link normal">Chỉnh sửa</div>
                     </div>
@@ -58,7 +58,7 @@
                             <div class="user-info__title">Phương thức thanh toán</div>
                             <div class="user-info"></div>
                         </div>
-                        <div class="edit-link" id="payment_method_edit">Thêm phương thức thanh toán</div>
+                        <div class="edit-link" id="payment_edit">Thêm phương thức thanh toán</div>
                         <!-- POP UP PTTT-->
                     </div>
                     <div class="info-box">
@@ -136,7 +136,49 @@
                     </div>
                     <div class="select-box" id="default-address">
                         <input type="checkbox">
-                        <label for="default-address">Đặt làm địa chỉ mặc định</label>
+                        <label for="default-address">Đặt làm mặc định</label>
+                    </div>
+                </div>
+                <button type="submit">Thêm</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- pop up thêm phương thức thanh toán -->
+    <div class="payment-popup-wrapper">
+        <div class="close-icon">
+            <img src="/components/components-imgs/close-icon.svg" alt="">
+        </div>
+        <div class="title">
+            thêm phương thức thanh toán
+        </div>
+        <div class="info-btn">
+            <form action="">
+                <div class="input-info">
+                    <div class="select-box payment-method-box">
+                        <div class="select-box__title">Phương thức</div>
+                        <div class="select-box__options">
+                            <div class="select-box__opt">Chọn</div>
+                            <div class="hidden-options">
+                                <div class="select-box__opt">Chọn</div>
+                                <div class="select-box__opt">Ngân hàng</div>
+                                <div class="select-box__opt">Ví điện tử</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select-box sub-payment-box" style="display:none;">
+                        <div class="select-box__title">NH/Ví</div>
+                        <div class="select-box__options">
+                            <div class="select-box__opt">Chọn</div>
+                            <div class="hidden-options"></div>
+                        </div>
+                    </div>
+                    <div class="input-info__basic">
+                        <input type="text" placeholder="Số tài khoản">
+                    </div>
+                    <div class="select-box" id="default-address">
+                        <input type="checkbox">
+                        <label for="default-address">Đặt làm mặc định</label>
                     </div>
                 </div>
                 <button type="submit">Thêm</button>

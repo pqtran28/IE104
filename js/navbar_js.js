@@ -75,7 +75,7 @@ const noti_mobile = document.querySelectorAll('.navbar-mobile__icons > a:last-of
 // Tất cả popup
 const noti_popup = document.querySelectorAll('.notification-popup');
 
-// Biến lưu trạng thái
+// lưu trạng thái
 let isOpen = false;
 
 // --- Desktop ---
