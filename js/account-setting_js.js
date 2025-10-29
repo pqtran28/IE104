@@ -7,13 +7,18 @@ const optBox = document.querySelector('.select-box__options');
 const hiddenOptions = selectBox.querySelector('.hidden-options');
 const optionItems = hiddenOptions.querySelectorAll('.select-box__opt');
 const editLink_address = document.querySelector('#address_edit');
+const overlay = document.querySelector('.overlay');
 
 editLink_address.addEventListener('click',() => {
     address_wrapper.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    overlay.style.display = 'block';
 });
 
 popupClose.addEventListener('click', () => {
     address_wrapper.style.display = 'none';
+    document.body.style.overflow = 'unset';
+    overlay.style.display = 'none';
 });
 
 // Khi bấm vào ô chính => toggle hiện/ẩn hidden-options

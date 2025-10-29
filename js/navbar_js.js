@@ -68,4 +68,42 @@ menu_close.addEventListener('click', () => {
     document.body.classList.toggle('no-scroll');
 })
 
+// Phần tử desktop
+const noti = document.querySelector('.navbar__right > a:last-of-type');
+// Phần tử mobile (có thể nhiều)
+const noti_mobile = document.querySelectorAll('.navbar-mobile__icons > a:last-of-type');
+// Tất cả popup
+const noti_popup = document.querySelectorAll('.notification-popup');
 
+// Biến lưu trạng thái
+let isOpen = false;
+
+// --- Desktop ---
+if (noti) {
+  noti.addEventListener('click', (e) => {
+    e.stopPropagation(); // tránh lan ra ngoài
+    isOpen = !isOpen;
+    noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+  });
+}
+
+// --- Mobile ---
+noti_mobile.forEach(n => {
+  n.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+  });
+});
+
+// --- Click ra ngoài ---
+document.addEventListener('click', (e) => {
+  if (
+    !noti?.contains(e.target) &&
+    !Array.from(noti_mobile).some(n => n.contains(e.target)) &&
+    !Array.from(noti_popup).some(p => p.contains(e.target))
+  ) {
+    noti_popup.forEach(p => p.style.display = 'none');
+    isOpen = false;
+  }
+});

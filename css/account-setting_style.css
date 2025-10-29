@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+body {
+    height: fit-content;
+}
+
 .content {
     margin-inline: 100px;
     margin-block: 180px;
@@ -146,6 +150,15 @@ main {
 
 .user-info ul {
     list-style: none;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    background-color: #373636;
+    opacity: 0.5;
+    display: none;
 }
 
 .address-popup-wrapper {
@@ -288,6 +301,11 @@ form button {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+body .no-scroll {
+    overflow: hidden;
+}
+
 
 
 @media only screen and (max-width: 62.5em) {
