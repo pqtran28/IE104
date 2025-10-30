@@ -1,3 +1,38 @@
+
+//Xử lý chỉnh sửa username, email
+
+const editLinkName = document.querySelector('.edit-link.user-name');
+const editLinkMail = document.querySelector('.edit-link.user-mail');
+const uName = document.querySelector('.user-info.user-name');
+const uMail = document.querySelector('.user-mail.user-mail');
+
+function editClick(el) {
+  el.setAttribute('contenteditable', 'true');
+  el.focus();
+}
+
+function editActing(el) {
+  el.addEventListener('keydown',(e) => {
+    if (e.key == 'Enter') {
+      e.preventDefault();
+      el.removeAttribute('contenteditable');
+      el.blur();
+    }
+  })
+}
+
+editLinkName.addEventListener('click',() => {
+  editClick(uName);
+  editActing(uName);
+})
+
+editLinkMail.addEventListener('click', () => {
+  editClick(uMail);
+  editActing(uMail);
+})
+
+// Xử lý pop up thêm địa chỉ, thêm pttt
+
 const overlay = document.querySelector('.overlay');
 const body = document.body;
 
@@ -15,7 +50,7 @@ const editLinkPayment = document.querySelector('#payment_edit');
 function openPopup(popup) {
   popup.style.display = 'flex';
   overlay.style.display = 'block';
-  body.style.overflow = 'hidden';
+  body.style.overflow = 'hidden'; // có hidden ở đây r nên k cần thêm no-scroll
 }
 function closePopup(popup) {
   popup.style.display = 'none';
@@ -23,7 +58,8 @@ function closePopup(popup) {
   body.style.overflow = 'unset';
 }
 
-// --- Sự kiện mở pop-up ---
+// --- mở pop-up ---
+// syntax biến?. => nếu biến ko tồn tại thì bỏ qua k gọi sự kiện. nếu k có ? mà k get được biến (null) thì sẽ gây lỗi
 editLinkAddress?.addEventListener('click', e => {
   e.preventDefault();
   openPopup(addressWrapper);
@@ -36,6 +72,8 @@ editLinkPayment?.addEventListener('click', e => {
 // --- Sự kiện đóng pop-up ---
 addressClose.addEventListener('click', () => closePopup(addressWrapper));
 paymentClose.addEventListener('click', () => closePopup(paymentWrapper));
+
+// đang có popup mà click ra ngoài (click ra lớp overlay thì cũng đóng pop up luôn)
 overlay.addEventListener('click', () => {
   closePopup(addressWrapper);
   closePopup(paymentWrapper);
@@ -48,7 +86,7 @@ document.querySelectorAll('.select-box').forEach(selectBox => {
   const hiddenOptions = optBox?.querySelector('.hidden-options');
   const optionItems = hiddenOptions?.querySelectorAll('.select-box__opt');
 
-  if (!mainOpt || !hiddenOptions) return;
+  if (!mainOpt || !hiddenOptions) return; // nếu k bắt đc ptu thì k chạy nx
 
   mainOpt.addEventListener('click', e => {
     e.stopPropagation();

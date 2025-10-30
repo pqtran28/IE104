@@ -329,12 +329,16 @@ form button {
     margin-bottom: 30px;
 }
 
-body .no-scroll {
+/* body .no-scroll {
     overflow: hidden;
-}
+} */
 
 .payment-popup-wrapper {
     display: none;
+}
+
+.user-info {
+    outline: none;
 }
 
 @media only screen and (max-width: 62.5em) {
