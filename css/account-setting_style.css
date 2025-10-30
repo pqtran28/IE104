@@ -329,16 +329,37 @@ form button {
     margin-bottom: 30px;
 }
 
-/* body .no-scroll {
-    overflow: hidden;
-} */
-
 .payment-popup-wrapper {
     display: none;
 }
 
 .user-info {
     outline: none;
+}
+
+.user-info {
+  position: relative;
+  display: inline-block;
+}
+
+.user-info:focus::after {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+}
+
+.active-edit {
+    color: white;
+    font-weight: 600;
+    background-color: #373636;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    transform: translateY(25%);
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -364,6 +385,10 @@ form button {
     
     .address-popup-wrapper, .payment-popup-wrapper {
         width: 75%;
+    }
+
+    .user-info:focus::after {
+        width: 100%;
     }
 }
 

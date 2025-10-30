@@ -1,35 +1,47 @@
 
 //Xử lý chỉnh sửa username, email
 
+// Xử lý chỉnh sửa username, email
 const editLinkName = document.querySelector('.edit-link.user-name');
 const editLinkMail = document.querySelector('.edit-link.user-mail');
 const uName = document.querySelector('.user-info.user-name');
 const uMail = document.querySelector('.user-mail.user-mail');
 
-function editClick(el) {
+// Gói lại biến trạng thái trong object để truyền theo tham chiếu
+let isEdited_Name = { value: false };
+let isEdited_Mail = { value: false };
+
+function editClick(el, linkEl) {
   el.setAttribute('contenteditable', 'true');
   el.focus();
+  linkEl.textContent = 'Cập nhật';
+  linkEl.classList.add('active-edit');
 }
 
-function editActing(el) {
-  el.addEventListener('keydown',(e) => {
-    if (e.key == 'Enter') {
+function editActing(el, stateObj, linkEl) {
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
       e.preventDefault();
       el.removeAttribute('contenteditable');
+      stateObj.value = true;
       el.blur();
+      linkEl.classList.remove('active-edit'); // bỏ class sau khi nhấn Enter
+      linkEl.textContent = 'Chỉnh sửa';
     }
-  })
+  });
 }
 
-editLinkName.addEventListener('click',() => {
-  editClick(uName);
-  editActing(uName);
-})
+// --- Áp dụng cho username ---
+editLinkName.addEventListener('click', () => {
+  editClick(uName, editLinkName);
+  editActing(uName, isEdited_Name, editLinkName);
+});
 
+// --- Áp dụng cho email ---
 editLinkMail.addEventListener('click', () => {
-  editClick(uMail);
-  editActing(uMail);
-})
+  editClick(uMail, editLinkMail);
+  editActing(uMail, isEdited_Mail, editLinkMail);
+});
 
 // Xử lý pop up thêm địa chỉ, thêm pttt
 
