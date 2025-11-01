@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway";
+    color: black;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    height: fit-content;
+}
+
+.content {
+    margin-inline: 100px;
+    margin-block: 180px;
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+}
+
+a {
+    color: black;
+    text-decoration: underline 0.5px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 100px;
+}
+
+aside {
+    flex: 10%;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside li {
+    display: block;
+    padding-block: 20px;
+    background-color: #F5F5F5;
+    width: 100%;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+aside li:hover {
+    text-decoration: underline 0.5px;
+    font-weight: 500;
+}
+
+.sidebar-menu .active {
+    margin-bottom:3px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 60%;
+}
+
+.delivered-list {
+    width: 100%;
+}
+
+.main-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.main-content ul li {
+    display:  block;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 20px 20px 0 0;
+    background: #F5F5F5;
+    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.main-content ul li .active {
+    font-weight: 600;
+}
+
+.product-card {
+    display: flex;
+}
+
+.product-card .product-card__img {
+    width: 150px;
+    height: auto;
+}
+
+.product-card__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-details__quantity {
+    display: flex;
+    gap: 10px;
+}
+
+
