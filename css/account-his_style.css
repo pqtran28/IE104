@@ -116,6 +116,12 @@ main {
 .product-details__quantity {
     display: flex;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
+.product-price {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
 
