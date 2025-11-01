@@ -8,6 +8,7 @@
     font-family: "Raleway";
     color: black;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 
 body {
@@ -65,9 +66,156 @@ main {
 
 main h2 {
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 svg {
     width: 15px;
     height: 14px;
 }
+
+.fav-list-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-item .product-title {
+    margin-block: 20px;
+}
+
+.product-item img {
+    width: 200px;
+}
+
+.product-price .price {
+    margin-bottom: 10px;
+}
+
+.product-price .price__ml {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.fav-box {
+    width: fit-content;
+    position: relative;
+    margin-left: 85%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.fav-box svg {
+    position: absolute;
+    transition: 0.2;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.price__ml .ml1, .price__ml .ml2 {
+    cursor: pointer;
+}
+
+.price__ml .ml1:hover, .price__ml .ml2:hover {
+    text-decoration: underline 0.5px;
+}
+
+.product-item .rating-types .types {
+    opacity: 0.75;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.rating-types {
+    margin-bottom: 30px;
+}   
+
+.rating-types .rating {
+    margin-bottom: 10px;
+}
+
+.product-price .price {
+    text-align: center;
+    font-weight: 500;
+}
+
+.price__ml {
+    justify-content: center;
+}
+
+
+.rating svg {
+    transform: translateY(25%);
+}
+
+.product-item button {
+    outline: none;
+    width: 100%;
+    padding-block: 10px;
+    background-color: white;
+    border: 1px solid #909090;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.product-item button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.product-item:hover {
+    
+}
+
+@media only screen and (max-width: 78.75em) {
+
+    .content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content {
+        margin-inline: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 73.625em) {
+
+    .product-item img {
+        width: 180px;
+        height: auto;
+    }
+
+    .fav-list-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 46.1875em) {
+
+    .product-item img {
+        width: 180px;
+        height: auto;
+    }
+
+    .fav-list-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
