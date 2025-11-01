@@ -80,12 +80,16 @@ svg {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.product-item {
+    cursor: pointer;
+}
+
 .product-item .product-title {
     margin-block: 20px;
 }
 
 .product-item img {
-    width: 200px;
+    width: 100%;
 }
 
 .product-price .price {
@@ -162,6 +166,7 @@ svg {
     border: 1px solid #909090;
     font-size: 0.9rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .product-item button:hover {
@@ -170,8 +175,10 @@ svg {
     transition: 0.5s;
 }
 
-.product-item:hover {
-    
+.product-item .product-title:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.5s ease;
 }
 
 @media only screen and (max-width: 78.75em) {
@@ -194,10 +201,10 @@ svg {
 
 @media only screen and (min-width: 46.25em) and (max-width: 73.625em) {
 
-    .product-item img {
+    /* .product-item img {
         width: 180px;
         height: auto;
-    }
+    } */
 
     .fav-list-wrapper {
         grid-template-columns: repeat(4, 1fr);
@@ -207,10 +214,10 @@ svg {
 
 @media only screen and (max-width: 46.1875em) {
 
-    .product-item img {
+    /* .product-item img {
         width: 180px;
         height: auto;
-    }
+    } */
 
     .fav-list-wrapper {
         grid-template-columns: repeat(2, 1fr);
