@@ -4,13 +4,12 @@ html{
 }
 
 body{
-    font-family: 'Raleway';
     margin: 20px 20px;
 }
 
-button {
+button{
     font-size: 10px;
-    border-radius: 20px;
+    border-radius: 0px;
     padding: 10px 30px;
     background-color: rgb(241, 240, 240);
     border-width: 1px;
@@ -22,8 +21,13 @@ button a{
 }
 
 button:hover{
-    background-color: aliceblue;
-    color:#000;
+    color: white;
+    background-color: rgb(210, 210, 210);
+    transition: 0.5s;
+}
+
+button:hover a{
+    color: white;
 }
 
 li{
@@ -56,34 +60,142 @@ li{
     margin: 20px 20px;
 }
 
-.wrapper div:hover{
-    background-color:  aliceblue;
-}
-
 .product{
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
+    height: 90%;
     border: 0px solid;
-    border-radius: 10px;
-    background-color: rgb(244, 242, 242);
+    border-radius: 0px;
+    width: 90%;
 }
 
-.product img {
-    width: 80%;
+.product img{
+    width: 70%;
     height: auto;
     border-image: none;
     margin-bottom: 20px;
     border-radius: 10px;
 }
 
-.line{
+.product_name{
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product_name:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.info_product{
+    display: flex;
+    align-content: center;
+    gap: 5px;
+    width: 100%;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.info_product img{
+    padding-left: 10px;
+    width: 4rem;
+    padding-bottom: 0px;
+}
+
+.info_product .rating{
+    padding-left: 0px;
+}
+
+.types{
+    padding-left: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.fav_prod{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.love_icon{
+    width: 12px !important;
+    height: 12px !important;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.fav_prod.active .love_icon{
+    transform: scale(1.1);
+}
+
+.price{
+    font-weight: bold;
+    margin-bottom: 2.5px;
+    font-size: 18px;
+}
+
+.volume{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.volume .small, .volume .big{
+    cursor: pointer;
+}
+
+.volume .small:hover, .volume .big:hover{
+    text-decoration: underline;
+}
+
+.volume .small.active, .volume .big.active{
+    text-decoration: underline;
+}
+
+.add_cart{
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 16px;
+    border: 1px solid black;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+}
+
+.add_cart:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.show_more{
+    font-size: 14px;
     display: grid;
     place-items: center;
     max-width: auto;
     height: auto;
     margin: 20px auto;
+}
+
+button.show_more{
+    background-color: white;
+}
+
+button.show_more:hover{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
 }
 
 section{
@@ -94,20 +206,20 @@ section{
     max-width: 100%;
 }
 
-.product_section {
+.product_section{
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-.product_section h2 {
+.product_section h2{
     text-align: left;
     margin-bottom: 8px;
     font-size: 28px;
     font-weight: bold;
 }
 
-.product_section hr {
+.product_section hr{
     border: 1px solid black;
     width: 100%;
     margin-left: 0;
@@ -146,7 +258,7 @@ section{
     z-index: 2;
 }
 
-.heading {
+.heading{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +281,8 @@ section{
 }
 
 .filter button:hover{
-    background-color:  aliceblue;
+    background-color: rgb(210, 210, 210);
+    transition: 0.5s;
 }
 
 .filter_menu{
@@ -190,7 +303,7 @@ section{
     display: none;
 }
 
-.filter_menu.active {
+.filter_menu.active{
     display: block;
 }
 
@@ -199,7 +312,7 @@ section{
     text-align: left;
 }
 
-.filter_menu label {
+.filter_menu label{
     display:flex;
     align-items: center;
     gap: 5px;
@@ -233,7 +346,6 @@ section{
 
 .another_prod p{
     text-align: center;
-    
 }
 
 .another_prod h2{
@@ -252,10 +364,14 @@ section{
     position: fixed;
     top: 50px;
     left: 5px;
-    font-size: 18px;
-    border:none;
+    border: 1px solid white;
+    border-radius: 20px;
     background-color: white;
     z-index: 10;
+}
+
+.hamburger img{
+    width: 1rem;
 }
 
 .sidebar{
@@ -289,15 +405,27 @@ section{
     color: rgb(59, 59, 59)
 }
 
-@media (max-width: 700px) {
-    .wrapper {
+@media (max-width: 700px){
+    .wrapper{
         grid-template-columns: repeat(2, 1fr);
     }
-    .wrapper_other {
+    .wrapper_other{
         grid-template-columns: 1fr;
         width: 80%;
     }
-    .more_prod {
+    .product{
+        width: 80%;
+    }
+    .add_cart{
+        font-size: 1rem;
+        padding: 2px 6px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .more_prod{
         display: none;
         width: 100%;
         margin-top: 30px;
@@ -305,7 +433,7 @@ section{
     .head_page{
         transform: scale(0.8);
     }
-    .head_box {
+    .head_box{
         position: static;
         transform: none;
         width: 100%;
@@ -315,7 +443,7 @@ section{
     .head_page{
         transform: scale(0.8);
     }
-    .head_box {
+    .head_box{
         position: static;
         transform: none;
         width: 100%;
@@ -325,19 +453,19 @@ section{
     .head_page img{
         transform: scale(1.5);
     }
-    .head_box h1 {
+    .head_box h1{
         font-size: 0.8rem;
     }
-    .head_box p {
+    .head_box p{
         font-size: 0.6rem;
     }
-    .heading h2 {
+    .heading h2{
         font-size: 1.5rem;
     }
-    .filter {
+    .filter{
         width: 0.5rem;
     }
-    .filter button {
+    .filter button{
         white-space: nowrap;
         font-size: 0.6rem;
     }
