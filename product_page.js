@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const filterBtn = document.getElementById("filter_btn");
     const filterMenu = document.querySelector(".filter_menu");
     const filterButton = document.querySelectorAll(".filter_button button");
-
     filterBtn.addEventListener("click", function(e){
         e.stopPropagation();
         filterMenu.classList.toggle("active");
@@ -53,12 +52,11 @@ function toggleFav(element){
     }
 }
 
-// update_price_for_volume
+// update_price_for_product_page
 function updateprice(size){
     const product = event.target.closest(".product");
     const small = product.querySelector(".small");
     const big = product.querySelector(".big");
-
     small.classList.remove("active");
     big.classList.remove("active");
     choosevolume(size)
@@ -71,6 +69,40 @@ function updateprice(size){
         }
         else{
             price.textContent = "350.000 VND";
+            big.classList.add("active");
+        }
+    }
+}
+// update_price_for_deal_page
+function updateprice_deal(size){
+    const product = event.target.closest(".deal_product");
+    const small = product.querySelector(".small");
+    const big = product.querySelector(".big");
+    const old_price = product.querySelector(".old_price");
+    const new_price1 = product.querySelector(".sale_price1");
+    const new_price2 = product.querySelector(".sale_price2");
+    small.classList.remove("active");
+    big.classList.remove("active");
+    choosevolume(size)
+    function choosevolume(element){
+        if (element == "small"){
+            if(new_price1){
+                new_price1.textContent = "180.000 VND";
+            }
+            else{
+                new_price2.textContent = "160.000 VND";
+            }
+            old_price.textContent = "200.000 VND";
+            small.classList.add("active");
+        }
+        else{
+            if(new_price1){
+                new_price1.textContent = "315.000 VND";
+            }
+            else{
+                new_price2.textContent = "280.000 VND";
+            }
+            old_price.textContent = "350.000 VND";
             big.classList.add("active");
         }
     }
