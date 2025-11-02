@@ -1,0 +1,248 @@
+body{
+    font-size: 16px;
+    font-family: 'Raleway';
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading hr{
+    max-width: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-gap: 30px;
+    width: 90%; 
+    margin: 0 auto;
+}
+
+.deal_product{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 0px solid;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+}
+
+.deal_product img{
+    width: 70%;
+    height: auto;
+    border-image: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.deal_product:hover{
+    background-color: rgb(210, 210, 210);
+}
+
+.product_name{
+  margin: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product_name:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.info_product{
+    display: flex;
+    align-content: center;
+    width: 90%;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.info_product img{
+    padding-left: 0px;
+    width: 4rem;
+    padding-bottom: 0px;
+}
+
+.info_product .rating{
+    padding-left: 0px;
+}
+
+.types{
+    padding-left: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.fav_prod{
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 90%;
+}
+
+.love_icon{
+    width: 12px !important;
+    height: 12px !important;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.fav_prod.active .love_icon{
+    transform: scale(1.1);
+}
+
+.price{
+    font-weight: bold;
+    margin-bottom: 2.5px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+.volume{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.volume .small, .volume .big{
+    cursor: pointer;
+}
+
+.volume .small:hover, .volume .big:hover{
+    text-decoration: underline;
+}
+
+.volume .small.active, .volume .big.active{
+    text-decoration: underline;
+}
+
+.add_cart{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 14px;
+    border: 1px solid black;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+}
+
+.add_cart:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.old_price{
+    font-size: 10px;
+    text-decoration:line-through;
+}
+
+button{
+    background-color: rgb(241, 240, 240);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button a{
+    color: black;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: rgb(234, 234, 234);
+}
+
+.deal_product .sale_banner{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(180, 180, 180);
+    padding: 4px 8px;
+    display: flex;
+    align-items: left;    
+}
+
+#product1, #product2{
+    margin-top: 3rem;
+    text-decoration: underline;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 2rem;;
+}
+
+.hamburger{
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 5px;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgb(205, 205, 205);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hamburger img{
+    width: 30px;
+}
+
+.sidebar{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 100px;
+    width: 200px;
+    padding: 20px;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: left 0.5s ease;
+    overflow-y: auto;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.sidebar a{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color:rgb(152, 152, 152);
+}
+
+.sidebar a:hover{
+    color: rgb(59, 59, 59)
+}
+
+@media (max-width: 700px){
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+    .add_cart{
+        font-size: 0.8rem;
+        padding: 2px 6px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
