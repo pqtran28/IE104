@@ -205,9 +205,9 @@ button:hover{
     position: fixed;
     left: -300px;
     top: 100px;
-    width: 200px;
+    width: 150px;
     padding: 20px;
-    height: 30%;
+    height: 20%;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     transition: left 0.5s ease;
@@ -245,4 +245,5 @@ button:hover{
         justify-content: center;
         align-items: center;
     }
+
 }
