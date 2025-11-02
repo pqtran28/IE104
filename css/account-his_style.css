@@ -92,7 +92,7 @@ main {
     padding-inline: 20px;
     border-radius: 20px 20px 0 0;
     background: #F5F5F5;
-    box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .main-content ul li .active {
@@ -101,6 +101,8 @@ main {
 
 .product-card {
     display: flex;
+    gap: 20px;
+    background-color: white;
 }
 
 .product-card .product-card__img {
@@ -123,5 +125,24 @@ main {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 78.75em) {
+
+    .content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content {
+        margin-inline: 50px;
+    }
+
 }
 
