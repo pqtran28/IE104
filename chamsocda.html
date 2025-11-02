@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <button class="hamburger" onclick="toggleSidebar()"> <img src="image_prod/hamburger-menu-4.svg"> </button>
     <div class="sidebar" id="sidebar">
         <a href="#h1"> CHĂM SÓC DA </a>
         <hr>
@@ -26,7 +26,7 @@
         <div class="head_box">
             <h1 id="h1"> Chăm sóc da </h1>
             <p> Khám phá các sản phẩm chăm sóc da từ Derma.glow cho làn da khỏe!</p>
-            <button> Xem sản phẩm </button><br>
+            <button><a href="#product1"> Xem sản phẩm </a></button><br>
         </div>
         <img src="/image_prod/banner-my-pham-the-ordinary.jpg" alt="picture advertisement">
     </section>
@@ -43,6 +43,9 @@
                     <label><input type="radio" name="price"> Mặc định </label><br>
                     <label><input type="radio" name="price"> Giá tăng dần </label><br>
                     <label><input type="radio" name="price"> Giá giảm dần </label><br>
+                    <p> Dung tích </p>
+                    <label><input type="radio" name="volume"> 150ml </label><br>
+                    <label><input type="radio" name="volume"> 300ml </label><br>
                     <div class="filter_button">
                         <button> Xóa thiết lập </button>
                         <button> Áp dụng </button>
@@ -54,54 +57,142 @@
         <div class="wrapper"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
-        <button class="line show_more"> XEM THÊM </button>
+        <button class="show_more"><strong> Xem thêm </strong></button>
         <div class="wrapper more_prod"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
 
@@ -114,54 +205,142 @@
         <div class="wrapper"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
-        <button class="line show_more"> XEM THÊM </button>
+        <button class="show_more"> <strong> Xem thêm </strong> </button>
         <div class="wrapper more_prod"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
     </section>
@@ -173,54 +352,142 @@
         <div class="wrapper"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
-        <button class="line show_more"> XEM THÊM </button>
+        <button class="show_more"> <strong> Xem thêm </strong> </button>
         <div class="wrapper more_prod"> 
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
             <div class="product">
                 <img src = "/image_prod/product.webp" alt="product picture">
-                <p> Kem dưỡng sáng da, mờ thâm mụn </p>
-                <p> 200.000 vnd </p>
-                <p><button> <a href="#"> MUA NGAY </a></button></p>
+                <div class="product_name"> Kem dưỡng sáng da, mờ thâm mụn </div>
+                <div class="info_product">
+                    <img src="/image_prod/star.svg" alt="star icon"> 
+                    <span class="rating"> 4.5 (1123) </span>
+                </div>
+                <div class="types"> Cấp ẩm, làm dịu </div>
+                <div class="fav_prod" onclick="toggleFav(this)">
+                    <img class="love_icon" src="/image_prod/heart.svg">
+                </div>
+                <div class="price" id="price"> 200.000 VND </div>
+                <div class="volume">
+                    <span class="small" onclick="updateprice('small')"> 150ml </span> / <span class="big" onclick="updateprice('big')"> 300ml </span>
+                </div>
+                <p><a href="#" class="add_cart"><strong> Thêm vào giỏ hàng </strong></a></p>
             </div>
         </div>
     </section>
@@ -258,6 +525,3 @@
     </section>
 </body>
 </html>
-
-
-
