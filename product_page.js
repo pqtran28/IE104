@@ -1,17 +1,17 @@
 // sidebar
-function toggleSidebar() {
+function toggleSidebar(){
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("active");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function(){
     //showmore
     const showmore = document.querySelectorAll(".show_more");
-    showmore.forEach(function(button) {
-        button.addEventListener("click", function() {
+    showmore.forEach(function(button){
+        button.addEventListener("click", function(){
             const section = button.closest(".product_section");
             const moreProducts = section.querySelector(".more_prod");
-            if (moreProducts) {
+            if (moreProducts){
                 moreProducts.style.display = "grid";
                 button.style.display = "none"; 
             }
@@ -23,20 +23,55 @@ document.addEventListener("DOMContentLoaded", function() {
     const filterMenu = document.querySelector(".filter_menu");
     const filterButton = document.querySelectorAll(".filter_button button");
 
-    filterBtn.addEventListener("click", function(e) {
+    filterBtn.addEventListener("click", function(e){
         e.stopPropagation();
         filterMenu.classList.toggle("active");
     });
 
-    document.addEventListener("click", function(e) {
-        if (!filterMenu.contains(e.target) && !filterBtn.contains(e.target)) {
+    document.addEventListener("click", function(e){
+        if (!filterMenu.contains(e.target) && !filterBtn.contains(e.target)){
             filterMenu.classList.remove("active");
         }
     });
 
-    filterButton.forEach(function(btn) {
+    filterButton.forEach(function(btn){
         btn.addEventListener("click", function(){
         filterMenu.classList.remove("active");
         });
     });
 });
+
+//love_prod
+function toggleFav(element){
+    const img = element.querySelector(".love_icon");
+    const isactive = element.classList.toggle("active");
+    if (isactive){
+        img.src = "/image_prod/heart_full.svg";
+    }
+    else{
+        img.src = "/image_prod/heart.svg";
+    }
+}
+
+// update_price_for_volume
+function updateprice(size){
+    const product = event.target.closest(".product");
+    const small = product.querySelector(".small");
+    const big = product.querySelector(".big");
+
+    small.classList.remove("active");
+    big.classList.remove("active");
+    choosevolume(size)
+    //change_price
+    function choosevolume(element){
+        const price = product.querySelector(".price");
+        if (element == "small"){
+            price.textContent = "200.000 VND";
+            small.classList.add("active");
+        }
+        else{
+            price.textContent = "350.000 VND";
+            big.classList.add("active");
+        }
+    }
+}
