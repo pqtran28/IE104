@@ -1,18 +1,20 @@
 html{
     scroll-behavior: smooth;
-    font-family: 'Raleway';
+    font-family: "Raleway";
 }
 
 body{
     margin: 20px 20px;
+    font-size: 18px;
 }
 
 button{
-    font-size: 10px;
+    font-size: 18px;
     border-radius: 0px;
     padding: 10px 30px;
     background-color: rgb(241, 240, 240);
     border-width: 1px;
+    font-family: "Raleway";
 }
 
 button a{
@@ -164,7 +166,7 @@ li{
 
 .add_cart{
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 16px;
     border: 1px solid black;
     text-decoration: none;
@@ -180,7 +182,7 @@ li{
 }
 
 .show_more{
-    font-size: 14px;
+    font-size: 18px;
     display: grid;
     place-items: center;
     max-width: auto;
@@ -212,6 +214,24 @@ section{
     padding: 0 20px;
 }
 
+.box{
+    padding: 10px;
+    width: 30%;
+    margin: 20px auto;
+}
+
+.another_prod{
+    margin: 20px 20px;
+}
+
+.another_prod p{
+    text-align: center;
+}
+
+.another_prod h2{
+    text-align: center;
+}
+
 .product_section h2{
     text-align: left;
     margin-bottom: 8px;
@@ -220,7 +240,7 @@ section{
 }
 
 .product_section hr{
-    border: 1px solid black;
+    border: 0.2px solid black;
     width: 100%;
     margin-left: 0;
     margin-bottom: 20px;
@@ -278,6 +298,7 @@ section{
     border: 1px solid black;
     border-radius: 10px;
     background-color:rgb(241, 240, 240);
+    font-size: 12px;
 }
 
 .filter button:hover{
@@ -297,10 +318,6 @@ section{
     padding: 10px;
     min-width: 150px;
     top: 110%;
-}
-
-#filter_off{
-    display: none;
 }
 
 .filter_menu.active{
@@ -340,38 +357,22 @@ section{
     width: 1rem;
 }
 
-.another_prod{
-    margin: 20px 20px;
-}
-
-.another_prod p{
-    text-align: center;
-}
-
-.another_prod h2{
-    text-align: center;
-}
-
-.box{
-    padding: 10px;
-    width: 100%;
-    background-color:  #bdbdbd;        
-    border-color: black;
-}
-
 .hamburger{
     display: block;
     position: fixed;
     top: 50px;
     left: 5px;
+    padding: 10px;
+    padding-bottom: 5px;
     border: 1px solid white;
-    border-radius: 20px;
-    background-color: white;
+    border-radius: 50%;
+    background-color: rgb(205, 205, 205);
     z-index: 10;
+    cursor: pointer;
 }
 
 .hamburger img{
-    width: 1rem;
+    width: 30px;
 }
 
 .sidebar{
@@ -406,6 +407,12 @@ section{
 }
 
 @media (max-width: 700px){
+    body, .price{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
+    }
     .wrapper{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -417,7 +424,7 @@ section{
         width: 80%;
     }
     .add_cart{
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 2px 6px;
         width: 80%;
         margin: 0 auto;
@@ -425,10 +432,24 @@ section{
         justify-content: center;
         align-items: center;
     }
+    .show_more{
+        font-size: 0.8rem;
+    }
+    .product_section h2{
+        font-size: 1.5rem;
+        margin-top: 0px;
+    }
+    .product_section img{
+        margin: 20px auto;
+        width:80%;
+    }
     .more_prod{
         display: none;
         width: 100%;
         margin-top: 30px;
+    }
+    .box{
+        width: 80%;
     }
     .head_page{
         transform: scale(0.8);
@@ -439,6 +460,7 @@ section{
         width: 100%;
         margin-top: 40px;
         margin-left:none;
+        font-size: 16px;
     }
     .head_page{
         transform: scale(0.8);
@@ -450,23 +472,33 @@ section{
         margin-top: 20px;
         margin-left:none;
     }
+    .head_box button{
+        padding: 10px 20px;
+    }
     .head_page img{
         transform: scale(1.5);
     }
     .head_box h1{
-        font-size: 0.8rem;
+        font-size: 2rem;
     }
     .head_box p{
-        font-size: 0.6rem;
-    }
-    .heading h2{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .filter{
-        width: 0.5rem;
+        width: 10%;
     }
-    .filter button{
+    .another_prod h2{
+        font-size: 1.5rem;
+    }
+    #filter_btn{
         white-space: nowrap;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        height: 35px;
+        padding: 20px;;
+    }
+    #filter_btn img{
+        width: 50%;
     }
 }
