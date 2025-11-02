@@ -79,10 +79,11 @@ main {
     position: relative;
 }
 
-.delivered-list {
+.delivered-list, .in-transfer, .processing {
     position: absolute;
     width: 100%;
     margin-block: 20px;
+    display: none;
 }
 
 .main-content ul {
@@ -192,19 +193,7 @@ main {
     transition: 0.5s ease;
 }
 
-/* .hidden {
-    display: none;
-} */
-
-.in-transfer {
-    position: absolute;
-    width: 100%;
-    display: none;
-}
-
-.processing {
-    position: absolute;
-    width: 100%;
+.hidden-list {
     display: none;
 }
 
@@ -215,6 +204,10 @@ main {
 
 .order-history__bar li:hover {
     font-weight: 600;
+}
+
+.active-list {
+    display: block;
 }
 
 
