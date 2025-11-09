@@ -1,77 +1,80 @@
-(function() {
-  const groupBanner = document.querySelector(".group-banner");
-  let banners = document.querySelectorAll(".group-banner__banner");
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
+const favBox = document.querySelectorAll('.fav-box');
+const favArr = document.querySelectorAll('.fav-box svg:nth-of-type(2)');
 
-  const firstClone = banners[0].cloneNode(true);
-  const lastClone = banners[banners.length - 1].cloneNode(true);
+favBox.forEach(box => {
+    const fav = box.querySelector('svg:nth-of-type(2)');
+    const notfav = box.querySelector('svg:first-of-type');
 
-  firstClone.id = "first-clone";
-  lastClone.id = "last-clone";
+    // Ban đầu: hiển thị notfav, ẩn fav
+    fav.classList.add('hidden');
+    notfav.classList.remove('hidden');
 
-  groupBanner.appendChild(firstClone);
-  groupBanner.prepend(lastClone);
+    notfav.addEventListener('click', () => {
+        notfav.classList.add('hidden');
+        fav.classList.remove('hidden');
+    });
 
-  banners = document.querySelectorAll(".group-banner__banner");
-  const total = banners.length;
-  let index = 1;
+    fav.addEventListener('click', () => {
+        fav.classList.add('hidden');
+        notfav.classList.remove('hidden');
+    });
+});
 
-  function getBannerWidth() {
-    return banners[index].clientWidth;
-  }
 
-  function setTranslate() {
-    groupBanner.style.transform = `translateX(-${getBannerWidth() * index}px)`;
-  }
-  setTranslate();
+// price
+document.querySelectorAll('.product-price').forEach(box => {
+  const priceEl = box.querySelector('.price');
+  const ml1 = box.querySelector('.ml1');
+  const ml2 = box.querySelector('.ml2');
 
-  function nextBanner() {
-    if (index >= total - 1) return;
-    index++;
-    groupBanner.style.transition = "transform 0.5s ease-in-out";
-    setTranslate();
-  }
+  ml1.style.fontWeight = 500;
+  // Lấy giá gốc từ text ban đầu
+  const basePrice = parseInt(priceEl.textContent.replace(/\D/g, ''));
 
-  function prevBanner() {
-    if (index <= 0) return;
-    index--;
-    groupBanner.style.transition = "transform 0.5s ease-in-out";
-    setTranslate();
-  }
-
-  groupBanner.addEventListener("transitionend", () => {
-    if (banners[index].id === "first-clone") {
-      groupBanner.style.transition = "none";
-      index = 1;
-      setTranslate();
-    }
-    if (banners[index].id === "last-clone") {
-      groupBanner.style.transition = "none";
-      index = total - 2;
-      setTranslate();
-    }
+  ml1.addEventListener('click', () => {
+    priceEl.textContent = basePrice.toLocaleString('vi-VN') + 'vnđ';
+    ml2.style.fontWeight = 'normal';
+    ml1.style.fontWeight = 500;
   });
 
-  nextBtn.addEventListener("click", nextBanner);
-  prevBtn.addEventListener("click", prevBanner);
-
-  let autoSlide = setInterval(nextBanner, 4000);
-
-  document.querySelector(".carousel-banner").addEventListener("mouseenter", () => {
-    clearInterval(autoSlide);
+  ml2.addEventListener('click', () => {
+    const newPrice = basePrice + 50000;
+    priceEl.textContent = newPrice.toLocaleString('vi-VN') + 'vnđ';
+    ml2.style.fontWeight = 500;
+    ml1.style.fontWeight = 'normal';
   });
+});
 
-  document.querySelector(".carousel-banner").addEventListener("mouseleave", () => {
-    autoSlide = setInterval(nextBanner, 4000);
-  });
+// slider sp
+const track = document.querySelector('.fav-list-wrapper');
+const items = document.querySelectorAll('.product-card');
+const btnPrev = document.querySelector('.product-slider .prev');
+const btnNext = document.querySelector('.product-slider .next');
 
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      groupBanner.style.transition = "none";
-      setTranslate();
-    }, 200);
-  });
-})();
+let i = 0;
+const itemsPerScreen = 4;
+const gap = 20; // px
+const maxIndex = items.length - itemsPerScreen;
+
+function updateSlider() {
+  const itemWidth = items[0].offsetWidth;
+  console.log(itemWidth);
+  const shift = i * (itemWidth + gap);
+  track.style.transform = `translateX(-${shift}px)`;
+}
+
+// Next
+btnNext.addEventListener('click', () => {
+  if (i < maxIndex) {
+    i++;
+    updateSlider();
+  }
+});
+
+// Prev
+btnPrev.addEventListener('click', () => {
+  if (i > 0) {
+    i--;
+    updateSlider();
+  }
+});
