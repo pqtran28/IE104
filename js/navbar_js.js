@@ -1,7 +1,38 @@
+// Đăng nhập
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+const userBtn = document.querySelector('.login-signin');
+const notifyBtn = document.querySelector(".notifyBtn");
+const cartBtn = document.querySelector(".cartBtn");
+
+// Nếu đã đăng nhập
+if (currentUser) {
+  userBtn.textContent = currentUser.username;
+}
+
+// Xử lý click vào giỏ hàng
+cartBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (currentUser) {
+    cartBtn.href = "#";
+  } else {
+    cartBtn.href = "/accounts/account-login.html";
+    console.log("hello");
+    window.location.href = "/accounts/account-login.html";
+  }
+});
+
+// Xử lý click vào thông báo
+// notifyBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   if (!currentUser) {
+//     window.location.href = "/accounts/account-login.html";
+//   }
+// });
+
 const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
 let index = 0;
 
-// chạy banner đầu trang
+// chạy banner đầu trang  
 function showNextText() {
     texts[index].classList.remove('active');
     index = (index + 1) % texts.length;
@@ -59,12 +90,12 @@ const navbar_dropdownlist = document.querySelector('.navbar-mobile__menu');
 const menu_close = document.querySelector('.menu-close');
 
 menu_toggle.addEventListener('click', () => {
-    navbar_dropdownlist.style.display = 'block';
+    navbar_dropdownlist.classList.toggle('menu-toggle-active');
     document.body.classList.toggle('no-scroll');
 });
 
 menu_close.addEventListener('click', () => {
-    navbar_dropdownlist.style.display = 'none';
+    navbar_dropdownlist.classList.toggle('menu-toggle-active');
     document.body.classList.toggle('no-scroll');
 })
 
@@ -82,8 +113,14 @@ let isOpen = false;
 if (noti) {
   noti.addEventListener('click', (e) => {
     e.stopPropagation(); // tránh lan ra ngoài
-    isOpen = !isOpen;
+    if (!currentUser) {
+      // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
+      window.location.href = "/accounts/account-login.html";
+    }
+    else {
+      isOpen = !isOpen;
     noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+    }
   });
 }
 
@@ -91,8 +128,14 @@ if (noti) {
 noti_mobile.forEach(n => {
   n.addEventListener('click', (e) => {
     e.stopPropagation();
-    isOpen = !isOpen;
-    noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+    if (!currentUser) {
+      // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
+      window.location.href = "/accounts/account-login.html";
+    }
+    else {
+      isOpen = !isOpen;
+      noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+    }
   });
 });
 

@@ -48,5 +48,6 @@ const logoutBtn = document.querySelector('.logout-btn');
 
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
+  sessionStorage.removeItem('currentUser');
   window.location.href = "/homepage/homepage.html";
 });

@@ -303,9 +303,8 @@ ul {
     background-color: white;
     height: 100vh;
     top: 0;
-    left: 0;
-    display: none;
-    transition: left ease-in 10s;
+    left: -100%;
+    transition: left 0.5s ease-in-out;
 }
 
 .navbar-mobile .menu-close img {
@@ -398,6 +397,15 @@ ul {
 
 .navbar-mobile__icons img {
     border-radius: 5px;
+}
+
+.notifyBtn {
+    cursor: pointer;
+}
+
+.menu-toggle-active {
+    left: 0;
+    right: 0;
 }
 
 @media only screen and (max-width: 78.5625em) {
