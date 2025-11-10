@@ -77,6 +77,7 @@ main {
 
 .main-wrapper {
     position: relative;
+    min-height: 900px;
 }
 
 .delivered-list, .in-transfer, .processing {
@@ -208,6 +209,10 @@ main {
 
 .active-list {
     display: block;
+}
+
+.content {
+    margin-bottom: 200px;
 }
 
 

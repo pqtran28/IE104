@@ -1058,38 +1058,6 @@
             © Derma.glow Beauty Group Inc. 2025. All rights reserved.
         </div>
     </footer>
-
-
-    <script>
-        const track_beautyblog = document.querySelector('.beauty-blog');
-        const cards = [...track_beautyblog.children]; // spread to make a static copy
-        // Duplicate cards only once
-        for (const card of cards) {
-            track_beautyblog.appendChild(card.cloneNode(true))
-        }
-    </script>
-    <script>
-        // Thêm class ẩn ban đầu
-        const elements = document.querySelectorAll('body > *');
-        elements.forEach(el => {
-            el.classList.add('hidden');
-        });
-
-        // Tạo observer
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // chỉ hiện 1 lần
-                }
-            });
-        }, {
-            threshold: 0.15 // xuất hiện 15% là bắt đầu hiệu ứng
-        });
-
-        // Quan sát tất cả phần tử
-        elements.forEach(el => observer.observe(el));
-    </script>
 </body>
 
 </html>

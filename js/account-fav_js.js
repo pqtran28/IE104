@@ -41,3 +41,12 @@ document.querySelectorAll('.product-price').forEach(box => {
     ml1.style.fontWeight = 'normal';
   });
 });
+
+
+// Đăng xuất
+const logoutBtn = document.querySelector('.logout-btn');
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "/homepage/homepage.html";
+});

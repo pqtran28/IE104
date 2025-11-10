@@ -78,3 +78,31 @@ btnPrev.addEventListener('click', () => {
     updateSlider();
   }
 });
+
+// carousel infinite beautiblog
+const track_beautyblog = document.querySelector('.beauty-blog');
+const cards = [...track_beautyblog.children];
+for (const card of cards) {
+  track_beautyblog.appendChild(card.cloneNode(true))
+}
+
+// Thêm class ẩn ban đầu
+const elements = document.querySelectorAll('body > *');
+elements.forEach(el => {
+  el.classList.add('hidden');
+});
+
+// Tạo observer
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // chỉ hiện 1 lần
+    }
+  });
+}, {
+  threshold: 0.15 // xuất hiện 15% là bắt đầu hiệu ứng
+});
+
+// Quan sát tất cả phần tử
+elements.forEach(el => observer.observe(el));

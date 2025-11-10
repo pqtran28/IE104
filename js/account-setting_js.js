@@ -163,3 +163,11 @@ function updateSubPaymentBox(selectedMethod) {
     });
   });
 }
+
+// Đăng xuất
+const logoutBtn = document.querySelector('.logout-btn');
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "/homepage/homepage.html";
+});

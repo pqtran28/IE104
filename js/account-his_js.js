@@ -35,3 +35,11 @@ processingTab.addEventListener('click', () => {
     processingList.classList.add('active-list');
     processingTab.style.fontWeight = 600;
 });
+
+// Đăng xuất
+const logoutBtn = document.querySelector('.logout-btn');
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.removeItem("currentUser");
+  window.location.href = "/homepage/homepage.html";
+});
