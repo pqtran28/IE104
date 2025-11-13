@@ -132,6 +132,7 @@ header {
 .navbar__logo {
     height: 100%;
     margin-left: 2rem;
+    cursor: pointer;
 }
 
 .navbar__logo img {
@@ -208,6 +209,7 @@ header {
 .navbar__bottom--logo {
     margin-bottom: 10px;
     width: 90px;
+    cursor: pointer;
 }
 
 header ul {

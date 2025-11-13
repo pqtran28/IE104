@@ -1,16 +1,11 @@
-localStorage.setItem('currentUser', JSON.stringify({
-    id: 1,
-    username: 'Eira',
-    email: 'eira@example.com'
-}));
-
-// Đăng nhập
+  // Đăng nhập
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const userBtn = document.querySelector('.login-signin');
 const notifyBtn = document.querySelector(".notifyBtn");
 const cartBtn = document.querySelector(".cartBtn");
 const navUser = document.querySelector('.navbar-username');
 const userBtnAll = document.querySelector('.navbar__right button');
+const userMobile = document.querySelectorAll('.login-mobile')
 
 // Nếu đã đăng nhập
 if (currentUser) {
@@ -25,6 +20,18 @@ else {
   window.location.href = "/accounts/account-login.html";
   });
 }
+
+userMobile.forEach(element => {
+  element.addEventListener('click', () => {
+    if(currentUser) {
+      window.location.href = "/accounts/account-setting.html";
+    }
+    else {
+      window.location.href = "/accounts/account-login.html";
+    }
+  })
+
+});
 
 // Xử lý click vào giỏ hàng
 cartBtn.addEventListener("click", (e) => {
@@ -319,4 +326,15 @@ document.addEventListener('click', (e) => {
     openSearch = false;
   }
 });
+
+const navbarLogo = document.querySelector('.navbar__logo');
+const navbarbottomLogo = document.querySelector('.navbar__bottom--logo');
+
+navbarLogo.addEventListener('click', () => {
+  window.location.href = '/homepage/homepage.html';
+})
+
+navbarbottomLogo.addEventListener('click', () => {
+  window.location.href = '/homepage/homepage.html';
+})
 
