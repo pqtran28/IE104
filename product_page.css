@@ -428,8 +428,11 @@ section{
         grid-template-columns: 1fr;
         width: 80%;
     }
-    .product {
+    .product{
         width: 100%;
+    }
+    .fav-prod{
+        margin-left: 85%;
     }
     .add-cart{
         font-size: 0.8rem;
@@ -1142,3 +1145,4 @@ ul {
         width: 80vw;
     }
 }
+
