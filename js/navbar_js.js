@@ -1,4 +1,10 @@
-  // Đăng nhập
+
+
+
+
+
+
+// Đăng nhập
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const userBtn = document.querySelector('.login-signin');
 const notifyBtn = document.querySelector(".notifyBtn");
@@ -30,7 +36,6 @@ userMobile.forEach(element => {
       window.location.href = "/accounts/account-login.html";
     }
   })
-
 });
 
 // Xử lý click vào giỏ hàng
@@ -55,16 +60,16 @@ notifyBtn.addEventListener("click", (e) => {
 
 
 const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
-let index = 0;
+let indexBanner = 0;
 
 // chạy banner đầu trang  
 function showNextText() {
-  texts[index].classList.remove('active');
-  index = (index + 1) % texts.length;
-  texts[index].classList.add('active');
+  texts[indexBanner].classList.remove('active');
+  indexBanner = (indexBanner + 1) % texts.length;
+  texts[indexBanner].classList.add('active');   
 }
 
-texts[index].classList.add('active');
+texts[indexBanner ].classList.add('active');
 setInterval(showNextText, 3000);
 
 // Hover vào hiện list spham:
@@ -124,6 +129,16 @@ menu_toggle.addEventListener('click', () => {
       noScroll = true;
     }
   inMenu = true;
+  if (inMenu && currentUser) {
+  let login_out_menu = document.querySelector('#login_out_menu');
+  if (login_out_menu) {
+    login_out_menu.textContent = 'Đăng xuất';
+    login_out_menu.href = '/homepage/homepage.html';
+    login_out_menu.addEventListener('click', () => {
+      localStorage.removeItem('currentUser');
+    })
+  }
+}
 });
 
 menu_close.addEventListener('click', () => {
@@ -261,16 +276,6 @@ function initSearchFeature(selector) {
       renderResults(filtered);
     }
   });
-
-  // --- Khi click icon tìm kiếm ---
-  // searchBtn.addEventListener('click', () => {
-  //   const keyword = input.value.trim();
-  //   if (!keyword) {
-  //     inputCmd.style.display = 'block';
-  //     return;
-  //   }
-  //   alert(`Tìm kiếm: ${keyword}`);
-  // });
 
   closeBtn?.addEventListener('click', () => {
     input.value = '';

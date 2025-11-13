@@ -106,6 +106,7 @@ header {
     width: 30%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .navbar__right a {
@@ -411,14 +412,13 @@ header .content__img img {
 .navbar__search-suggestion {
     position: absolute;
     top: 130%;
-    width: 50vw;
+    width: 50vw;    
     border: 0.5px solid #646363;
     transform: translateX(-20%);
     z-index: 1000;
-    background-color: rgba(217, 217, 217, 0.5);
+    background-color: rgba(217, 217, 217);
     border-radius: 15px;
     overflow: hidden;
-    opacity: 0.8;
 }
 
 .navbar__search-suggestion>p {
@@ -627,6 +627,10 @@ body.no-scroll {
 .navbar button:hover .navbar-username {
     color: white;
 }   
+
+button.login-btn {
+    padding-inline: 10px;
+}
 
 @media only screen and (max-width: 78.5625em) {
 

@@ -25,8 +25,8 @@
             </div>
             <div class="navbar__top">
                 <div class="navbar__left">
-                    <button class="btn btn-outline">Danh sách cửa hàng</button>
-                    <button class="btn btn-outline">Hỗ trợ</button>
+                    <button class="btn btn-outline btn-decor">Danh sách cửa hàng</button>
+                    <button class="btn btn-outline btn-decor">Hỗ trợ</button>
                 </div>
 
                 <div class="navbar__logo">
@@ -34,12 +34,46 @@
                 </div>
 
                 <div class="navbar__right">
-                    <button class="btn btn-outline">
+                    <button class="btn btn-outline btn-decor login-btn">
                         <img src="/components/components-imgs/login.svg" alt="login-button">
-                        Đăng nhập/Đăng ký
+                        <a href="/accounts/account-login.html" class="login-signin">
+                            <span class="navbar-username">Đăng nhập</span>
+                        </a>
                     </button>
-                    <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt="gio hang"></a>
-                    <a href="#"><img src="/components/components-imgs/notification-icon.svg" alt="thong bao"></a>
+                    <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt="gio hang" class="cartBtn"></a>
+                    <div class="notifyBtn">
+                        <img src="/components/components-imgs/notification-icon.svg" alt="thong bao">
+                        <!-- pop up thông báo -->
+                        <div class="notification-popup">
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="navbar__bottom">
@@ -51,8 +85,26 @@
                     <a href="#">Hot Deals!</a>
                 </div>
                 <div class="navbar__search">
-                    <img src="/components/components-imgs/search-icon.svg" alt="">
+                    <img src="/components/components-imgs/search-icon.svg" alt="" class="search-icon">
                     <input type="text" placeholder="Tìm kiếm sản phẩm">
+                    <div class="navbar__search-suggestion search-results">
+                        <div class="navbar__search-cmd input-keyword">Nhập từ khóa để tìm sản phẩm.</div>
+                        <div class="navbar__search-cmd no-results">Không tìm thấy sản phẩm nào!</div>
+                        <div class="navbar__search__rcm">
+                            <div class="navbar__search__rcm-img">
+                                <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                                <p>Dưỡng trắng</p>
+                            </div>
+                            <div class="navbar__search__rcm-img">
+                                <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                                <p>Trị nám</p>
+                            </div>
+                            <div class="navbar__search__rcm-img">
+                                <img src="/components/components-imgs/nav-dropdown.webp" alt="">
+                                <p>Sản phẩm khác</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="navbar__menu">
@@ -135,9 +187,42 @@
                     <img src="/components/components-imgs/toogle-menu.svg" alt="">
                 </button>
                 <div class="navbar-mobile__icons">
-                    <a href="#"><img src="/components/components-imgs/login.svg" alt=""></a>
-                    <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt=""></a>
+                    <img src="/components/components-imgs/search-icon.svg" alt="" class="search-icons-mobile">
+                    <img src="/components/components-imgs/login.svg" alt="" class="login-mobile">
+                    <img src="/components/components-imgs/cart-icon.svg" alt="">
+                    <img src="/components/components-imgs/notification-icon.svg" alt="">
+                    <!-- pop up thông báo -->
+                    <div class="notification-popup">
+                        <div class="notification__item">
+                            <img src="/components/components-imgs/cart-img.jpg" alt="">
+                            <div class="notification__item__description">
+                                <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                    nhanh nhất có thể.</p>
+                                <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                <p>28-09-2025</p>
+                            </div>
+                        </div>
+                        <div class="notification__item">
+                            <img src="/components/components-imgs/cart-img.jpg" alt="">
+                            <div class="notification__item__description">
+                                <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                    nhanh nhất có thể.</p>
+                                <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                <p>28-09-2025</p>
+                            </div>
+                        </div>
+                        <div class="notification__item">
+                            <img src="/components/components-imgs/cart-img.jpg" alt="">
+                            <div class="notification__item__description">
+                                <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                    nhanh nhất có thể.</p>
+                                <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                <p>28-09-2025</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    </a>
                 </div>
             </div>
 
@@ -146,23 +231,74 @@
                 <div class="navbar-mobile__menu-top navbar-mobile__top">
                     <button class="menu-close"><img src="/components/components-imgs/close-icon.svg" alt=""></button>
                     <div class="navbar-mobile__icons">
-                        <a href="#"><img src="/components/components-imgs/login.svg" alt=""></a>
-                        <a href="#"><img src="/components/components-imgs/cart-icon.svg" alt=""></a>
+                        <img src="/components/components-imgs/search-icon.svg" alt="" class="search-icons-mobile">
+                        <img src="/components/components-imgs/login.svg" alt="" class="login-mobile">
+                        <img src="/components/components-imgs/cart-icon.svg" alt="">
+                        <img src="/components/components-imgs/notification-icon.svg" alt="">
+                        <!-- pop up thông báo -->
+                        <div class="notification-popup">
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                            <div class="notification__item">
+                                <img src="/components/components-imgs/cart-img.jpg" alt="">
+                                <div class="notification__item__description">
+                                    <p>Đơn hàng XXX-YYY của bạn đã được đặt thành công và chúng tôi sẽ giao đến bạn
+                                        nhanh nhất có thể.</p>
+                                    <p>Nhấn để xem chi tiết đơn vừa đặt</p>
+                                    <p>28-09-2025</p>
+                                </div>
+                            </div>
+                        </div>
 
+                        </a>
                     </div>
                 </div>
 
-                <ul>
-                    <li><a href="#">Bestsellers<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
-                    <li><a href="#">Chăm sóc da<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
-                    <li><a href="#">Chăm sóc tóc & cơ thể<img src="/components/components-imgs/angle-right.svg"
-                                alt=""></a></li>
-                    <li><a href="#">Derma.info<img src="/components/components-imgs/angle-right.svg" alt=""></a></li>
-                    <li><a href="#">Đăng nhập</a></li>
-                </ul>
+                <div class="navbar-mobile__menu-bottom">
+                    <ul>
+                        <li><a href="#">Bestsellers<img src="/components/components-imgs/angle-right.svg" alt=""></a>
+                        </li>
+                        <li><a href="#">Chăm sóc da<img src="/components/components-imgs/angle-right.svg" alt=""></a>
+                        </li>
+                        <li><a href="#">Chăm sóc tóc & cơ thể<img src="/components/components-imgs/angle-right.svg"
+                                    alt=""></a></li>
+                        <li><a href="#">Derma.info<img src="/components/components-imgs/angle-right.svg" alt=""></a>
+                        </li>
+                        <li><a href="/accounts/account-login.html" id="login_out_menu">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--tìm kiếm sản phẩm-->
+
+            <div class="navbar-mobile__search">
+                <div class="navbar-mobile__search-area">
+                    <img src="/components/components-imgs/close-icon.svg" alt="" class="close-icon">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <img src="/components/components-imgs/search-icon.svg" alt="" id="search-mb" class="search-icon">
+                </div>
+                <div class="navbar-mobile__search-output search-results">
+                    <div class="navbar__search-cmd input-keyword">Nhập từ khóa để tìm sản phẩm.</div>
+                    <div class="navbar__search-cmd no-results">Không tìm thấy sản phẩm nào!</div>
+                </div>
             </div>
         </div>
-
     </header>
 
     <div class="homepage-video" loading="lazy">
