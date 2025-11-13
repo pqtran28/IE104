@@ -39,7 +39,6 @@ header {
     margin-bottom: 10px;
 }
 
-
 .navbar__banner--promotion-text a {
     color: white;
     opacity: 0;
@@ -94,13 +93,13 @@ header {
     margin-right: 10px;
     cursor: pointer;
     font-size: 1rem;
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar button:hover {
-    background-color: #e6e6e6;
+    background-color: black;
     border-color: #505050;
-    /* color: white; */
+    color: white;
 }
 
 .navbar__right {
@@ -115,9 +114,8 @@ header {
 
 .navbar__right button {
     margin: 0;
+    min-width: 150px;
 }
-
-
 
 .navbar__right a img {
     width: 30px;
@@ -177,6 +175,7 @@ header {
     margin-right: 20px;
     /* margin-bottom: 10px; */
     transform: translateY(-10px);
+    cursor: pointer;
 }
 
 .navbar__search>img {
@@ -251,16 +250,6 @@ header .content__img img {
 
 .navbar-mobile {
     display: none;
-}
-
-.cuoi {
-    height: 5000px;
-    background-color: aqua;
-}
-
-.cuoi2 {
-    background-color: red;
-    height: 5000px;
 }
 
 .navbar-mobile {
@@ -350,7 +339,7 @@ header .content__img img {
 
 .notification-popup {
     width: 30vw;
-    right: 50%;
+    right: 12%;
     position: absolute;
     background-color: #505050;
     border-radius: 20px;
@@ -433,9 +422,10 @@ header .content__img img {
 .navbar__search-suggestion>p {
     display: block;
     padding-bottom: 20px;
-    text-align: center;
+    text-align: left;
     padding-top: 20px;
     cursor: pointer;
+    padding-left: 50px;
 }
 
 .navbar__search__rcm img {
@@ -607,6 +597,10 @@ header .content__img img {
     height: 30px;
 }
 
+.notifyBtn {
+    position: relative;
+}
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -618,6 +612,19 @@ body.no-scroll {
 .navbar__search-suggestion {
     display: none;
 }
+
+.navbar-username {
+    white-space: nowrap;      /* Không xuống dòng */
+    overflow: hidden;         /* Ẩn phần vượt quá khung */
+    text-overflow: ellipsis; 
+    display: inline-block; 
+    max-width: 150px;
+}
+
+
+.navbar button:hover .navbar-username {
+    color: white;
+}   
 
 @media only screen and (max-width: 78.5625em) {
 
@@ -631,11 +638,14 @@ body.no-scroll {
 
     .notification-popup {
         width: 40vw;
+        top: 50px;
+        right: 45px;
     }
 }
 
 @media only screen and (max-width: 46.1875em) {
     .notification-popup {
         width: 80vw;
+        top: 50px;
     }
 }

@@ -1,12 +1,29 @@
+localStorage.setItem('currentUser', JSON.stringify({
+    id: 1,
+    username: 'Eira',
+    email: 'eira@example.com'
+}));
+
 // Đăng nhập
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const userBtn = document.querySelector('.login-signin');
 const notifyBtn = document.querySelector(".notifyBtn");
 const cartBtn = document.querySelector(".cartBtn");
+const navUser = document.querySelector('.navbar-username');
+const userBtnAll = document.querySelector('.navbar__right button');
 
 // Nếu đã đăng nhập
 if (currentUser) {
-  userBtn.textContent = currentUser.username;
+  navUser.textContent = currentUser.username;
+  userBtn.href = '/accounts/account-setting.html';
+  userBtnAll.addEventListener('click', () => {
+  window.location.href = "/accounts/account-setting.html";
+  });
+}
+else {
+  userBtnAll.addEventListener('click', () => {
+  window.location.href = "/accounts/account-login.html";
+  });
 }
 
 // Xử lý click vào giỏ hàng
@@ -22,12 +39,13 @@ cartBtn.addEventListener("click", (e) => {
 });
 
 // Xử lý click vào thông báo
-// notifyBtn.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   if (!currentUser) {
-//     window.location.href = "/accounts/account-login.html";
-//   }
-// });
+notifyBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!currentUser) {
+    window.location.href = "/accounts/account-login.html";
+  }
+});
+
 
 const texts = document.querySelectorAll('.navbar__banner--promotion-text a');
 let index = 0;
@@ -286,10 +304,12 @@ const desktopSearch = document.querySelector('.navbar__search');
 let openSearch = false;
 
 desktopSearch.addEventListener('click',(e) => {
+  if(!openSearch) {
   openSearch = true;
   desktopSearch.querySelector('.search-results').style.display = 'block';
   initSearchFeature('.navbar__search');
   e.stopPropagation(); // tránh click vào desktopSearch bị document click xử lý
+  }
 })
 
 // Click ra ngoài
@@ -299,5 +319,4 @@ document.addEventListener('click', (e) => {
     openSearch = false;
   }
 });
-
 
