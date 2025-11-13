@@ -34,9 +34,9 @@ let index = 0;
 
 // chạy banner đầu trang  
 function showNextText() {
-    texts[index].classList.remove('active');
-    index = (index + 1) % texts.length;
-    texts[index].classList.add('active');
+  texts[index].classList.remove('active');
+  index = (index + 1) % texts.length;
+  texts[index].classList.add('active');
 }
 
 texts[index].classList.add('active');
@@ -51,38 +51,41 @@ const lists = document.querySelectorAll('.navbar__menu__content--list');
 let isOverList = false;
 
 menus.forEach(menu => {
-    const type = menu.classList.contains('deals') ? 'deals' :
-        menu.classList.contains('skincare') ? 'skincare' : 'hairbody';
-    const list = document.querySelector(`.navbar__menu__content--list.${type}`);
+  const type = menu.classList.contains('deals') ? 'deals' :
+    menu.classList.contains('skincare') ? 'skincare' : 'hairbody';
+  const list = document.querySelector(`.navbar__menu__content--list.${type}`);
 
-    // Hover vào menu hiện list tương ứng
-    menu.addEventListener('mouseenter', () => {
-        wrapper.style.display = 'block';
+  // Hover vào menu hiện list tương ứng
+  menu.addEventListener('mouseenter', () => {
+    wrapper.style.display = 'block';
 
-        // Ẩn tất cả list khác
-        lists.forEach(l => l.style.display = 'none');
+    // Ẩn tất cả list khác
+    lists.forEach(l => l.style.display = 'none');
 
-        // Hiện list tương ứng
-        list.style.display = 'flex';
-        list.style.gap = '30px';
-    });
+    // Hiện list tương ứng
+    list.style.display = 'flex';
+    list.style.gap = '30px';
+  });
 
-    // Khi chuột rời khỏi menu, nếu không hover vào list thì ẩn
-    menu.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-            if (!wrapper.matches(':hover')) {
-                wrapper.style.display = 'none';
-                list.style.display = 'none';
-            }
-        }, 100);
-    });
-
-    // Khi rời khỏi list thì ẩn
-    wrapper.addEventListener('mouseleave', () => {
+  // Khi chuột rời khỏi menu, nếu không hover vào list thì ẩn
+  menu.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!wrapper.matches(':hover')) {
         wrapper.style.display = 'none';
         list.style.display = 'none';
-    });
+      }
+    }, 100);
+  });
+
+  // Khi rời khỏi list thì ẩn
+  wrapper.addEventListener('mouseleave', () => {
+    wrapper.style.display = 'none';
+    list.style.display = 'none';
+  });
 });
+
+let noScroll = false;
+let inMenu = false;
 
 const menu_toggle = document.querySelector('.menu-toggle');
 const navbar_mobile_top = document.querySelector('.navbar-mobile__top');
@@ -90,19 +93,27 @@ const navbar_dropdownlist = document.querySelector('.navbar-mobile__menu');
 const menu_close = document.querySelector('.menu-close');
 
 menu_toggle.addEventListener('click', () => {
-    navbar_dropdownlist.classList.toggle('menu-toggle-active');
-    document.body.classList.toggle('no-scroll');
+  navbar_dropdownlist.classList.toggle('menu-toggle-active');
+  if (!noScroll) {
+      document.body.classList.add('no-scroll');
+      noScroll = true;
+    }
+  inMenu = true;
 });
 
 menu_close.addEventListener('click', () => {
-    navbar_dropdownlist.classList.toggle('menu-toggle-active');
-    document.body.classList.toggle('no-scroll');
+  navbar_dropdownlist.classList.toggle('menu-toggle-active');
+  if (noScroll) {
+    document.body.classList.remove('no-scroll');
+    noScroll = false;
+  }
+  inMenu = false;
 })
 
 // Phần tử desktop
-const noti = document.querySelector('.navbar__right > a:last-of-type');
+const noti = document.querySelector('.notifyBtn');
 // Phần tử mobile (có thể nhiều)
-const noti_mobile = document.querySelectorAll('.navbar-mobile__icons > a:last-of-type');
+const noti_mobile = document.querySelectorAll('.navbar-mobile__icons > img:last-of-type');
 // Tất cả popup
 const noti_popup = document.querySelectorAll('.notification-popup');
 
@@ -119,7 +130,7 @@ if (noti) {
     }
     else {
       isOpen = !isOpen;
-    noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
+      noti_popup.forEach(p => p.style.display = isOpen ? 'block' : 'none');
     }
   });
 }
@@ -150,4 +161,143 @@ document.addEventListener('click', (e) => {
     isOpen = false;
   }
 });
+
+// tìm kiếm
+const mobileSearchBtn = document.querySelectorAll('.search-icons-mobile');
+const searchMobile = document.querySelector('.navbar-mobile__search');
+const closeSearch = document.querySelector('.navbar-mobile__search .close-icon');
+
+mobileSearchBtn.forEach(searchBtn => {
+  searchBtn.addEventListener('click', () => {
+    searchMobile.classList.remove('hidden');
+    searchMobile.classList.add('active');
+    if (!noScroll) {
+      document.body.classList.add('no-scroll');
+      noScroll = true;
+    }
+  })
+});
+
+closeSearch.addEventListener('click', () => {
+  searchMobile.classList.remove('active');
+  searchMobile.classList.add('hidden');
+  if (noScroll && !inMenu) {
+      document.body.classList.remove('no-scroll');
+      noScroll = false;
+    }
+})
+
+// HÀM TÌM KIẾM
+
+function initSearchFeature(selector) {
+  const container = document.querySelector(selector);
+  if (!container) return;
+
+  const input = container.querySelector('input');
+  const closeBtn = container.querySelector('.close-icon');
+  const searchBtn = container.querySelector('.search-icon'); // #search-mb hoặc #search-dt
+  const outputBox = container.querySelector('.search-results');
+  const noResults = container.querySelector('.no-results');
+  const inputCmd = container.querySelector('.input-keyword');
+
+  // --- Giả lập dữ liệu tìm kiếm ---
+  const data = [
+    'Niacinamide Zinc 10%',
+    'Kem chống nắng nâng tông',
+    'UV defender SPF50+ PA++++'
+  ];
+
+  // --- Khi nhập từ khóa ---
+  input.addEventListener('input', () => {
+    const keyword = input.value.trim().toLowerCase();
+
+    // Khi ô input trống
+    if (keyword === '') {
+      inputCmd.style.display = 'block';      // hiện gợi ý nhập
+      noResults.style.display = 'none';      // ẩn thông báo không kết quả
+      outputBox.querySelectorAll(':scope > p')?.forEach(p => p.remove());
+      return;
+    }
+
+    // Khi đang nhập
+    inputCmd.style.display = 'none';
+
+    // Lọc dữ liệu
+    const filtered = data.filter(item =>
+      item.toLowerCase().includes(keyword)
+    );
+
+    // Nếu không có kết quả
+    if (filtered.length === 0) {
+      outputBox.querySelectorAll(':scope > p')?.forEach(p => p.remove());
+      noResults.style.display = 'block';
+    } else {
+      noResults.style.display = 'none';
+      renderResults(filtered);
+    }
+  });
+
+  // --- Khi click icon tìm kiếm ---
+  // searchBtn.addEventListener('click', () => {
+  //   const keyword = input.value.trim();
+  //   if (!keyword) {
+  //     inputCmd.style.display = 'block';
+  //     return;
+  //   }
+  //   alert(`Tìm kiếm: ${keyword}`);
+  // });
+
+  closeBtn?.addEventListener('click', () => {
+    input.value = '';
+    inputCmd.style.display = 'block';
+    noResults.style.display = 'none';
+    outputBox.querySelectorAll(':scope > p')?.forEach(p => p.remove());
+  });
+
+  // --- render danh sách kết quả ---
+  function renderResults(results) {
+
+  outputBox.querySelectorAll(':scope > p').forEach(p => p.remove());
+
+  const existing = new Set(
+    Array.from(outputBox.querySelectorAll(':scope > p')).map(p => p.textContent)
+  );
+
+  results.forEach(item => {
+    if (!existing.has(item)) {
+      const p = document.createElement('p');
+      p.textContent = item;
+      outputBox.insertBefore(p, outputBox.firstChild);
+      existing.add(item);
+    }
+  });
+}
+  inputCmd.style.display = 'block';
+  noResults.style.display = 'none';
+}
+
+
+// cho mobile
+initSearchFeature('.navbar-mobile__search');
+
+// cho desktop
+const desktopSearch = document.querySelector('.navbar__search');
+
+let openSearch = false;
+
+desktopSearch.addEventListener('click',(e) => {
+  openSearch = true;
+  desktopSearch.querySelector('.search-results').style.display = 'block';
+  initSearchFeature('.navbar__search');
+  e.stopPropagation(); // tránh click vào desktopSearch bị document click xử lý
+})
+
+// Click ra ngoài
+document.addEventListener('click', (e) => {
+  if (openSearch && !desktopSearch.contains(e.target)) {
+    desktopSearch.querySelector('.search-results').style.display = 'none';
+    openSearch = false;
+  }
+});
+
 
