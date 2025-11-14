@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // Đăng nhập
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const userBtn = document.querySelector('.login-signin');
@@ -165,7 +159,6 @@ if (noti) {
   noti.addEventListener('click', (e) => {
     e.stopPropagation(); // tránh lan ra ngoài
     if (!currentUser) {
-      // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
       window.location.href = "../accounts/account-login.html";
     }
     else {
@@ -180,7 +173,6 @@ noti_mobile.forEach(n => {
   n.addEventListener('click', (e) => {
     e.stopPropagation();
     if (!currentUser) {
-      // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
       window.location.href = "../accounts/account-login.html";
     }
     else {
@@ -199,6 +191,18 @@ document.addEventListener('click', (e) => {
   ) {
     noti_popup.forEach(p => p.style.display = 'none');
     isOpen = false;
+  }
+});
+
+// giỏ hàng mobile
+const mobileCart = document.querySelectorAll('.cart-mobile');
+
+mobileCart.forEach(element => {
+  if(currentUser == '') {
+    window.location.href = '../accounts/account-login.html';
+  }
+  else {
+    window.location.href = '../cart/shopping_cart.html';
   }
 });
 
