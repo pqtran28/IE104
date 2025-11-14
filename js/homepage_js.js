@@ -90,7 +90,7 @@ const getStartedBtn = document.querySelector('.get-started');
 
 getStartedBtn?.addEventListener('click',() => {
   window.location.href = '../accounts/account-signin.html';
-})
+});
 
 const addToCartBtn = document.querySelectorAll('.product-item button');
 
@@ -98,4 +98,6 @@ addToCartBtn.addEventListener('click', ()=>{
   if(currentUser == '') {
     window.location.href = '../accounts/account-login.html';
   }
-})
+});
+
+

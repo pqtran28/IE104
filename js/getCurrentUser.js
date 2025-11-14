@@ -1,13 +1,6 @@
 function getCurrentUser() {
   const userData = localStorage.getItem('currentUser');
-  if (!userData) return null; // nếu chưa đăng nhập
-
-  try {
-    return JSON.parse(userData);
-  } catch (error) {
-    console.error('Lỗi parse dữ liệu currentUser:', error);
-    return null;
-  }
+  return userData ? JSON.parse(userData) : null;
 }
 
 function logout() {
