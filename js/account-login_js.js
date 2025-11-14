@@ -24,7 +24,7 @@ form.addEventListener('submit', function (e) {
         localStorage.setItem('loggedInUser', JSON.stringify(userData));
 
         alert('Đăng nhập thành công!');
-        window.location.href = '/accounts/account-setting.html'; // chuyển đến trang tài khoản
+        window.location.href = '../accounts/account-setting.html'; // chuyển đến trang tài khoản
     } else {
         alert('Sai tên đăng nhập hoặc mật khẩu!');
     }

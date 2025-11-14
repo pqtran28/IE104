@@ -71,7 +71,7 @@ signin_btn.addEventListener("click", function (e) {
     localStorage.setItem("currentUser", JSON.stringify(userData));
 
     form.reset();
-    window.location.href = "/accounts/account-setting.html";
+    window.location.href = "../accounts/account-setting.html";
 
   }
 });

@@ -12,7 +12,7 @@ function getCurrentUser() {
 
 function logout() {
   localStorage.removeItem('currentUser');
-  window.location.href = '/homepage/homepage.html';
+  window.location.href = '../homepage/homepage.html';
 }
 
 
