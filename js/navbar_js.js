@@ -133,7 +133,7 @@ menu_toggle.addEventListener('click', () => {
   let login_out_menu = document.querySelector('#login_out_menu');
   if (login_out_menu) {
     login_out_menu.textContent = 'Đăng xuất';
-    login_out_menu.href = '/homepage/homepage.html';
+    login_out_menu.href = '/homepage/index.html';
     login_out_menu.addEventListener('click', () => {
       localStorage.removeItem('currentUser');
     })
@@ -336,10 +336,10 @@ const navbarLogo = document.querySelector('.navbar__logo');
 const navbarbottomLogo = document.querySelector('.navbar__bottom--logo');
 
 navbarLogo.addEventListener('click', () => {
-  window.location.href = '/homepage/homepage.html';
+  window.location.href = '/homepage/index.html';
 })
 
 navbarbottomLogo.addEventListener('click', () => {
-  window.location.href = '/homepage/homepage.html';
+  window.location.href = '/homepage/index.html';
 })
 
