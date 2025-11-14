@@ -195,10 +195,10 @@ document.addEventListener('click', (e) => {
 });
 
 // giỏ hàng mobile
-const mobileCart = document.querySelectorAll('.cart-mobile');
+const mobileCart = document.querySelectorAll('.cart-mobile-navbar');
 
 mobileCart.forEach(element => {
-  if(currentUser == '') {
+  if(!currentUser) {
     window.location.href = '../accounts/account-login.html';
   }
   else {
