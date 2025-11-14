@@ -198,12 +198,14 @@ document.addEventListener('click', (e) => {
 const mobileCart = document.querySelectorAll('.cart-mobile-navbar');
 
 mobileCart.forEach(element => {
-  if(!currentUser) {
+  element.addEventListener('click', () => {
+    if(!currentUser) {
     window.location.href = '../accounts/account-login.html';
   }
   else {
     window.location.href = '../cart/shopping_cart.html';
   }
+  });
 });
 
 // tìm kiếm
