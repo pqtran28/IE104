@@ -16,24 +16,24 @@ const userMobile = document.querySelectorAll('.login-mobile')
 // Nếu đã đăng nhập
 if (currentUser) {
   navUser.textContent = currentUser.username;
-  userBtn.href = '/accounts/account-setting.html';
+  userBtn.href = '../accounts/account-setting.html';
   userBtnAll.addEventListener('click', () => {
-  window.location.href = "/accounts/account-setting.html";
+  window.location.href = "../accounts/account-setting.html";
   });
 }
 else {
   userBtnAll.addEventListener('click', () => {
-  window.location.href = "/accounts/account-login.html";
+  window.location.href = "../accounts/account-login.html";
   });
 }
 
 userMobile.forEach(element => {
   element.addEventListener('click', () => {
     if(currentUser) {
-      window.location.href = "/accounts/account-setting.html";
+      window.location.href = "../accounts/account-setting.html";
     }
     else {
-      window.location.href = "/accounts/account-login.html";
+      window.location.href = "../accounts/account-login.html";
     }
   })
 });
@@ -44,9 +44,9 @@ cartBtn.addEventListener("click", (e) => {
   if (currentUser) {
     cartBtn.href = "#";
   } else {
-    cartBtn.href = "/accounts/account-login.html";
+    cartBtn.href = "../accounts/account-login.html";
     console.log("hello");
-    window.location.href = "/accounts/account-login.html";
+    window.location.href = "../accounts/account-login.html";
   }
 });
 
@@ -54,7 +54,7 @@ cartBtn.addEventListener("click", (e) => {
 notifyBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (!currentUser) {
-    window.location.href = "/accounts/account-login.html";
+    window.location.href = "../accounts/account-login.html";
   }
 });
 
@@ -133,7 +133,7 @@ menu_toggle.addEventListener('click', () => {
   let login_out_menu = document.querySelector('#login_out_menu');
   if (login_out_menu) {
     login_out_menu.textContent = 'Đăng xuất';
-    login_out_menu.href = '/homepage/index.html';
+    login_out_menu.href = '../homepage/index.html';
     login_out_menu.addEventListener('click', () => {
       localStorage.removeItem('currentUser');
     })
@@ -166,7 +166,7 @@ if (noti) {
     e.stopPropagation(); // tránh lan ra ngoài
     if (!currentUser) {
       // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
-      window.location.href = "/accounts/account-login.html";
+      window.location.href = "../accounts/account-login.html";
     }
     else {
       isOpen = !isOpen;
@@ -181,7 +181,7 @@ noti_mobile.forEach(n => {
     e.stopPropagation();
     if (!currentUser) {
       // chưa đăng nhập thì không mở popup, chuyển về trang đăng nhập
-      window.location.href = "/accounts/account-login.html";
+      window.location.href = "../accounts/account-login.html";
     }
     else {
       isOpen = !isOpen;
@@ -336,10 +336,10 @@ const navbarLogo = document.querySelector('.navbar__logo');
 const navbarbottomLogo = document.querySelector('.navbar__bottom--logo');
 
 navbarLogo.addEventListener('click', () => {
-  window.location.href = '/homepage/index.html';
+  window.location.href = '../homepage/index.html';
 })
 
 navbarbottomLogo.addEventListener('click', () => {
-  window.location.href = '/homepage/index.html';
+  window.location.href = '../homepage/index.html';
 })
 
