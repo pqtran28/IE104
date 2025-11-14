@@ -1,3 +1,4 @@
+// Sản phẩm yêu thích (nhấn vào sản phẩm)
 const favBox = document.querySelectorAll('.fav-box');
 const favArr = document.querySelectorAll('.fav-box svg:nth-of-type(2)');
 
@@ -19,7 +20,6 @@ favBox.forEach(box => {
         notfav.classList.remove('hidden');
     });
 });
-
 
 // price
 document.querySelectorAll('.product-price').forEach(box => {
@@ -86,23 +86,16 @@ for (const card of cards) {
   track_beautyblog.appendChild(card.cloneNode(true))
 }
 
-// Thêm class ẩn ban đầu
-const elements = document.querySelectorAll('body > *');
-elements.forEach(el => {
-  el.classList.add('hidden');
-});
+const getStartedBtn = document.querySelector('.get-started');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.15 // xuất hiện 15% là bắt đầu hiệu ứng
-});
+getStartedBtn?.addEventListener('click',() => {
+  window.location.href = '../accounts/account-signin.html';
+})
 
-elements.forEach(el => observer.observe(el));
+const addToCartBtn = document.querySelectorAll('.product-item button');
 
-
+addToCartBtn.addEventListener('click', ()=>{
+  if(currentUser == '') {
+    window.location.href = '../accounts/account-login.html';
+  }
+})
