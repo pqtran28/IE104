@@ -414,6 +414,28 @@ section{
     color: rgb(59, 59, 59)
 }
 
+.volume {
+    margin-block: 10px;
+}
+
+.product p {
+    margin-block: 20px;
+    font-weight: 300;
+}
+
+.product {
+    cursor: pointer;
+}
+
+.show-more {
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.product-section h2 {
+    font-weight: 500;
+}
+
 @media (max-width: 46.1875em){
     body, .price{
         font-size: 1rem;
