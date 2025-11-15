@@ -15,6 +15,7 @@ if (currentUser) {
   window.location.href = "../accounts/account-setting.html";
   });
 }
+
 else {
   userBtnAll.addEventListener('click', () => {
   window.location.href = "../accounts/account-login.html";

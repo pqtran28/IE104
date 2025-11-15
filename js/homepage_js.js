@@ -87,10 +87,15 @@ for (const card of cards) {
 }
 
 const getStartedBtn = document.querySelector('.get-started');
-
-getStartedBtn?.addEventListener('click',() => {
+if (!currentUser) {
+  getStartedBtn.style.display = 'none';
+  getStartedBtn?.addEventListener('click',() => {
   window.location.href = '../accounts/account-signin.html';
 });
+}
+else {
+  getStartedBtn.style.display = 'block';
+}
 
 const addToCartBtn = document.querySelectorAll('.product-item button');
 
@@ -99,5 +104,4 @@ addToCartBtn.addEventListener('click', ()=>{
     window.location.href = '../accounts/account-login.html';
   }
 });
-
 
