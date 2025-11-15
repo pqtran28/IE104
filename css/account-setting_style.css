@@ -368,6 +368,12 @@ form button {
     transform: translateY(25%);
 }
 
+.cartBtn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 62.5em) {
     .content {
         margin-top: 20px;

@@ -34,17 +34,13 @@ userMobile.forEach(element => {
 });
 
 // Xử lý click vào giỏ hàng
-cartBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+cartBtn.addEventListener("click", () => {
   if (currentUser) {
-    cartBtn.href = "../cart/shopping_cart.html";
+    window.location.href = "../cart/shopping_cart.html";
   } else {
-    cartBtn.href = "../accounts/account-login.html";
-    console.log("hello");
     window.location.href = "../accounts/account-login.html";
   }
-});
-
+}); 
 // Xử lý click vào thông báo
 notifyBtn.addEventListener("click", (e) => {
   e.preventDefault();
