@@ -99,9 +99,11 @@ else {
 
 const addToCartBtn = document.querySelectorAll('.product-item button');
 
-addToCartBtn.addEventListener('click', ()=>{
-  if(currentUser == '') {
+addToCartBtn.forEach(element => {
+  element.addEventListener('click', () => {
+    if(!currentUser) {
     window.location.href = '../accounts/account-login.html';
   }
+  });
 });
 
