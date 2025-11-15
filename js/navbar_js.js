@@ -37,7 +37,7 @@ userMobile.forEach(element => {
 cartBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (currentUser) {
-    cartBtn.href = "#";
+    cartBtn.href = "../cart/shopping_cart.html";
   } else {
     cartBtn.href = "../accounts/account-login.html";
     console.log("hello");

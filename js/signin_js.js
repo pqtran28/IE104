@@ -62,10 +62,10 @@ signin_btn.addEventListener("click", function (e) {
     password: pwInput.value,
   };
 
-  let loggedInUsers = JSON.parse(localStorage.getItem("loggedInUsers")) || [];
-  loggedInUsers.push(userData);
+  let verifiedUsers = JSON.parse(localStorage.getItem("verifiedUsers")) || [];
+  verifiedUsers.push(userData);
 
-  localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsers));
+  localStorage.setItem("verifiedUsers", JSON.stringify(verifiedUsers));
   localStorage.setItem("currentUser", JSON.stringify(userData));
 
   form.reset();
