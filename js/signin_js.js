@@ -8,25 +8,29 @@ const confirmError = document.getElementById("notmatch-pw");
 const signin_btn = document.querySelector('.register-btn');
 const usernameInput = document.querySelector('input[name="username"]');
 
-let finished = false;
-
-function hidden_error(emailError, pwError, confirmError) {
-  emailError.style.display = "none";
-  pwError.style.display = "none";
-  confirmError.style.display = "none";
-}
-
-// Hàm check định dạng email
+// ====================== VALIDATION FUNCTIONS =======================
 function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
-// Hàm check mật khẩu đủ mạnh
 function validatePassword(pw) {
   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
   return regex.test(pw);
 }
+
+// ====================== LIVE INPUT VALIDATION =======================
+emailInput.addEventListener("input", () => {
+  if (validateEmail(emailInput.value)) emailError.style.display = "none";
+});
+
+pwInput.addEventListener("input", () => {
+  if (validatePassword(pwInput.value)) pwError.style.display = "none";
+});
+
+confirmInput.addEventListener("input", () => {
+  if (pwInput.value === confirmInput.value) confirmError.style.display = "none";
+});
 
 // ====================== SUBMIT =======================
 signin_btn.addEventListener("click", function (e) {
@@ -49,7 +53,7 @@ signin_btn.addEventListener("click", function (e) {
     valid = false;
   }
 
-  // Nếu chưa hợp lệ → dừng
+  // Nếu chưa hợp lệ
   if (!valid) return;
 
   // ====================== SAVE USER =======================
