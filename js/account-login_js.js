@@ -6,23 +6,19 @@ form.addEventListener('submit', function (e) {
     const username = form.username.value.trim();
     const password = form.password.value.trim();
     const remember = form.remember.checked;
+    let loggedInUsers = JSON.parse(localStorage.getItem("loggedInUsers")) || [];
 
-    // Giả lập tài khoản hợp lệ
-    const validUser = {
-        username: 'admin',
-        password: '123'
-    };
+    const found = loggedInUsers.find(user => 
+    user.username === username && user.password === password
+    );
 
     // Kiểm tra thông tin đăng nhập
-    if (username === validUser.username && password === validUser.password) {
+    if (found) {
         // Lưu trạng thái đăng nhập vào localStorage
-        const userData = {
-            username,
-            remember
-        };
-
-        localStorage.setItem('loggedInUser', JSON.stringify(userData));
         localStorage.setItem('currentUser', JSON.stringify(userData));
+        loggedInUsers.push({ username, password });
+        localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsers));
+        
         window.location.href = '../accounts/account-setting.html'; // chuyển đến trang tài khoản
     } else {
         alert('Sai tên đăng nhập hoặc mật khẩu!');

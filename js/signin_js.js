@@ -8,7 +8,7 @@ const confirmError = document.getElementById("notmatch-pw");
 const signin_btn = document.querySelector('.register-btn');
 const usernameInput = document.querySelector('input[name="username"]');
 
-// Ẩn lỗi ban đầu
+let finished = false;
 
 function hidden_error(emailError, pwError, confirmError) {
   emailError.style.display = "none";
@@ -28,7 +28,7 @@ function validatePassword(pw) {
   return regex.test(pw);
 }
 
-// Khi người dùng nhấn submit
+// ====================== SUBMIT =======================
 signin_btn.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -37,60 +37,33 @@ signin_btn.addEventListener("click", function (e) {
   if (!validateEmail(emailInput.value)) {
     emailError.style.display = "block";
     valid = false;
-  } else {
-    emailError.style.display = "none";
   }
 
   if (!validatePassword(pwInput.value)) {
     pwError.style.display = "block";
     valid = false;
-  } else {
-    pwError.style.display = "none";
   }
 
   if (pwInput.value !== confirmInput.value) {
     confirmError.style.display = "block";
     valid = false;
-  } else {
-    confirmError.style.display = "none";
   }
 
-  if (valid) {
-    const userData = {
-      email: emailInput.value,
-      username: usernameInput.value,
-      password: pwInput.value,
-    };
+  // Nếu chưa hợp lệ → dừng
+  if (!valid) return;
 
-    // Lưu danh sách user
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    users.push(userData);
-    localStorage.setItem("users", JSON.stringify(users));
+  // ====================== SAVE USER =======================
+  const userData = {
+    username: usernameInput.value,
+    password: pwInput.value,
+  };
 
-    // Đặt current user
-    localStorage.setItem("currentUser", JSON.stringify(userData));
+  let loggedInUsers = JSON.parse(localStorage.getItem("loggedInUsers")) || [];
+  loggedInUsers.push(userData);
 
-    form.reset();
-    window.location.href = "../accounts/account-setting.html";
+  localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsers));
+  localStorage.setItem("currentUser", JSON.stringify(userData));
 
-  }
-});
-
-// Khi người dùng nhập lại thì kiểm tra và ẩn lỗi nếu hợp lệ
-emailInput.addEventListener("input", () => {
-  if (validateEmail(emailInput.value)) {
-    emailError.style.display = "none";
-  }
-});
-
-pwInput.addEventListener("input", () => {
-  if (validatePassword(pwInput.value)) {
-    pwError.style.display = "none";
-  }
-});
-
-confirmInput.addEventListener("input", () => {
-  if (pwInput.value === confirmInput.value) {
-    confirmError.style.display = "none";
-  }
+  form.reset();
+  window.location.href = "../accounts/account-setting.html";
 });
