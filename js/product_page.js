@@ -45,10 +45,10 @@ function toggleFav(element){
     const img = element.querySelector(".love-icon");
     const isactive = element.classList.toggle("active");
     if (isactive){
-        img.src = "/image_prod/heart_full.svg";
+        img.src = "../products/image_prod/heart_full.svg";
     }
     else{
-        img.src = "/image_prod/heart.svg";
+        img.src = "../products/image_prod/heart.svg";
     }
 }
 
