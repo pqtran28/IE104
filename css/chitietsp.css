@@ -43,7 +43,6 @@ body {
 .product-gallery {
   min-height: 75vh;
   flex: 0 0 55%;
-  position: sticky;
   top: 180px;
 }
 

@@ -109,16 +109,16 @@ header {
     justify-content: space-around;
 }
 
-.navbar__right a {
+/* .navbar__right a {
     display: block;
-}
+} */
 
 .navbar__right button {
     margin: 0;
     min-width: 150px;
 }
 
-.navbar__right a img {
+.navbar__right img {
     width: 30px;
     height: 30px;
     margin-right: 20px;
@@ -632,7 +632,29 @@ button.login-btn {
     padding-inline: 10px;
 }
 
-@media only screen and (max-width: 78.5625em) {
+button.login-btn img {
+    margin-inline: 0;
+}
+ 
+.cartBtn {
+    cursor: pointer;
+}
+
+.navbar-mobile .mobile-logo {
+    position: absolute;
+    left: 60px;;
+}
+
+.navbar-mobile img.mobile-logo {
+    width: unset;
+    cursor: pointer;
+}
+
+.navbar-mobile button.menu-toggle {
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 78.25em) {
 
     .navbar-desktop {
         display: none;

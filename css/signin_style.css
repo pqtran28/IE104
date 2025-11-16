@@ -150,6 +150,7 @@ h1 {
 }
 
 @media only screen and (max-width: 78.5625em) {
+    
     .background-container {
         margin-top: 100px;
         margin-bottom: 100px;

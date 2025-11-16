@@ -1,5 +1,4 @@
 html{
-    scroll-behavior: smooth;
     font-family: "Raleway";
 }
 
@@ -435,6 +434,119 @@ section{
 .product-section h2 {
     font-weight: 500;
 }
+ /* mới*/
+
+svg {
+    width: 15px;
+    height: 14px;
+}
+
+.fav-list-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-item {
+    cursor: pointer;
+}
+
+.product-item .product-title {
+    margin-block: 20px;
+}
+
+.product-item img {
+    width: 100%;
+}
+
+.product-price .price {
+    margin-bottom: 10px;
+}
+
+.product-price .price__ml {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.fav-box {
+    width: fit-content;
+    position: relative;
+    margin-left: 85%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.fav-box svg {
+    position: absolute;
+    transition: 0.2;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.price__ml .ml1, .price__ml .ml2 {
+    cursor: pointer;
+}
+
+.price__ml .ml1:hover, .price__ml .ml2:hover {
+    text-decoration: underline 0.5px;
+}
+
+.product-item .rating-types .types {
+    opacity: 0.75;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.rating-types {
+    margin-bottom: 30px;
+}   
+
+.rating-types .rating {
+    margin-bottom: 10px;
+}
+
+.product-price .price {
+    text-align: center;
+    font-weight: 500;
+}
+
+.price__ml {
+    justify-content: center;
+}
+
+
+.rating svg {
+    transform: translateY(25%);
+}
+
+.product-item button {
+    outline: none;
+    width: 100%;
+    padding-block: 10px;
+    background-color: white;
+    border: 1px solid #909090;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.product-item .product-title:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
 
 @media (max-width: 46.1875em){
     body, .price{
@@ -485,7 +597,7 @@ section{
         width: 80%;
     }
     .setup-page{
-        margin-top: 10%;
+        margin-top: 56px;
     }
     .head-page{
         transform: scale(0.8);
@@ -545,3 +657,9 @@ section{
         top: 125px;
     }
 }
+
+/* body {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+} */

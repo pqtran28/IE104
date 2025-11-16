@@ -302,11 +302,17 @@ function initSearchFeature(selector) {
       p.textContent = item;
       outputBox.insertBefore(p, outputBox.firstChild);
       existing.add(item);
+      p.addEventListener('click', () => {
+        window.location.href = '../cart/chitietsp.html';
+      })
     }
   });
 }
   inputCmd.style.display = 'block';
   noResults.style.display = 'none';
+  
+  
+  
 }
 
 
@@ -345,4 +351,13 @@ navbarLogo.addEventListener('click', () => {
 navbarbottomLogo.addEventListener('click', () => {
   window.location.href = '../homepage/index.html';
 })
+
+// logo mobile quay về homepage
+const mobileLogo = document.querySelectorAll('.mobile-logo');
+
+mobileLogo.forEach(element => {
+  element.addEventListener('click', () => {
+    window.location.href = '../homepage/index.html';
+  })
+});
 
