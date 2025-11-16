@@ -88,13 +88,13 @@ for (const card of cards) {
 
 const getStartedBtn = document.querySelector('.get-started');
 if (!currentUser) {
-  getStartedBtn.style.display = 'none';
+  getStartedBtn.style.display = 'block';
   getStartedBtn?.addEventListener('click',() => {
   window.location.href = '../accounts/account-signin.html';
 });
 }
 else {
-  getStartedBtn.style.display = 'block';
+  getStartedBtn.style.display = 'none';
 }
 
 const addToCartBtn = document.querySelectorAll('.product-item button');
