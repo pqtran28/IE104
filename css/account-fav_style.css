@@ -230,5 +230,11 @@ svg {
     }
 }
 
+@media only screen and (max-width: 46.1875em) {
+    .content {
+        margin-inline: 25px;
+    }
+}
+
 
 

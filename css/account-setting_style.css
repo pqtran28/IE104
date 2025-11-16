@@ -291,7 +291,6 @@ main {
 
 form button {
     width: 100%;
-    position: absolute;
     bottom: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -377,6 +376,15 @@ form button {
     cursor: pointer;
 }
 
+.payment-popup-wrapper, .address-popup-wrapper {
+    height: unset;
+}
+
+#default-address {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 62.5em) {
     .content {
         margin-top: 20px;
@@ -405,5 +413,24 @@ form button {
     .user-info:focus::after {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 46.1875em) {
+    .content {
+        margin-inline: 25px;
+    }
+
+    .user-info__title {
+        font-size: 1.2rem;
+    }
+
+    .edit-link, .user-info {
+        font-size: 0.9rem;
+    }
+
+    .address-popup-wrapper, .payment-popup-wrapper {
+        width: 90%;
+    }
+
 }
 

@@ -35,3 +35,9 @@ form.addEventListener('submit', function (e) {
         alert('Sai tên đăng nhập hoặc mật khẩu!');
     }
 });
+
+const registerBtn = document.querySelector('.intro-sign-up__img button');
+
+registerBtn.addEventListener('click', () => {
+    window.location.href = '../accounts/account-signin.html';
+});

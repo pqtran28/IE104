@@ -11,37 +11,48 @@ const uMail = document.querySelector('.user-mail.user-mail');
 let isEdited_Name = { value: false };
 let isEdited_Mail = { value: false };
 
-function editClick(el, linkEl) {
-  el.setAttribute('contenteditable', 'true');
-  el.focus();
-  linkEl.textContent = 'Cập nhật';
-  linkEl.classList.add('active-edit');
-}
+function bindEditable(el, linkEl, stateObj) {
 
-function editActing(el, stateObj, linkEl) {
-  el.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      el.removeAttribute('contenteditable');
-      stateObj.value = true;
-      el.blur();
-      linkEl.classList.remove('active-edit'); // bỏ class sau khi nhấn Enter
-      linkEl.textContent = 'Chỉnh sửa';
+  linkEl.addEventListener('click', () => {
+
+    // Nếu đang edit → Lưu
+    if (el.isContentEditable) {
+      finishEdit();
+    } 
+    // Nếu chưa edit → Bật edit
+    else {
+      startEdit();
     }
   });
+
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && el.isContentEditable) {
+      e.preventDefault();
+      finishEdit();
+    }
+  });
+
+  function startEdit() {
+    el.setAttribute('contenteditable', 'true');
+    el.focus();
+    linkEl.textContent = 'Cập nhật';
+    linkEl.classList.add('active-edit');
+  }
+
+  function finishEdit() {
+    el.removeAttribute('contenteditable');
+    el.blur();
+    linkEl.textContent = 'Chỉnh sửa';
+    linkEl.classList.remove('active-edit');
+    stateObj.value = true;
+  }
 }
 
-// --- Áp dụng cho username ---
-editLinkName.addEventListener('click', () => {
-  editClick(uName, editLinkName);
-  editActing(uName, isEdited_Name, editLinkName);
-});
+// --- username ---
+bindEditable(uName, editLinkName, isEdited_Name);
 
-// --- Áp dụng cho email ---
-editLinkMail.addEventListener('click', () => {
-  editClick(uMail, editLinkMail);
-  editActing(uMail, isEdited_Mail, editLinkMail);
-});
+// --- email ---
+bindEditable(uMail, editLinkMail, isEdited_Mail);
 
 // Xử lý pop up thêm địa chỉ, thêm pttt
 
