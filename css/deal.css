@@ -12,7 +12,9 @@ body{
 }
 
 .heading hr{
-    max-width: 20px;
+    max-width: 100px;
+    border-radius: 1.5px solid black;
+    margin: 10px auto;
 }
 
 .wrapper {
@@ -232,6 +234,9 @@ button:hover{
 }
 
 @media (max-width: 46.1875em){
+    .setup-page{
+        margin: 50px auto;
+    }
     .wrapper{
         grid-template-columns: repeat(2, 1fr);
         width: 80%;
@@ -244,5 +249,8 @@ button:hover{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .hamburger{
+        top: 75px;
     }
 }

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Chọn size
     const sizeButtons = document.querySelectorAll('.size-btn');
     sizeButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Tăng/giảm số lượng sản phẩm
     const qtyInput = document.querySelector('.quantity span');
     const minusBtn = document.querySelector('.qty-btn:first-child');
     const plusBtn = document.querySelector('.qty-btn:last-child');
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mở modal thành phần
     const expandBtn = document.getElementById('expandIngredients');
     const closeBtn = document.getElementById('closeModal');
     const modalOverlay = document.getElementById('ingredientsOverlay');
@@ -71,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Ẩn/hiện chi tiết tổng quan
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
@@ -81,4 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // slider
+    const thumbnails = document.querySelectorAll('.gallery__thumbnails img');
+    const mainImage = document.querySelector('.gallery__main img');
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const newImageSrc = thumb.getAttribute('src');
+            const newImageAlt = thumb.getAttribute('alt');
+            mainImage.setAttribute('src', newImageSrc);
+            mainImage.setAttribute('alt', newImageAlt);
+        });
+    });
 });
