@@ -548,6 +548,40 @@ svg {
     transition: 0.5s ease;
 }
 
+.filter button {
+    font-size: 1rem;
+    padding-inline: 10px;
+    padding-block: 8px;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.filter-menu {
+    width: 30vw;
+}
+
+.filter-menu p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.filter-button button {
+    border: 0.5px solid #333;
+}
+
+.filter-menu label {
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+    }
+}
 @media (max-width: 46.1875em){
     body, .price{
         font-size: 1rem;
@@ -611,11 +645,10 @@ svg {
         font-size: 16px;
     }
     .head-page{
-        transform: scale(0.8);
+        width: 100%;
     }
     .head-box{
         position: static;
-        transform: none;
         width: 100%;
         margin-top: 20px;
         margin-left:none;
@@ -624,8 +657,10 @@ svg {
         padding: 10px 20px;
     }
     .head-page img{
-        transform: scale(1.5);
+
         height: 70%;
+        width: 100%;
+
     }
     .head-box h1{
         font-size: 2rem;
@@ -639,22 +674,50 @@ svg {
     .another-prod h2{
         font-size: 1.5rem;
     }
+
+    #filter-btn img {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
     #filter-btn{
         white-space: nowrap;
-        font-size: 0.5rem;
+        font-size: 1rem;
         margin-bottom: 0px;
         margin-top: 0px;
-        height: 25px;
-        padding: 15px;;
-    }
-    #filter-btn img{
-        width: 50%;
+        width: 100px;
     }
     .hamburger{
         top: 75px;
     }
     .sidebar{
         top: 125px;
+    }
+
+    .head-page {
+        display: unset;
+        overflow: hidden;
+        width: 100%;
+        position: unset;
+    }
+
+    .head-page img, .head-box {
+        border-radius: 0;
+        width: 90%;
+        margin-inline: 5%;
+    }
+
+    .head-box {
+        width: 90%;
+    }
+
+    .head-page img {
+        width: 90%;
+    }
+
+    .filter-menu {
+        width: 50vw;
+        z-index: 1000;
     }
 }
 
