@@ -171,7 +171,7 @@ function updateprice_deal(size) {
     }
 }
 
-const productLinks = document.querySelectorAll('.product-card');
+const productLinks = document.querySelectorAll('.product-item img, .product-item .product-title');
 
 productLinks.forEach(element => {
     element.addEventListener('click', () => {

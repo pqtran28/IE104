@@ -549,7 +549,7 @@ svg {
 }
 
 .filter button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-inline: 10px;
     padding-block: 8px;
     cursor: pointer;
@@ -581,9 +581,22 @@ svg {
     border: none;
 }
 
-.another-prod button:hover {
+.another-prod button {
+    color: white;
     background-color: #333;
     cursor: pointer;
+}
+
+.another-prod button:hover {
+    background-color: white;
+}
+
+.another-prod button:hover a {
+    color: #333;
+}
+
+.another-prod a {
+    color: white;
 }
 
 .another-prod p {
