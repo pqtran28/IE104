@@ -577,6 +577,26 @@ svg {
     font-size: 1rem;
 }
 
+.product-section hr {
+    border: none;
+}
+
+.another-prod button:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+.another-prod p {
+    text-align: left;
+}
+
+#other-product {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     .wrapper {
         grid-template-columns: repeat(4, minmax(120px, 1fr));
