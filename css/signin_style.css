@@ -151,11 +151,44 @@ h1 {
 
 @media only screen and (max-width: 78.5625em) {
     .background-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
     
     .header-text {
         display: none;
+    }
+}
+
+
+@media only screen and (max-width: 46.1875em) {
+    .wrapper-signup {
+        width: 90%;
+    }
+
+    .wrapper-signup-form {
+        border-radius: 10px;
+    }
+
+    .register-btn {
+        border-radius: 0 0 10px 10px;
+    }
+
+    form {
+        margin-inline: 5px;
+    }
+
+    .input-box input {
+        height: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .login-link, .commitment {
+        margin-left: 10px;
+        font-size: 0.9rem;
+    }
+
+    .register-btn button {
+        font-size: 1.1rem;
     }
 }
