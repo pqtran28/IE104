@@ -12,7 +12,9 @@ body{
 }
 
 .heading hr{
-    max-width: 20px;
+    max-width: 100px;
+    border-radius: 1.5px solid black;
+    margin: 10px auto;
 }
 
 .wrapper {
