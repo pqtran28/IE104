@@ -170,3 +170,11 @@ function updateprice_deal(size) {
         }
     }
 }
+
+const productLinks = document.querySelectorAll('.product-card');
+
+productLinks.forEach(element => {
+    element.addEventListener('click', () => {
+        window.location.href = '../cart/chitietsp.html';
+    })
+});
