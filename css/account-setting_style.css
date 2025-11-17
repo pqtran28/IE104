@@ -280,7 +280,7 @@ main {
   height: 18px;
 }
 
-#default-address {
+.default-address {
     margin-top: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -380,7 +380,7 @@ form button {
     height: unset;
 }
 
-#default-address {
+.default-address {
     margin-top: 5px;
     margin-bottom: 20px;
 }

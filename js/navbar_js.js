@@ -4,7 +4,7 @@ const notifyBtn = document.querySelector(".notifyBtn");
 const cartBtn = document.querySelector(".cartBtn");
 const navUser = document.querySelector('.navbar-username');
 const userBtnAll = document.querySelector('.navbar__right button');
-const userMobile = document.querySelectorAll('.login-mobile')
+const userMobile = document.querySelectorAll('.login-mobile');
 
 // Nếu đã đăng nhập
 if (currentUser) {
