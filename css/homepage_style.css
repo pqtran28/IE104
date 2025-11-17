@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway";
+    color: #333;
 }
 
 h2 {
@@ -242,7 +243,7 @@ section .main-title span {
   display: inline-block;
   width: 30%;
   height: 0.5px;
-  background-color: black;
+  /* background-color: black; */
   margin-left: 30px;
 }
 
@@ -309,7 +310,7 @@ section .sub-title {
     font-size: 1.5rem;
     font-weight: 500;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid #525252;
     position: absolute;
     background-color: white;
     transition: 0.5s;
@@ -328,7 +329,7 @@ section .sub-title {
 
 .common-concern button:hover {
   color: white;
-  background-color: #000;
+  background-color: #525252;
 }
 
 hr {
@@ -399,7 +400,7 @@ hr {
 }
 
 .beauty-blog__product-description a {
-  color: black;
+  color: #333;
   text-decoration: none;
   font-weight: 600;
   transition: 0.5s ease-in-out;
@@ -462,7 +463,7 @@ h3 {
 }
 
 .commitment p:hover {
-  color: black;
+  color: #333;
 }
 
 .product-slider {
@@ -599,7 +600,7 @@ h3 {
 }
 
 .product-item button:hover {
-    background-color: black;
+    background-color: #333;
     color: white;
     transition: 0.5s;
 }
@@ -615,6 +616,15 @@ h3 {
     height: 14px;
 }
 /* BREAKPOINT */
+
+.beauty-blog__gif a img {
+  width: 300px;
+  height: auto;
+}
+
+.beauty-blog__overlay {
+  bottom: 20%;
+}
 
 @media only screen and (max-width: 46.1875em) {
 
@@ -727,6 +737,18 @@ h3 {
     transform: translateY(-70%);
   }
 
+  .beauty-blog__gif a img {
+    width: 180px;
+  }
+
+  .beauty-blog__overlay {
+    bottom: 30%;
+  }
+
+  .beauty-blog__product {
+    font-size: 0.8rem;
+    gap: 5px;
+  }
 }
 
  /* Hiệu ứng ban đầu */
@@ -744,7 +766,16 @@ h3 {
 
   .product-title {
     text-align: left;
+    height: max-content;
   }
+
+  .product-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
 
   @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
 

@@ -622,6 +622,36 @@ svg {
     padding-left: 0;
 }
 
+.another-prod button:hover {
+    color: black;
+}
+
+ .product-title {
+    text-align: left;
+    height: max-content;
+  }
+
+  .product-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+button.show-more:hover strong {
+    color: white;
+}
+
+.head-box button {
+    cursor: pointer;
+    border-radius: 8px;;
+}
+
+.head-box button:hover {
+    color: white;
+    background-color: #333;
+}
+
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     .wrapper {
         grid-template-columns: repeat(4, minmax(120px, 1fr));

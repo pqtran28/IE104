@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
@@ -26,7 +27,7 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 
 .navbar__banner {
@@ -97,7 +98,7 @@ header {
 }
 
 .navbar button:hover {
-    background-color: black;
+    background-color: #333;
     border-color: #505050;
     color: white;
 }
@@ -169,7 +170,7 @@ header {
 
 .navbar__search {
     width: 450px;
-    border: 0.6px solid black;
+    border: 0.6px solid #333;
     border-radius: 10px;
     height: auto;
     margin-top: 10px;

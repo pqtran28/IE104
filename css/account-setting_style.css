@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     font-family: "Raleway";
-    color: black;
+    color: #333;
     box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 a {
-    color: black;
+    color: #333;
     text-decoration: underline 0.5px;
 }
 
@@ -81,7 +81,7 @@ main {
 .info-box {
     width: 100%;
     padding-block: 30px;
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid #333;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -136,7 +136,7 @@ main {
 
 .mail-subcribe input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333;
     width: 50%;
     outline: none;
     padding-block: 10px;
@@ -175,7 +175,7 @@ main {
     top: 50%;
     left: 50%;
     background-color: #F5F5F5;
-    border: 1px solid black;
+    border: 1px solid #333;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     height: 500px;
@@ -190,7 +190,7 @@ main {
     top: 50%;
     left: 50%;
     background-color: #F5F5F5;
-    border: 1px solid black;
+    border: 1px solid #333;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     height: 60vh;
@@ -236,7 +236,7 @@ main {
     font-size: 1rem;
     padding-block: 10px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333;
     outline: none;
     background-color: transparent;
     padding-left: 10px;
@@ -262,7 +262,7 @@ main {
     background-color: #F5F5F5;
     transform: translateY(-30%);
     width: 60%;
-    border: 1px solid black;
+    border: 1px solid #333;
     border-radius: 20px;
 }
 
@@ -275,7 +275,7 @@ main {
 }
 
 .select-box input[type="checkbox"] {
-  accent-color: black; /* màu cam */
+  accent-color: #333;
   width: 18px;
   height: 18px;
 }
@@ -295,12 +295,12 @@ form button {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 0px;
-    border-top: 1px solid black;
+    border-top: 1px solid #333;
     padding-block: 15px;
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: black;
+    background-color: #333;
     color: white;
     transition: 0.5s ease;
     cursor: pointer;
@@ -310,9 +310,9 @@ form button {
     background-color: #F5F5F5;
     height: 20vh;
     overflow-y: scroll; 
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     display: none;
@@ -351,7 +351,7 @@ form button {
 }
 
 .user-info:focus::after {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333;
     padding-bottom: 5px;
     content: "";
     position: absolute;
