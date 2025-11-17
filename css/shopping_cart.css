@@ -206,6 +206,14 @@ html {
     color: var(--text-dark, #333);
 }
 
+.breadcrumb a {
+    color: #333;
+}
+
+.breadcrumb a::after {
+    color: #333;
+}
+
 
 @media (max-width: 700px) {
     .cart-container {
