@@ -1,6 +1,5 @@
 // Đăng nhập
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-const userBtn = document.querySelector('.login-signin');
 const notifyBtn = document.querySelector(".notifyBtn");
 const cartBtn = document.querySelector(".cartBtn");
 const navUser = document.querySelector('.navbar-username');
@@ -10,12 +9,10 @@ const userMobile = document.querySelectorAll('.login-mobile')
 // Nếu đã đăng nhập
 if (currentUser) {
   navUser.textContent = currentUser.username;
-  userBtn.href = '../accounts/account-setting.html';
   userBtnAll.addEventListener('click', () => {
   window.location.href = "../accounts/account-setting.html";
   });
 }
-
 else {
   userBtnAll.addEventListener('click', () => {
   window.location.href = "../accounts/account-login.html";
