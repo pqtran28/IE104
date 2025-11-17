@@ -665,8 +665,6 @@ h3 {
 
   padding: 12px 16px;
   flex: 1;
-
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12); /* bóng mờ nhẹ */
   display: flex;
   flex-direction: column;
   justify-content: space-between  ;
@@ -696,11 +694,20 @@ h3 {
   color: #333;
   opacity: 0.8;
   cursor: pointer;
+  display: none;
 }
 
 .container__left-img img {
-  transition: 0.5s ease-in-out;
+  object-fit: fill;
+  transition: opacity 0.5s ease, transform 0.6s ease;
 }
+
+.container__left-img img.fade {
+  opacity: 0;
+  transform: scale(1.03); /* zoom nhẹ khi chuyển */
+}
+
+
 
 @media only screen and (max-width: 46.1875em) {
 
@@ -828,7 +835,34 @@ h3 {
     font-size: 0.8rem;
     gap: 5px;
   }
+
+  .our-value__container {
+    flex-direction: column;
+  }
+
+  .container__right-description p {
+    width: 100%;
+  }
+
+  .container-right {
+    width: 90vw;
+  }
+
+  .container__left-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .our-value__container {
+    height: unset;
+  }
+
+  .container__right-description p {
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
 }
+
 
  /* Hiệu ứng ban đầu */
   .hidden {
@@ -911,5 +945,30 @@ h3 {
 
   .product-slider .prev, .product-slider .next {
     transform: translateY(-100%);
+  }
+
+  .our-value__container {
+    flex-direction: column;
+  }
+
+  .container__right-description p {
+    width: 100%;
+  }
+
+  .container-right {
+    width: 90vw;
+  }
+
+  .container__left-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .our-value__container {
+    height: unset;
+  }
+  .container__right-description p {
+    padding-bottom: 10px;
+    padding-top: 30px;
   }
 }

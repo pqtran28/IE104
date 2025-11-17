@@ -121,3 +121,39 @@ addToCartBtn.forEach(element => {
   });
 });
 
+// tầm nhìn
+const itemValues = document.querySelectorAll('.container__right-item');
+const mainImg = document.querySelector('#container__left-main-img');
+const allDescriptions = document.querySelectorAll('.container__right-description p');
+
+// --- HIỆN MẶC ĐỊNH "TẦM NHÌN" ---
+allDescriptions.forEach(p => p.style.display = 'none');
+const defaultDesc = document.querySelector('.vision');
+if (defaultDesc) defaultDesc.style.display = 'block';
+
+itemValues.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+
+    // đổi ảnh
+    const newImg = item.getAttribute("data-img");
+    mainImg.classList.add("fade");
+    setTimeout(() => {
+      mainImg.src = newImg;
+      mainImg.classList.remove("fade");
+    }, 300);
+
+    // ẩn toàn bộ mô tả
+    allDescriptions.forEach(p => p.style.display = 'none');
+
+    // hiện mô tả theo id
+    const id = item.getAttribute("id");
+    const description = document.querySelector(`.${id}`);
+    if (description) {
+      description.style.display = 'block';
+    }
+  });
+});
+
+
+
+
