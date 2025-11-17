@@ -610,6 +610,18 @@ svg {
     margin-left: 20px;
 }
 
+.product-title {
+    text-align: left;
+
+}
+.rating-types {
+    text-align: left;
+}
+
+.types {
+    padding-left: 0;
+}
+
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     .wrapper {
         grid-template-columns: repeat(4, minmax(120px, 1fr));
