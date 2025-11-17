@@ -652,6 +652,12 @@ button.show-more:hover strong {
     background-color: #333;
 }
 
+.filter-menu.active {
+    background: rgba(255, 255, 255, 0.25); /* nền trắng trong suốt */
+    backdrop-filter: blur(12px);           /* làm mờ phần phía sau */
+    -webkit-backdrop-filter: blur(12px);   /* cho Safari */
+}
+
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
     .wrapper {
         grid-template-columns: repeat(4, minmax(120px, 1fr));
