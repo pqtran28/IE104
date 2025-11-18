@@ -137,6 +137,10 @@ a {
     margin-bottom: 40px;
 }
 
+button strong {
+    color: white;
+}
+
 @media only screen and (max-width: 78.5625em) {
     .login-wrapper {
         margin-top: 20px;
