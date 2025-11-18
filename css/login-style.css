@@ -141,6 +141,10 @@ button strong {
     color: white;
 }
 
+button:hover strong {
+    color: #333;
+}
+
 @media only screen and (max-width: 78.5625em) {
     .login-wrapper {
         margin-top: 20px;
