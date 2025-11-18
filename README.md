@@ -19,7 +19,6 @@ Trong bối cảnh lĩnh vực thương mại điện tử đang có xu hướng
 * **JavaScript**: Ngôn ngữ đóng vai trò tạo ra các trang web động và có tương tác.
 ## Cấu trúc thư mục
 ```
-├── .vscode          # Chứa tập dữ liệu JSON giả lập phục vụ cho việc kiểm thử 
 ├── accounts         # Thư mục chứa các tệp HTML liên quan đến quản lý tài khoản (Đăng nhập, Đăng ký, Cài đặt tài khoản, Lịch sử mua hàng, Sản phẩm yêu thích) 
 ├── cart             # Thư mục trang giỏ hàng và chi tiết sản phẩm 
 ├── components       # Các thành phần giao diện có chức năng riêng biệt, độc lập và dùng chung cho tất cả các trang (header, footer)
