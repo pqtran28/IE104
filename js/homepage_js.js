@@ -154,6 +154,14 @@ itemValues.forEach(item => {
   });
 });
 
+const productLinks = document.querySelectorAll('.product-item img, .product-item .product-title');
+
+productLinks?.forEach(element => {
+    element.addEventListener('click', () => {
+        window.location.href = '../cart/chitietsp.html';
+    })
+});
+
 
 
 
