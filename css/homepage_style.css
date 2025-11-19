@@ -861,6 +861,10 @@ h3 {
     padding-bottom: 10px;
     padding-top: 30px;
   }
+
+  .commitment {
+    height: unset;
+  }
 }
 
 
