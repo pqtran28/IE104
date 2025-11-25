@@ -1,9 +1,10 @@
-// sidebar
+// mở/đóng sidebar
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("active");
 }
 
+//chỉ hiện nút show-more đầu tiên, còn các nút sau ẩn
 const productSections = document.querySelectorAll('.product-section');
 productSections.forEach(element => {
     const showmores = element.querySelectorAll('.show-more');
@@ -16,7 +17,7 @@ productSections.forEach(element => {
     });
 });
 
-// sửa hết showmore
+// showmore
 const showmoreBtns = document.querySelectorAll('.show-more');
 
 showmoreBtns.forEach(element => {
@@ -30,7 +31,7 @@ showmoreBtns.forEach(element => {
     });
 });
 
-// sửa hết product card, lấy từ account-fav
+// product card, lấy từ account-fav
 // Sản phẩm yêu thích (nhấn vào sản phẩm)
 const favBox = document.querySelectorAll('.fav-box');
 const favArr = document.querySelectorAll('.fav-box svg:nth-of-type(2)');
@@ -54,7 +55,7 @@ favBox.forEach(box => {
     });
 });
 
-// price
+// price theo từng dung tích
 document.querySelectorAll('.product-price').forEach(box => {
   const priceEl = box.querySelector('.price');
   const ml1 = box.querySelector('.ml1');
@@ -79,7 +80,6 @@ document.querySelectorAll('.product-price').forEach(box => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-
     //filter
     const filterBtn = document.getElementById("filter-btn");
     const filterMenu = document.querySelector(".filter-menu");
@@ -102,75 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//love_prod
-function toggleFav(element) {
-    const img = element.querySelector(".love-icon");
-    const isactive = element.classList.toggle("active");
-    if (isactive) {
-        img.src = "../products/image_prod/heart_full.svg";
-    }
-    else {
-        img.src = "../products/image_prod/heart.svg";
-    }
-}
-
-// update_price_for_product_page
-function updateprice(size) {
-    const product = event.target.closest(".product");
-    const small = product.querySelector(".small");
-    const big = product.querySelector(".big");
-    small.classList.remove("active");
-    big.classList.remove("active");
-    choosevolume(size)
-    //change_price
-    function choosevolume(element) {
-        const price = product.querySelector(".price");
-        if (element == "small") {
-            price.textContent = "200.000 VND";
-            small.classList.add("active");
-        }
-        else {
-            price.textContent = "350.000 VND";
-            big.classList.add("active");
-        }
-    }
-}
-
-// update_price_for_deal_page
-function updateprice_deal(size) {
-    const product = event.target.closest(".deal-product");
-    const small = product.querySelector(".small");
-    const big = product.querySelector(".big");
-    const old_price = product.querySelector(".old-price");
-    const new_price1 = product.querySelector(".sale-price1");
-    const new_price2 = product.querySelector(".sale-price2");
-    small.classList.remove("active");
-    big.classList.remove("active");
-    choosevolume(size)
-    function choosevolume(element) {
-        if (element == "small") {
-            if (new_price1) {
-                new_price1.textContent = "180.000 VND";
-            }
-            else {
-                new_price2.textContent = "160.000 VND";
-            }
-            old_price.textContent = "200.000 VND";
-            small.classList.add("active");
-        }
-        else {
-            if (new_price1) {
-                new_price1.textContent = "315.000 VND";
-            }
-            else {
-                new_price2.textContent = "280.000 VND";
-            }
-            old_price.textContent = "350.000 VND";
-            big.classList.add("active");
-        }
-    }
-}
-
+//điều hướng đến trang chi tiết sản phẩm khi nhấp vào sản phẩm
 const productLinks = document.querySelectorAll('.product-item img, .product-item .product-title');
 
 productLinks.forEach(element => {
