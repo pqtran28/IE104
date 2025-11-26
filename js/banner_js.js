@@ -35,7 +35,7 @@
 
   function prevBanner() {
     if (index <= 0) return;
-    index--;
+    index--;  
     groupBanner.style.transition = "transform 0.5s ease-in-out";
     setTranslate();
   }
