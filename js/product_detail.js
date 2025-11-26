@@ -1,3 +1,25 @@
+// Thêm sản phẩm yêu thích
+const wishlistIcon = document.getElementById('wishlistIcon');
+
+if (wishlistIcon) {
+    wishlistIcon.parentElement.addEventListener('click', function() {
+        const currentSrc = wishlistIcon.getAttribute('src');
+        
+        const emptyHeart = '../cart/cart-imgs/heart.svg';
+        const filledHeart = '../cart/cart-imgs/heart_full.svg';
+
+        if (currentSrc === emptyHeart) {
+            wishlistIcon.setAttribute('src', filledHeart);
+            wishlistIcon.setAttribute('alt', 'Remove from wishlist');
+            console.log('Added to wishlist');
+        } else {
+            wishlistIcon.setAttribute('src', emptyHeart);
+            wishlistIcon.setAttribute('alt', 'Add to wishlist');
+            console.log('Removed from wishlist');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Chọn size
     const sizeButtons = document.querySelectorAll('.size-btn');
