@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/footer_style.css">
     <link rel="stylesheet" href="../css/navbar_style.css">
     <script src="../js/navbar_js.js" defer></script>
+    <script src="../js/shopping_cart.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../components/components-imgs/logo-shortcut2.png">
 </head>
@@ -312,19 +313,21 @@
         <div class="cart-items">
             <h2>GIỎ HÀNG CỦA TÔI</h2>
 
+            <div class="cart-items">
+            <h2>GIỎ HÀNG CỦA TÔI</h2>
+
             <div class="cart-item">
                 <img src="../cart/cart-imgs/cart-item-img.webp" alt="Product Image"
                     class="cart-item-image">
                 <div class="cart-item-details">
                     <p class="cart-item-name">Tinh chất làm mờ thâm Derma.glow</p>
                     <p class="cart-item-info">Số lượng: 1</p>
-                    <p class="cart-item-info"><strong>Thành tiền: 890.000đ</strong></p>
+                    <p class="cart-item-info"><strong class="item-price">Thành tiền: 367.000đ</strong></p>
 
                     <div class="cart-buttons-wrapper">
-                        <select class="classify-button">
-                            <option value="10ml">10ml</option>
-                            <option value="50ml">50ml</option>
-                            <option value="100ml">100ml</option>
+                        <select class="classify-button size-select">
+                            <option value="100ml" data-price-base="367000">100ml</option>
+                            <option value="150ml" data-price-base="417000">150ml</option>
                         </select>
                         <button class="remove-button">Loại bỏ</button>
                     </div>
@@ -337,13 +340,12 @@
                 <div class="cart-item-details">
                     <p class="cart-item-name">Tinh chất làm mờ thâm Derma.glow</p>
                     <p class="cart-item-info">Số lượng: 1</p>
-                    <p class="cart-item-info"><strong>Thành tiền: 890.000đ</strong></p>
+                    <p class="cart-item-info"><strong class="item-price">Thành tiền: 367.000đ</strong></p>
 
                     <div class="cart-buttons-wrapper">
-                        <select class="classify-button">
-                            <option value="10ml">10ml</option>
-                            <option value="50ml">50ml</option>
-                            <option value="100ml">100ml</option>
+                        <select class="classify-button size-select">
+                            <option value="100ml" data-price-base="367000">100ml</option>
+                            <option value="150ml" data-price-base="417000">150ml</option>
                         </select>
                         <button class="remove-button">Loại bỏ</button>
                     </div>
@@ -356,19 +358,17 @@
                 <div class="cart-item-details">
                     <p class="cart-item-name">Tinh chất làm mờ thâm Derma.glow</p>
                     <p class="cart-item-info">Số lượng: 1</p>
-                    <p class="cart-item-info"><strong>Thành tiền: 890.000đ</strong></p>
+                    <p class="cart-item-info"><strong class="item-price">Thành tiền: 367.000đ</strong></p>
 
                     <div class="cart-buttons-wrapper">
-                        <select class="classify-button">
-                            <option value="10ml">10ml</option>
-                            <option value="50ml">50ml</option>
-                            <option value="100ml">100ml</option>
+                        <select class="classify-button size-select">
+                            <option value="100ml" data-price-base="367000">100ml</option>
+                            <option value="150ml" data-price-base="417000">150ml</option>
                         </select>
                         <button class="remove-button">Loại bỏ</button>
                     </div>
                 </div>
             </div>
-            
         </div>
 
         <div class="checkout-summary">
@@ -384,12 +384,12 @@
 
             <div class="summary-row">
                 <span>Tổng tiền</span>
-                <span>23.900.000đ</span>
+                <span id="cartTotalDisplay">0đ</span>
             </div>
 
             <div class="summary-row">
                 <span>Phí ship</span>
-                <span>23.900.000đ</span>
+                <span>50.000đ</span>
             </div>
 
             <a href="#" class="discount-link">Nhập code giảm giá</a>
