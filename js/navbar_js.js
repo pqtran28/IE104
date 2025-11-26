@@ -300,7 +300,7 @@ function initSearchFeature(selector) {
       outputBox.insertBefore(p, outputBox.firstChild);
       existing.add(item);
       p.addEventListener('click', () => {
-        window.location.href = '../cart/chitietsp.html';
+        window.location.href = '../cart/product_detail.html';
       })
     }
   });
