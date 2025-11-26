@@ -1,32 +1,62 @@
-// Thêm sản phẩm yêu thích
-const wishlistIcon = document.getElementById('wishlistIcon');
-
-if (wishlistIcon) {
-    wishlistIcon.parentElement.addEventListener('click', function() {
-        const currentSrc = wishlistIcon.getAttribute('src');
-        
-        const emptyHeart = '../cart/cart-imgs/heart.svg';
-        const filledHeart = '../cart/cart-imgs/heart_full.svg';
-
-        if (currentSrc === emptyHeart) {
-            wishlistIcon.setAttribute('src', filledHeart);
-            wishlistIcon.setAttribute('alt', 'Remove from wishlist');
-            console.log('Added to wishlist');
-        } else {
-            wishlistIcon.setAttribute('src', emptyHeart);
-            wishlistIcon.setAttribute('alt', 'Add to wishlist');
-            console.log('Removed from wishlist');
-        }
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    // Chọn size
+    // Thêm sản phẩm yêu thích
+    const wishlistIcon = document.getElementById('wishlistIcon');
+
+    if (wishlistIcon) {
+        wishlistIcon.parentElement.addEventListener('click', function() {
+            const currentSrc = wishlistIcon.getAttribute('src');
+        
+            const emptyHeart = '../cart/cart-imgs/heart.svg';
+            const filledHeart = '../cart/cart-imgs/heart-full.svg';
+
+            if (currentSrc === emptyHeart) {
+                wishlistIcon.setAttribute('src', filledHeart);
+                wishlistIcon.setAttribute('alt', 'Remove from wishlist');
+                console.log('Added to wishlist');
+            } else {
+                wishlistIcon.setAttribute('src', emptyHeart);
+                wishlistIcon.setAttribute('alt', 'Add to wishlist')
+                wishlistIcon.classList.remove(FULL_ICON_CLASS);
+                console.log('Removed from wishlist');
+            }
+        });
+    }
+
+    // Tính giá phù hợp với dung tích
+    const formatPrice = (price) => price.toLocaleString('vi-VN') + ' VND';
+    
+    const parsePrice = (priceText) => parseInt(priceText.replace(/\D/g, ''), 10);
+
     const sizeButtons = document.querySelectorAll('.size-btn');
-    sizeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            sizeButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    const newPrice = document.getElementById('productNewPrice');
+    const oldPrice = document.getElementById('productOldPrice');
+
+    const NewPrice = parsePrice(newPrice.textContent);
+    const OldPrice = parsePrice(oldPrice.textContent);
+
+    const discount = OldPrice - NewPrice;
+    
+    const priceMap = {
+        '100ml': { new: NewPrice, old: OldPrice },
+        '150ml': { 
+            new: NewPrice + 50000,
+            old: NewPrice + 50000 + discount
+        }
+    };
+
+    // chọn size và giá tương ứng
+    sizeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const size = btn.getAttribute('data-size');
+            const prices = priceMap[size];
+            
+            sizeButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (prices) {
+                newPrice.textContent = formatPrice(prices.new);
+                oldPrice.textContent = formatPrice(prices.old);
+            }
         });
     });
 
