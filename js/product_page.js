@@ -107,6 +107,6 @@ const productLinks = document.querySelectorAll('.product-item img, .product-item
 
 productLinks.forEach(element => {
     element.addEventListener('click', () => {
-        window.location.href = '../cart/chitietsp.html';
+        window.location.href = '../cart/product_detail.html';
     })
 });
