@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Lấy giá từ text ban đầu
     const parsePrice = (priceText) => parseInt(priceText.replace(/\D/g, ''), 10);
     const formatPrice = (price) => price.toLocaleString('vi-VN') + ' VND';
-    
+    // Lấy số lượng từ text
     const getQuantity = (itemEl) => {
     const qtyTextEl = itemEl.querySelector('.cart-item-details p:first-child');
     const matches = qtyTextEl?.textContent.match(/(\d+)$/);
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartItems = document.querySelectorAll('.cart-item');
     const totalDisplay = document.getElementById('cartTotalDisplay');
     
-    
+    // Tính tổng tiền hàng
     const updateCartTotal = () => {
         let total = 0;
 
@@ -46,4 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateCartTotal(); 
+
 });
