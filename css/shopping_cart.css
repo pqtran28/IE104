@@ -13,12 +13,14 @@ html {
     margin-top: 200px;
 }
 
+/* Cột giỏ hàng của tôi */
 .cart-items {
     flex: 2;
     min-width: 300px;
     padding: 1.5rem;
 }
 
+/* Cột thanh toán */
 .checkout-summary {
     flex: 1.5;
     min-width: 300px;
@@ -36,6 +38,7 @@ html {
     letter-spacing: 0.5px;
 }
 
+/* Đường dẫn */
 .breadcrumb {
     flex-basis: 100%;
     width: 100%;
@@ -49,6 +52,7 @@ html {
     font-weight: normal;
 }
 
+/* Chi tiết giỏ hàng */
 .cart-item {
     display: flex;
     align-items: flex-start;
@@ -104,6 +108,7 @@ html {
     margin-top: 1rem;
 }
 
+/* Chọn dung tích */
 .classify-button {
     background-color: transparent;
     border-width: 0 0 1px 0;
@@ -119,6 +124,7 @@ html {
     border-color: #bbb;
 }
 
+/* Nút loại bỏ */
 .remove-button {
     background-color: transparent;
     border: 1px solid var(--border-color, #ddd);
@@ -135,6 +141,7 @@ html {
     border-color: #bbb;
 }
 
+/* Các dòng chi tiết thanh toán */
 .summary-row {
     display: flex;
     justify-content: space-between;
@@ -160,6 +167,7 @@ html {
     font-weight: 600;
 }
 
+/* Thay đổi địa chỉ, code giảm giá */
 .summary-value a,
 .discount-link {
     font-size: 0.9rem;
@@ -176,6 +184,7 @@ html {
     text-align: right;
 }
 
+/* Nút Checkout */
 .btn-checkout,
 .btn-continue {
     display: block;
@@ -214,7 +223,7 @@ html {
     color: #333;
 }
 
-
+/* Responsive */
 @media (max-width: 700px) {
     .cart-container {
         flex-direction: column;
