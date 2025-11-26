@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 wishlistIcon.setAttribute('src', emptyHeart);
                 wishlistIcon.setAttribute('alt', 'Add to wishlist')
-                wishlistIcon.classList.remove(FULL_ICON_CLASS);
                 console.log('Removed from wishlist');
             }
         });
