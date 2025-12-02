@@ -85,20 +85,20 @@ const cards = [...track_beautyblog.children];
 for (const card of cards) {
   track_beautyblog.appendChild(card.cloneNode(true));
 }
-track_beautyblog.offsetWidth;
-let pos = 0;
-const speed = 1;
+// track_beautyblog.offsetWidth;
+// let pos = 0;
+// const speed = 1;
 
-function animate() {
-  pos += speed;
-  const halfTrackWidth = track_beautyblog.scrollWidth / 2;
-  if (pos >= halfTrackWidth) {
-    pos = 0; // reset seamless
-  }
-  track_beautyblog.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animate);
-}
-animate();
+// function animate() {
+//   pos -= speed;
+//   const halfTrackWidth = track_beautyblog.scrollWidth / 2;
+//   if (pos >= halfTrackWidth) {
+//     pos = 0; // reset seamless
+//   }
+//   track_beautyblog.style.transform = `translateX(${pos}px)`;
+//   requestAnimationFrame(animate);
+// }
+// animate();
 
 const getStartedBtn = document.querySelector('.get-started');
 if (!currentUser) {
